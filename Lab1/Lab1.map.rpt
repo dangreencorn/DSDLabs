@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1
-Wed Jan 22 16:52:15 2014
+Thu Jan 23 13:16:31 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 22 16:52:15 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 23 13:16:31 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab1                                          ;
 ; Top-level Entity Name              ; g01_lab1                                      ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 5                                             ;
-;     Total combinational functions  ; 5                                             ;
+; Total logic elements               ; 166                                           ;
+;     Total combinational functions  ; 166                                           ;
 ;     Dedicated logic registers      ; 0                                             ;
 ; Total registers                    ; 0                                             ;
-; Total pins                         ; 15                                            ;
+; Total pins                         ; 72                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -153,53 +153,55 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path  ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+
-; g01_comp7.bdf                    ; yes             ; User Block Diagram/Schematic File  ; P:/DSDLabs/Lab1/g01_comp7.bdf ;
-; g01_lab1.bdf                     ; yes             ; User Block Diagram/Schematic File  ; P:/DSDLabs/Lab1/g01_lab1.bdf  ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+
+; g01_comp7.bdf                    ; yes             ; User Block Diagram/Schematic File  ; P:/DSDLabs/Lab1/g01_comp7.bdf           ;
+; g01_lab1.bdf                     ; yes             ; User Block Diagram/Schematic File  ; P:/DSDLabs/Lab1/g01_lab1.bdf            ;
+; g01_Seconds_to_Days.vhd          ; yes             ; User VHDL File                     ; P:/DSDLabs/Lab1/g01_Seconds_to_Days.vhd ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                          ;
-+---------------------------------------------+------------------------+
-; Resource                                    ; Usage                  ;
-+---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 5                      ;
-;                                             ;                        ;
-; Total combinational functions               ; 5                      ;
-; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 4                      ;
-;     -- 3 input functions                    ; 0                      ;
-;     -- <=2 input functions                  ; 1                      ;
-;                                             ;                        ;
-; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 5                      ;
-;     -- arithmetic mode                      ; 0                      ;
-;                                             ;                        ;
-; Total registers                             ; 0                      ;
-;     -- Dedicated logic registers            ; 0                      ;
-;     -- I/O registers                        ; 0                      ;
-;                                             ;                        ;
-; I/O pins                                    ; 15                     ;
-; Maximum fan-out node                        ; g01_comp7:inst|inst9~0 ;
-; Maximum fan-out                             ; 1                      ;
-; Total fan-out                               ; 19                     ;
-; Average fan-out                             ; 0.95                   ;
-+---------------------------------------------+------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 166         ;
+;                                             ;             ;
+; Total combinational functions               ; 166         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 4           ;
+;     -- 3 input functions                    ; 137         ;
+;     -- <=2 input functions                  ; 25          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 14          ;
+;     -- arithmetic mode                      ; 152         ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 72          ;
+; Maximum fan-out node                        ; seconds[16] ;
+; Maximum fan-out                             ; 10          ;
+; Total fan-out                               ; 502         ;
+; Average fan-out                             ; 2.11        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |g01_lab1                  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |g01_lab1                ; work         ;
-;    |g01_comp7:inst|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_lab1|g01_comp7:inst ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |g01_lab1                      ; 166 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |g01_lab1                           ; work         ;
+;    |g01_Seconds_to_Days:inst1| ; 161 (161)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_lab1|g01_Seconds_to_Days:inst1 ; work         ;
+;    |g01_comp7:inst|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_lab1|g01_comp7:inst            ;              ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,25 +226,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Wed Jan 22 16:52:13 2014
+    Info: Processing started: Thu Jan 23 13:16:29 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1 -c Lab1
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file g01_comp7.bdf
     Info: Found entity 1: g01_comp7
 Info: Found 1 design units, including 1 entities, in source file g01_lab1.bdf
     Info: Found entity 1: g01_lab1
+Info: Found 2 design units, including 1 entities, in source file g01_seconds_to_days.vhd
+    Info: Found design unit 1: g01_Seconds_to_Days-implementation
+    Info: Found entity 1: g01_Seconds_to_Days
 Info: Elaborating entity "g01_lab1" for the top level hierarchy
 Info: Elaborating entity "g01_comp7" for hierarchy "g01_comp7:inst"
+Info: Elaborating entity "g01_Seconds_to_Days" for hierarchy "g01_Seconds_to_Days:inst1"
 Warning: Ignored assignments for entity "Lab1" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity Lab1 -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity Lab1 -section_id "Root Region" was ignored
-Info: Implemented 20 device resources after synthesis - the final resource count might be different
-    Info: Implemented 14 input pins
-    Info: Implemented 1 output pins
-    Info: Implemented 5 logic cells
+Info: Implemented 238 device resources after synthesis - the final resource count might be different
+    Info: Implemented 31 input pins
+    Info: Implemented 41 output pins
+    Info: Implemented 166 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 267 megabytes
-    Info: Processing ended: Wed Jan 22 16:52:15 2014
+    Info: Peak virtual memory: 303 megabytes
+    Info: Processing ended: Thu Jan 23 13:16:31 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
