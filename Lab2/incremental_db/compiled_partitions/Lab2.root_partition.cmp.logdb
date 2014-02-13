@@ -1,4 +1,1 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g01_dayseconds:inst|lpm_mult:mult2|mult_19o:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_out2,
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1,

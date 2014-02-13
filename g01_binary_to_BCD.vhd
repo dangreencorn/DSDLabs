@@ -11,7 +11,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; -- allows use of the unsigned type
 
-library lpm; -- allows use of the Altera library modules use lpm.lpm_components.all;
+library lpm; -- allows use of the Altera library modules 
+use lpm.lpm_components.all;
+
 entity g01_binary_to_BCD is
 	port ( clock : in std_logic; -- to clock the lpm_rom register
 		bin : in unsigned(5 downto 0);

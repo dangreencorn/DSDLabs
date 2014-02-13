@@ -25,561 +25,164 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 5242880.0;
-	SIMULATION_TIME = 5242880.0;
+	DATA_DURATION = 640.0;
+	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("DaySeconds")
+SIGNAL("code")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 17;
-	LSB_INDEX = 0;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("DaySeconds[16]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[15]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[14]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[13]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[12]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[11]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[10]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[9]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("DaySeconds[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "DaySeconds";
-}
-
-SIGNAL("Hours")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 5;
+	WIDTH = 4;
 	LSB_INDEX = 0;
 	DIRECTION = INPUT;
 	PARENT = "";
 }
 
-SIGNAL("Hours[4]")
+SIGNAL("code[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Hours";
+	PARENT = "code";
 }
 
-SIGNAL("Hours[3]")
+SIGNAL("code[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Hours";
+	PARENT = "code";
 }
 
-SIGNAL("Hours[2]")
+SIGNAL("code[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Hours";
+	PARENT = "code";
 }
 
-SIGNAL("Hours[1]")
+SIGNAL("code[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
-	PARENT = "Hours";
+	PARENT = "code";
 }
 
-SIGNAL("Hours[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Hours";
-}
-
-SIGNAL("Minutes")
+SIGNAL("segments")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 6;
+	WIDTH = 7;
 	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("segments[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("segments[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "segments";
+}
+
+SIGNAL("RIppleBlank_In")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
 	DIRECTION = INPUT;
 	PARENT = "";
 }
 
-SIGNAL("Minutes[5]")
+SIGNAL("RippleBlank_Out")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Minutes[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Minutes[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Minutes[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Minutes[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Minutes[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Minutes";
-}
-
-SIGNAL("Seconds")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 6;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
+	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("Seconds[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-SIGNAL("Seconds[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-SIGNAL("Seconds[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-SIGNAL("Seconds[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-SIGNAL("Seconds[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-SIGNAL("Seconds[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "Seconds";
-}
-
-TRANSITION_LIST("DaySeconds[16]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[15]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[14]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[13]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[12]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[11]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[10]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[9]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("DaySeconds[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5242880.0;
-	}
-}
-
-TRANSITION_LIST("Hours[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 2621440.0;
-			LEVEL 1 FOR 2621440.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Hours[3]")
+TRANSITION_LIST("code[3]")
 {
 	NODE
 	{
@@ -587,13 +190,13 @@ TRANSITION_LIST("Hours[3]")
 		NODE
 		{
 			REPEAT = 2;
-			LEVEL 0 FOR 1310720.0;
-			LEVEL 1 FOR 1310720.0;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
 		}
 	}
 }
 
-TRANSITION_LIST("Hours[2]")
+TRANSITION_LIST("code[2]")
 {
 	NODE
 	{
@@ -601,13 +204,13 @@ TRANSITION_LIST("Hours[2]")
 		NODE
 		{
 			REPEAT = 4;
-			LEVEL 0 FOR 655360.0;
-			LEVEL 1 FOR 655360.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
 		}
 	}
 }
 
-TRANSITION_LIST("Hours[1]")
+TRANSITION_LIST("code[1]")
 {
 	NODE
 	{
@@ -615,13 +218,13 @@ TRANSITION_LIST("Hours[1]")
 		NODE
 		{
 			REPEAT = 8;
-			LEVEL 0 FOR 327680.0;
-			LEVEL 1 FOR 327680.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
 		}
 	}
 }
 
-TRANSITION_LIST("Hours[0]")
+TRANSITION_LIST("code[0]")
 {
 	NODE
 	{
@@ -629,193 +232,111 @@ TRANSITION_LIST("Hours[0]")
 		NODE
 		{
 			REPEAT = 16;
-			LEVEL 0 FOR 163840.0;
-			LEVEL 1 FOR 163840.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
 		}
 	}
 }
 
-TRANSITION_LIST("Minutes[5]")
+TRANSITION_LIST("segments[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("segments[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 640.0;
+	}
+}
+
+TRANSITION_LIST("RIppleBlank_In")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 32;
-			LEVEL 0 FOR 81920.0;
-			LEVEL 1 FOR 81920.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Minutes[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 64;
-			LEVEL 0 FOR 40960.0;
-			LEVEL 1 FOR 40960.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Minutes[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 128;
-			LEVEL 0 FOR 20480.0;
-			LEVEL 1 FOR 20480.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Minutes[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 256;
-			LEVEL 0 FOR 10240.0;
-			LEVEL 1 FOR 10240.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Minutes[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 512;
-			LEVEL 0 FOR 5120.0;
-			LEVEL 1 FOR 5120.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Minutes[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1024;
-			LEVEL 0 FOR 2560.0;
-			LEVEL 1 FOR 2560.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Seconds[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 2048;
-			LEVEL 0 FOR 1280.0;
-			LEVEL 1 FOR 1280.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Seconds[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 4096;
-			LEVEL 0 FOR 640.0;
-			LEVEL 1 FOR 640.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Seconds[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 8192;
+			REPEAT = 1;
 			LEVEL 0 FOR 320.0;
 			LEVEL 1 FOR 320.0;
 		}
 	}
 }
 
-TRANSITION_LIST("Seconds[2]")
+TRANSITION_LIST("RippleBlank_Out")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 16384;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Seconds[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 32768;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-		}
-	}
-}
-
-TRANSITION_LIST("Seconds[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 65536;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-		}
+		LEVEL X FOR 640.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours";
+	CHANNEL = "code";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
-	CHILDREN = 1, 2, 3, 4, 5;
+	CHILDREN = 1, 2, 3, 4;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours[4]";
+	CHANNEL = "code[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -825,7 +346,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours[3]";
+	CHANNEL = "code[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -835,7 +356,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours[2]";
+	CHANNEL = "code[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -845,7 +366,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours[1]";
+	CHANNEL = "code[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -855,27 +376,26 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Hours[0]";
+	CHANNEL = "RIppleBlank_In";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 0;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes";
+	CHANNEL = "segments";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 0;
-	CHILDREN = 7, 8, 9, 10, 11, 12;
+	CHILDREN = 7, 8, 9, 10, 11, 12, 13;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[5]";
+	CHANNEL = "segments[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -885,7 +405,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[4]";
+	CHANNEL = "segments[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -895,7 +415,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[3]";
+	CHANNEL = "segments[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
@@ -905,7 +425,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[2]";
+	CHANNEL = "segments[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -915,7 +435,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[1]";
+	CHANNEL = "segments[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
@@ -925,7 +445,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Minutes[0]";
+	CHANNEL = "segments[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
@@ -935,257 +455,26 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "Seconds";
+	CHANNEL = "segments[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 13;
-	TREE_LEVEL = 0;
-	CHILDREN = 14, 15, 16, 17, 18, 19;
+	TREE_LEVEL = 1;
+	PARENT = 6;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "Seconds[5]";
+	CHANNEL = "RippleBlank_Out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 14;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Seconds[4]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 15;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Seconds[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 16;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Seconds[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 17;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Seconds[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 18;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "Seconds[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 19;
-	TREE_LEVEL = 1;
-	PARENT = 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 20;
 	TREE_LEVEL = 0;
-	CHILDREN = 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[16]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 21;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[15]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 22;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[14]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 23;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[13]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 24;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[12]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 25;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[11]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 26;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[10]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 27;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[9]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 28;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[8]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 29;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[7]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 30;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[6]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 31;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[5]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 32;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[4]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 33;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 34;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 35;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 36;
-	TREE_LEVEL = 1;
-	PARENT = 20;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "DaySeconds[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 37;
-	TREE_LEVEL = 1;
-	PARENT = 20;
 }
 
 TIME_BAR
 {
-	TIME = 24550;
+	TIME = 21575;
 	MASTER = TRUE;
 }
 ;

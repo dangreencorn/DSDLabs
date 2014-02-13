@@ -1,0 +1,47 @@
+-- this circuit decodes binary into the signals required to drive a 7-segment display
+-- if the RippleBlank_In is set high, and the binary value is zero, the display does not
+-- show anything and the RippleBlank_Out is set high. (This removes any leading zeros)
+--
+-- entity name: g01_BCD_to_display
+--
+-- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
+-- Version 1.0
+-- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
+-- Date: February 13, 2014
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all; -- allows use of the unsigned type
+
+entity g01_BCD_to_display is
+	port ( clk : in std_logic; -- to clock the lpm_rom register
+		bin : in unsigned(5 downto 0);
+		segments0 : out std_logic_vector(6 downto 0);
+		segments1 : out std_logic_vector(6 downto 0)
+	);
+end g01_BCD_to_display;
+
+architecture behaviour of g01_BCD_to_display is
+	signal BCD_out : std_logic_vector(7 downto 0);
+	component g01_7_segment_decoder
+		port ( code : in std_logic_vector(3 downto 0);
+				RippleBlank_In : in std_logic;
+				RippleBlank_Out : out std_logic;
+				segments : out std_logic_vector(6 downto 0));
+	end component;
+	
+	component g01_binary_to_BCD
+		port ( clk : in std_logic; -- to clock the lpm_rom register
+			bin : in unsigned(5 downto 0);
+			BCD : out std_logic_vector(7 downto 0));
+	end component;
+
+begin
+	BCD : g01_binary_to_BCD
+		PORT MAP ( clk => clk, bin => bin, BCD => BCD_out);
+	seg1 : g01_7_segment_decoder
+		PORT MAP ( code => BCD_out(7 downto 4), RippleBlank_In => '1', segments => segments1 );
+	seg0 : g01_7_segment_decoder
+		PORT MAP ( code => BCD_out(3 downto 0), RippleBlank_In => '0', segments => segments0 );
+
+end behaviour;

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY Lab2
+set_global_assignment -name TOP_LEVEL_ENTITY g01_BCD_to_display
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:10:11  FEBRUARY 12, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -46,12 +46,44 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name VHDL_FILE g01_dayseconds.vhd
+set_global_assignment -name BDF_FILE Lab2.bdf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_dayseconds.vwf
+set_global_assignment -name VHDL_FILE g01_binary_to_BCD.vhd
+set_global_assignment -name MIF_FILE g01_binary_to_BCD.mif
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_binary_to_BCD.vwf
+set_global_assignment -name VHDL_FILE g01_7_segment_decoder.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_binary_to_BCD_functional.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_binary_to_BCD_timing.vwf
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_7_segment_decoder.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g01_7_segment_decoder.vwf
+set_global_assignment -name MISC_FILE "P:/DSDLabs/Lab2/Lab2.dpf"
+set_global_assignment -name VHDL_FILE Lab2.vhd
+set_global_assignment -name VHDL_FILE g01_BCD_to_display.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name BDF_FILE Lab2.bdf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_location_assignment PIN_L22 -to bin[0]
+set_location_assignment PIN_L21 -to bin[1]
+set_location_assignment PIN_M22 -to bin[2]
+set_location_assignment PIN_V12 -to bin[3]
+set_location_assignment PIN_W12 -to bin[4]
+set_location_assignment PIN_U12 -to bin[5]
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_J2 -to segments0[0]
+set_location_assignment PIN_J1 -to segments0[1]
+set_location_assignment PIN_H2 -to segments0[2]
+set_location_assignment PIN_H1 -to segments0[3]
+set_location_assignment PIN_F2 -to segments0[4]
+set_location_assignment PIN_F1 -to segments0[5]
+set_location_assignment PIN_E2 -to segments0[6]
+set_location_assignment PIN_E1 -to segments1[0]
+set_location_assignment PIN_H6 -to segments1[1]
+set_location_assignment PIN_H5 -to segments1[2]
+set_location_assignment PIN_H4 -to segments1[3]
+set_location_assignment PIN_G3 -to segments1[4]
+set_location_assignment PIN_D2 -to segments1[5]
+set_location_assignment PIN_D1 -to segments1[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE g01_dayseconds.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g01_dayseconds.vwf

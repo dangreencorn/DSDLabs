@@ -2,14 +2,34 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
-Type           : Worst-case tpd
+Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 25.809 ns
-From           : Hours[3]
-To             : DaySeconds[16]
+Actual Time    : 0.690 ns
+From           : bin[4]
+To             : g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|ram_block1a0~porta_address_reg4
 From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.375 ns
+From           : g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|ram_block1a0~porta_address_reg5
+To             : segments1[6]
+From Clock     : clk
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.186 ns
+From           : bin[2]
+To             : g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|ram_block1a0~porta_address_reg2
+From Clock     : --
+To Clock       : clk
 Failed Paths   : 0
 
 Type           : Total number of failed paths

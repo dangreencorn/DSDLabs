@@ -1,5 +1,5 @@
 Fitter report for Lab2
-Wed Feb 12 17:07:36 2014
+Thu Feb 13 13:49:25 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -23,19 +23,20 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
  15. Fitter Resource Utilization by Entity
  16. Delay Chain Summary
  17. Pad To Core Delay Chain Fanout
- 18. Non-Global High Fan-Out Signals
- 19. Fitter DSP Block Usage Summary
- 20. DSP Block Details
- 21. Interconnect Usage Summary
- 22. LAB Logic Elements
- 23. LAB Signals Sourced
- 24. LAB Signals Sourced Out
- 25. LAB Distinct Inputs
- 26. Fitter Device Options
- 27. Operating Settings and Conditions
- 28. Estimated Delay Added for Hold Timing
- 29. Fitter Messages
- 30. Fitter Suppressed Messages
+ 18. Control Signals
+ 19. Global & Other Fast Signals
+ 20. Non-Global High Fan-Out Signals
+ 21. Fitter RAM Summary
+ 22. Interconnect Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB Signals Sourced
+ 25. LAB Signals Sourced Out
+ 26. LAB Distinct Inputs
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Estimated Delay Added for Hold Timing
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -61,21 +62,21 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Wed Feb 12 17:07:36 2014         ;
+; Fitter Status                      ; Successful - Thu Feb 13 13:49:25 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab2                                          ;
-; Top-level Entity Name              ; Lab2                                          ;
+; Top-level Entity Name              ; g01_BCD_to_display                            ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 29 / 18,752 ( < 1 % )                         ;
-;     Total combinational functions  ; 29 / 18,752 ( < 1 % )                         ;
+; Total logic elements               ; 14 / 18,752 ( < 1 % )                         ;
+;     Total combinational functions  ; 14 / 18,752 ( < 1 % )                         ;
 ;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                            ;
 ; Total registers                    ; 0                                             ;
-; Total pins                         ; 34 / 315 ( 11 % )                             ;
+; Total pins                         ; 21 / 315 ( 7 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
-; Embedded Multiplier 9-bit elements ; 3 / 52 ( 6 % )                                ;
+; Total memory bits                  ; 512 / 239,616 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
 +------------------------------------+-----------------------------------------------+
 
@@ -141,12 +142,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.71        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;  25.0%      ;
+;     2-4 processors         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -156,8 +157,8 @@ applicable agreement for further details.
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 70 ( 0.00 % )  ;
-;     -- Achieved         ; 0 / 70 ( 0.00 % )  ;
+;     -- Requested        ; 0 / 48 ( 0.00 % )  ;
+;     -- Achieved         ; 0 / 48 ( 0.00 % )  ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -179,116 +180,103 @@ applicable agreement for further details.
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 70      ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 48      ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
+The pin-out file can be found in P:/DSDLabs/Lab2/Lab2.pin.
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                                                      ;
-+---------------------------------------------+----------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                ;
-+---------------------------------------------+----------------------------------------------------------------------+
-; Total logic elements                        ; 29 / 18,752 ( < 1 % )                                                ;
-;     -- Combinational with no register       ; 29                                                                   ;
-;     -- Register only                        ; 0                                                                    ;
-;     -- Combinational with a register        ; 0                                                                    ;
-;                                             ;                                                                      ;
-; Logic element usage by number of LUT inputs ;                                                                      ;
-;     -- 4 input functions                    ; 0                                                                    ;
-;     -- 3 input functions                    ; 12                                                                   ;
-;     -- <=2 input functions                  ; 17                                                                   ;
-;     -- Register only                        ; 0                                                                    ;
-;                                             ;                                                                      ;
-; Logic elements by mode                      ;                                                                      ;
-;     -- normal mode                          ; 3                                                                    ;
-;     -- arithmetic mode                      ; 26                                                                   ;
-;                                             ;                                                                      ;
-; Total registers*                            ; 0 / 19,649 ( 0 % )                                                   ;
-;     -- Dedicated logic registers            ; 0 / 18,752 ( 0 % )                                                   ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )                                                      ;
-;                                             ;                                                                      ;
-; Total LABs:  partially or completely used   ; 4 / 1,172 ( < 1 % )                                                  ;
-; User inserted logic elements                ; 0                                                                    ;
-; Virtual pins                                ; 0                                                                    ;
-; I/O pins                                    ; 34 / 315 ( 11 % )                                                    ;
-;     -- Clock pins                           ; 0 / 8 ( 0 % )                                                        ;
-; Global signals                              ; 0                                                                    ;
-; M4Ks                                        ; 0 / 52 ( 0 % )                                                       ;
-; Total block memory bits                     ; 0 / 239,616 ( 0 % )                                                  ;
-; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )                                                  ;
-; Embedded Multiplier 9-bit elements          ; 3 / 52 ( 6 % )                                                       ;
-; PLLs                                        ; 0 / 4 ( 0 % )                                                        ;
-; Global clocks                               ; 0 / 16 ( 0 % )                                                       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )                                                        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )                                                        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )                                                        ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                                                         ;
-; Peak interconnect usage (total/H/V)         ; 0% / 1% / 0%                                                         ;
-; Maximum fan-out node                        ; g01_dayseconds:inst|lpm_mult:mult2|mult_19o:auto_generated|mac_mult1 ;
-; Maximum fan-out                             ; 36                                                                   ;
-; Highest non-global fan-out signal           ; ~GND                                                                 ;
-; Highest non-global fan-out                  ; 4                                                                    ;
-; Total fan-out                               ; 103                                                                  ;
-; Average fan-out                             ; 1.47                                                                 ;
-+---------------------------------------------+----------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                                                                                                ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                          ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+; Total logic elements                        ; 14 / 18,752 ( < 1 % )                                                                                          ;
+;     -- Combinational with no register       ; 14                                                                                                             ;
+;     -- Register only                        ; 0                                                                                                              ;
+;     -- Combinational with a register        ; 0                                                                                                              ;
+;                                             ;                                                                                                                ;
+; Logic element usage by number of LUT inputs ;                                                                                                                ;
+;     -- 4 input functions                    ; 14                                                                                                             ;
+;     -- 3 input functions                    ; 0                                                                                                              ;
+;     -- <=2 input functions                  ; 0                                                                                                              ;
+;     -- Register only                        ; 0                                                                                                              ;
+;                                             ;                                                                                                                ;
+; Logic elements by mode                      ;                                                                                                                ;
+;     -- normal mode                          ; 14                                                                                                             ;
+;     -- arithmetic mode                      ; 0                                                                                                              ;
+;                                             ;                                                                                                                ;
+; Total registers*                            ; 0 / 19,649 ( 0 % )                                                                                             ;
+;     -- Dedicated logic registers            ; 0 / 18,752 ( 0 % )                                                                                             ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )                                                                                                ;
+;                                             ;                                                                                                                ;
+; Total LABs:  partially or completely used   ; 2 / 1,172 ( < 1 % )                                                                                            ;
+; User inserted logic elements                ; 0                                                                                                              ;
+; Virtual pins                                ; 0                                                                                                              ;
+; I/O pins                                    ; 21 / 315 ( 7 % )                                                                                               ;
+;     -- Clock pins                           ; 5 / 8 ( 63 % )                                                                                                 ;
+; Global signals                              ; 1                                                                                                              ;
+; M4Ks                                        ; 1 / 52 ( 2 % )                                                                                                 ;
+; Total block memory bits                     ; 512 / 239,616 ( < 1 % )                                                                                        ;
+; Total block memory implementation bits      ; 4,608 / 239,616 ( 2 % )                                                                                        ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )                                                                                                 ;
+; PLLs                                        ; 0 / 4 ( 0 % )                                                                                                  ;
+; Global clocks                               ; 1 / 16 ( 6 % )                                                                                                 ;
+; JTAGs                                       ; 0 / 1 ( 0 % )                                                                                                  ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )                                                                                                  ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )                                                                                                  ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                                                                                                   ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%                                                                                                   ;
+; Maximum fan-out node                        ; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[0] ;
+; Maximum fan-out                             ; 56                                                                                                             ;
+; Highest non-global fan-out signal           ; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[0] ;
+; Highest non-global fan-out                  ; 7                                                                                                              ;
+; Total fan-out                               ; 36                                                                                                             ;
+; Average fan-out                             ; 0.90                                                                                                           ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                       ;
-+------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Hours[0]   ; P17   ; 6        ; 50           ; 8            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Hours[1]   ; R18   ; 6        ; 50           ; 8            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Hours[2]   ; R19   ; 6        ; 50           ; 8            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Hours[3]   ; V11   ; 8        ; 20           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Hours[4]   ; T21   ; 6        ; 50           ; 9            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[0] ; R17   ; 6        ; 50           ; 5            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[1] ; U20   ; 6        ; 50           ; 5            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[2] ; W22   ; 6        ; 50           ; 5            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[3] ; Y20   ; 6        ; 50           ; 3            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[4] ; V20   ; 6        ; 50           ; 4            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Minutes[5] ; V22   ; 6        ; 50           ; 7            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[0] ; W11   ; 8        ; 20           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[1] ; U22   ; 6        ; 50           ; 7            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[2] ; Y21   ; 6        ; 50           ; 6            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[3] ; U21   ; 6        ; 50           ; 7            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[4] ; W21   ; 6        ; 50           ; 4            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Seconds[5] ; R11   ; 8        ; 20           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-+------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                   ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; bin[0] ; L22   ; 5        ; 50           ; 14           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; bin[1] ; L21   ; 5        ; 50           ; 14           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; bin[2] ; M22   ; 6        ; 50           ; 14           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; bin[3] ; V12   ; 7        ; 26           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; bin[4] ; W12   ; 7        ; 26           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; bin[5] ; U12   ; 8        ; 26           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clk    ; L1    ; 2        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                  ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; DaySeconds[0]  ; U1    ; 1        ; 0            ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[10] ; V2    ; 1        ; 0            ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[11] ; R2    ; 1        ; 0            ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[12] ; Y22   ; 6        ; 50           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[13] ; T5    ; 1        ; 0            ; 6            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[14] ; AA9   ; 8        ; 18           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[15] ; T11   ; 8        ; 18           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[16] ; B9    ; 3        ; 15           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[1]  ; U2    ; 1        ; 0            ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[2]  ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[3]  ; M6    ; 1        ; 0            ; 12           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[4]  ; R5    ; 1        ; 0            ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[5]  ; AB10  ; 8        ; 22           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[6]  ; R6    ; 1        ; 0            ; 7            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[7]  ; F10   ; 3        ; 18           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[8]  ; AB9   ; 8        ; 18           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; DaySeconds[9]  ; V1    ; 1        ; 0            ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                ;
++--------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++--------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; segments0[0] ; J2    ; 2        ; 0            ; 18           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[1] ; J1    ; 2        ; 0            ; 18           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[2] ; H2    ; 2        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[3] ; H1    ; 2        ; 0            ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[4] ; F2    ; 2        ; 0            ; 20           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[5] ; F1    ; 2        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments0[6] ; E2    ; 2        ; 0            ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[0] ; E1    ; 2        ; 0            ; 20           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[1] ; H6    ; 2        ; 0            ; 21           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[2] ; H5    ; 2        ; 0            ; 21           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[3] ; H4    ; 2        ; 0            ; 21           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[4] ; G3    ; 2        ; 0            ; 21           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[5] ; D2    ; 2        ; 0            ; 22           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; segments1[6] ; D1    ; 2        ; 0            ; 22           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++--------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
 +------------------------------------------------------------+
@@ -296,14 +284,14 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 9 / 41 ( 22 % )  ; 3.3V          ; --           ;
-; 2        ; 2 / 33 ( 6 % )   ; 3.3V          ; --           ;
-; 3        ; 2 / 43 ( 5 % )   ; 3.3V          ; --           ;
+; 1        ; 0 / 41 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 17 / 33 ( 52 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 0 / 39 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 17 / 36 ( 47 % ) ; 3.3V          ; --           ;
-; 7        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
-; 8        ; 7 / 43 ( 16 % )  ; 3.3V          ; --           ;
+; 5        ; 2 / 39 ( 5 % )   ; 3.3V          ; --           ;
+; 6        ; 2 / 36 ( 6 % )   ; 3.3V          ; --           ;
+; 7        ; 2 / 40 ( 5 % )   ; 3.3V          ; --           ;
+; 8        ; 1 / 43 ( 2 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -342,7 +330,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; AA6      ; 97         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA7      ; 103        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA8      ; 111        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA9      ; 114        ; 8        ; DaySeconds[14]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA9      ; 114        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA10     ; 120        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA11     ; 122        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA12     ; 128        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -364,8 +352,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; AB6      ; 96         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB7      ; 102        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB8      ; 110        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB9      ; 113        ; 8        ; DaySeconds[8]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB10     ; 119        ; 8        ; DaySeconds[5]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB9      ; 113        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB10     ; 119        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB11     ; 121        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB12     ; 127        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB13     ; 129        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -386,7 +374,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; B6       ; 319        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B7       ; 305        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B8       ; 303        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B9       ; 297        ; 3        ; DaySeconds[16]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 297        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 292        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 286        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 282        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -422,8 +410,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; C20      ; 239        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C21      ; 236        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C22      ; 237        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D1       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D2       ; 15         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D1       ; 14         ; 2        ; segments1[6]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; D2       ; 15         ; 2        ; segments1[5]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; D3       ; 2          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D4       ; 3          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D5       ; 4          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -444,8 +432,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; D20      ; 241        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D21      ; 229        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D22      ; 230        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E1       ; 20         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E2       ; 21         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E1       ; 20         ; 2        ; segments1[0]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; E2       ; 21         ; 2        ; segments0[6]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; E3       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E4       ; 7          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E5       ;            ;          ; VCCD_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -466,8 +454,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; E20      ; 234        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E21      ; 227        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E22      ; 228        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F1       ; 22         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F2       ; 23         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F1       ; 22         ; 2        ; segments0[5]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; F2       ; 23         ; 2        ; segments0[4]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; F3       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F4       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F5       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -475,7 +463,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; F7       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F8       ; 312        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F9       ; 307        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F10      ; 295        ; 3        ; DaySeconds[7]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F10      ; 295        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F11      ; 294        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F12      ; 276        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F13      ; 269        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -490,7 +478,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; F22      ; 224        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; G3       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G3       ; 16         ; 2        ; segments1[4]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; G4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G5       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G6       ; 11         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -510,12 +498,12 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; G20      ; 233        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G21      ; 221        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G22      ; 222        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H1       ; 24         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H2       ; 25         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H1       ; 24         ; 2        ; segments0[3]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; H2       ; 25         ; 2        ; segments0[2]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H3       ; 27         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H4       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H5       ; 18         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H6       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H4       ; 17         ; 2        ; segments1[3]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; H5       ; 18         ; 2        ; segments1[2]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; H6       ; 19         ; 2        ; segments1[1]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H7       ; 318        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H8       ; 314        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H9       ; 300        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -532,8 +520,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; H20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; H22      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; J1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J2       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J1       ; 29         ; 2        ; segments0[1]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; J2       ; 30         ; 2        ; segments0[0]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; J3       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; J4       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J5       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -576,7 +564,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; K20      ; 215        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K21      ; 209        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K22      ; 210        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L1       ; 38         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; L1       ; 38         ; 2        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L2       ; 39         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L3       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L4       ; 40         ; 2        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -596,14 +584,14 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; L18      ; 208        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L19      ; 207        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L20      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; L21      ; 205        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; L22      ; 206        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; L21      ; 205        ; 5        ; bin[1]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; L22      ; 206        ; 5        ; bin[0]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M1       ; 41         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M2       ; 42         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M3       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; M4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M5       ; 43         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M6       ; 44         ; 1        ; DaySeconds[3]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M6       ; 44         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M7       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; M8       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; M9       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -619,7 +607,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; M19      ; 201        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M20      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; M21      ; 203        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; M22      ; 204        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; M22      ; 204        ; 6        ; bin[2]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N1       ; 45         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N2       ; 46         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N3       ; 51         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -658,31 +646,31 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; P14      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P15      ; 193        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P16      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P17      ; 186        ; 6        ; Hours[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P17      ; 186        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P18      ; 187        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P19      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P20      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; R1       ; 57         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R2       ; 58         ; 1        ; DaySeconds[11]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R2       ; 58         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R4       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; R5       ; 63         ; 1        ; DaySeconds[4]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R6       ; 64         ; 1        ; DaySeconds[6]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R5       ; 63         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R6       ; 64         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R7       ; 54         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R8       ; 53         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R9       ; 109        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R10      ; 108        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R11      ; 116        ; 8        ; Seconds[5]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; R11      ; 116        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R12      ; 134        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R13      ; 145        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R14      ; 150        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R15      ; 151        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R16      ; 155        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R17      ; 177        ; 6        ; Minutes[0]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R18      ; 184        ; 6        ; Hours[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R19      ; 185        ; 6        ; Hours[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R17      ; 177        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R18      ; 184        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R19      ; 185        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R20      ; 192        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R21      ; 190        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R22      ; 191        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -690,13 +678,13 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; T2       ; 60         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T4       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; T5       ; 67         ; 1        ; DaySeconds[13]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T5       ; 67         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T6       ; 68         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T7       ; 91         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T8       ; 90         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T9       ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T11      ; 115        ; 8        ; DaySeconds[15]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; T11      ; 115        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T12      ; 131        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T14      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -706,10 +694,10 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; T18      ; 171        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T19      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T21      ; 188        ; 6        ; Hours[4]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T21      ; 188        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T22      ; 189        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U1       ; 61         ; 1        ; DaySeconds[0]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U2       ; 62         ; 1        ; DaySeconds[1]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U1       ; 61         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U2       ; 62         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U3       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U4       ; 80         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U5       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -719,7 +707,7 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; U9       ; 106        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U10      ; 107        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U11      ; 123        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; U12      ; 124        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; U12      ; 124        ; 8        ; bin[5]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; U13      ; 132        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U14      ; 146        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U15      ; 157        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -727,11 +715,11 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; U17      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U18      ; 170        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U19      ; 172        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U20      ; 176        ; 6        ; Minutes[1]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U21      ; 182        ; 6        ; Seconds[3]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U22      ; 183        ; 6        ; Seconds[1]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V1       ; 65         ; 1        ; DaySeconds[9]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V2       ; 66         ; 1        ; DaySeconds[10]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U21      ; 182        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U22      ; 183        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V1       ; 65         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V2       ; 66         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V4       ; 81         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V5       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -740,8 +728,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; V8       ; 98         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V9       ; 101        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V10      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V11      ; 118        ; 8        ; Hours[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; V12      ; 126        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; V11      ; 118        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V12      ; 126        ; 7        ; bin[3]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; V13      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V14      ; 142        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V15      ; 158        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -749,9 +737,9 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; V17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ; 166        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V20      ; 173        ; 6        ; Minutes[4]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V21      ; 180        ; 6        ; DaySeconds[2]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V22      ; 181        ; 6        ; Minutes[5]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V20      ; 173        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V21      ; 180        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V22      ; 181        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W1       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W2       ; 72         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -762,8 +750,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; W8       ; 100        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W9       ; 105        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W11      ; 117        ; 8        ; Seconds[0]                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; W12      ; 125        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; W11      ; 117        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; W12      ; 125        ; 7        ; bin[4]                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W14      ; 141        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W15      ; 149        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -772,8 +760,8 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; W18      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; W19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W20      ; 167        ; 6        ; ~LVDS91p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W21      ; 174        ; 6        ; Seconds[4]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W22      ; 175        ; 6        ; Minutes[2]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W21      ; 174        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W22      ; 175        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y1       ; 73         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y3       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -793,9 +781,9 @@ The pin-out file can be found in C:/Users/mcarru/Desktop/DSD/Lab2.pin.
 ; Y17      ; 159        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y18      ; 165        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y19      ; 168        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y20      ; 169        ; 6        ; Minutes[3]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; Y21      ; 178        ; 6        ; Seconds[2]                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; Y22      ; 179        ; 6        ; DaySeconds[12]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y20      ; 169        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y21      ; 178        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y22      ; 179        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -837,228 +825,163 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                   ; Library Name ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------+--------------+
-; |Lab2                                 ; 29 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 3            ; 1       ; 1         ; 34   ; 0            ; 29 (1)       ; 0 (0)             ; 0 (0)            ; |Lab2                                                                 ; work         ;
-;    |g01_dayseconds:inst|              ; 28 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 3            ; 1       ; 1         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst                                             ;              ;
-;       |lpm_add_sub:add1|              ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_add_sub:add1                            ; work         ;
-;          |add_sub_oee:auto_generated| ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated ;              ;
-;       |lpm_add_sub:add2|              ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_add_sub:add2                            ; work         ;
-;          |add_sub_uee:auto_generated| ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated ;              ;
-;       |lpm_mult:mult1|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_mult:mult1                              ; work         ;
-;          |mult_e7o:auto_generated|    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated      ;              ;
-;       |lpm_mult:mult2|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_mult:mult2                              ; work         ;
-;          |mult_19o:auto_generated|    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 2            ; 0       ; 1         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Lab2|g01_dayseconds:inst|lpm_mult:mult2|mult_19o:auto_generated      ;              ;
-+---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                         ; Library Name ;
++-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g01_BCD_to_display                             ; 14 (0)      ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 21   ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display                                                                                                         ; work         ;
+;    |g01_7_segment_decoder:seg0|                 ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_7_segment_decoder:seg0                                                                              ;              ;
+;    |g01_7_segment_decoder:seg1|                 ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_7_segment_decoder:seg1                                                                              ;              ;
+;    |g01_binary_to_BCD:BCD|                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_binary_to_BCD:BCD                                                                                   ;              ;
+;       |lpm_rom:bcd_table|                       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_binary_to_BCD:BCD|lpm_rom:bcd_table                                                                 ;              ;
+;          |altrom:srom|                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom                                                     ;              ;
+;             |altsyncram:rom_block|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block                                ;              ;
+;                |altsyncram_v111:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |g01_BCD_to_display|g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated ;              ;
++-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                     ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
-; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
-; DaySeconds[16] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[15] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[14] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[13] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[12] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[11] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[10] ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[9]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[8]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[7]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[6]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[5]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[4]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[3]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[2]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[1]  ; Output   ; --            ; --            ; --                    ; --  ;
-; DaySeconds[0]  ; Output   ; --            ; --            ; --                    ; --  ;
-; Seconds[5]     ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
-; Seconds[4]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Seconds[3]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Seconds[2]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Seconds[1]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Seconds[0]     ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
-; Minutes[0]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Minutes[1]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Minutes[2]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Minutes[3]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Minutes[4]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Minutes[5]     ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Hours[0]       ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Hours[1]       ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Hours[2]       ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; Hours[3]       ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
-; Hours[4]       ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
++---------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                   ;
++--------------+----------+---------------+---------------+-----------------------+-----+
+; Name         ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++--------------+----------+---------------+---------------+-----------------------+-----+
+; segments0[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments0[6] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; segments1[6] ; Output   ; --            ; --            ; --                    ; --  ;
+; clk          ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; bin[0]       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; bin[1]       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; bin[2]       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; bin[3]       ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
+; bin[4]       ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
+; bin[5]       ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
++--------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                                    ;
-+-------------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                                 ; Pad To Core Index ; Setting ;
-+-------------------------------------------------------------------------------------+-------------------+---------+
-; Seconds[5]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[5]~10 ; 0                 ; 6       ;
-; Seconds[4]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[4]~8  ; 0                 ; 6       ;
-; Seconds[3]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[3]~6  ; 0                 ; 6       ;
-; Seconds[2]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[2]~4  ; 0                 ; 6       ;
-; Seconds[1]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[1]~2  ; 0                 ; 6       ;
-; Seconds[0]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add2|add_sub_uee:auto_generated|result[0]~0  ; 0                 ; 6       ;
-; Minutes[0]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[0]~0  ; 0                 ; 6       ;
-; Minutes[1]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[1]~2  ; 1                 ; 6       ;
-; Minutes[2]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[2]~4  ; 0                 ; 6       ;
-; Minutes[3]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[3]~6  ; 0                 ; 6       ;
-; Minutes[4]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[4]~8  ; 1                 ; 6       ;
-; Minutes[5]                                                                          ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[5]~10 ; 0                 ; 6       ;
-; Hours[0]                                                                            ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1         ; 0                 ; 6       ;
-; Hours[1]                                                                            ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1         ; 1                 ; 6       ;
-; Hours[2]                                                                            ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1         ; 0                 ; 6       ;
-; Hours[3]                                                                            ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1         ; 0                 ; 6       ;
-; Hours[4]                                                                            ;                   ;         ;
-;      - g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1         ; 1                 ; 6       ;
-+-------------------------------------------------------------------------------------+-------------------+---------+
++---------------------------------------------------+
+; Pad To Core Delay Chain Fanout                    ;
++---------------------+-------------------+---------+
+; Source Pin / Fanout ; Pad To Core Index ; Setting ;
++---------------------+-------------------+---------+
+; clk                 ;                   ;         ;
+; bin[0]              ;                   ;         ;
+; bin[1]              ;                   ;         ;
+; bin[2]              ;                   ;         ;
+; bin[3]              ;                   ;         ;
+; bin[4]              ;                   ;         ;
+; bin[5]              ;                   ;         ;
++---------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                          ;
-+--------------------------------------------------------------------------------+---------+
-; Name                                                                           ; Fan-Out ;
-+--------------------------------------------------------------------------------+---------+
-; ~GND                                                                           ; 4       ;
-; Hours[4]                                                                       ; 1       ;
-; Hours[3]                                                                       ; 1       ;
-; Hours[2]                                                                       ; 1       ;
-; Hours[1]                                                                       ; 1       ;
-; Hours[0]                                                                       ; 1       ;
-; Minutes[5]                                                                     ; 1       ;
-; Minutes[4]                                                                     ; 1       ;
-; Minutes[3]                                                                     ; 1       ;
-; Minutes[2]                                                                     ; 1       ;
-; Minutes[1]                                                                     ; 1       ;
-; Minutes[0]                                                                     ; 1       ;
-; Seconds[0]                                                                     ; 1       ;
-; Seconds[1]                                                                     ; 1       ;
-; Seconds[2]                                                                     ; 1       ;
-; Seconds[3]                                                                     ; 1       ;
-; Seconds[4]                                                                     ; 1       ;
-; Seconds[5]                                                                     ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~6         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~5         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~4         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~3         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~2         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~1         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~0         ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT10 ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT9  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT8  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT7  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT6  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT5  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT4  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT3  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT2  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1~DATAOUT1  ; 1       ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1           ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[10]~20  ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[9]~19   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[9]~18   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[8]~17   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[8]~16   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[7]~15   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[7]~14   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[6]~13   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[6]~12   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[5]~11   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[5]~10   ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[4]~9    ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[4]~8    ; 1       ;
-; g01_dayseconds:inst|lpm_add_sub:add1|add_sub_oee:auto_generated|result[3]~7    ; 1       ;
-+--------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                  ;
++------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; clk  ; PIN_L1   ; 1       ; Clock ; yes    ; Global Clock         ; GCLK2            ; --                        ;
++------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Fitter DSP Block Usage Summary                                                                ;
-+---------------------------------------+-------------+---------------------+-------------------+
-; Statistic                             ; Number Used ; Available per Block ; Maximum Available ;
-+---------------------------------------+-------------+---------------------+-------------------+
-; Simple Multipliers (9-bit)            ; 1           ; 2                   ; 52                ;
-; Simple Multipliers (18-bit)           ; 1           ; 1                   ; 26                ;
-; Embedded Multiplier Blocks            ; 2           ; --                  ; 26                ;
-; Embedded Multiplier 9-bit elements    ; 3           ; 2                   ; 52                ;
-; Signed Embedded Multipliers           ; 0           ; --                  ; --                ;
-; Unsigned Embedded Multipliers         ; 2           ; --                  ; --                ;
-; Mixed Sign Embedded Multipliers       ; 0           ; --                  ; --                ;
-; Variable Sign Embedded Multipliers    ; 0           ; --                  ; --                ;
-; Dedicated Input Shift Register Chains ; 0           ; --                  ; --                ;
-+---------------------------------------+-------------+---------------------+-------------------+
++-------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                     ;
++------+----------+---------+----------------------+------------------+---------------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------+----------+---------+----------------------+------------------+---------------------------+
+; clk  ; PIN_L1   ; 1       ; Global Clock         ; GCLK2            ; --                        ;
++------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; DSP Block Details                                                                                                                                                                                                                                                     ;
-+-------------------------------------------------------------------------+----------------------------+-------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; Name                                                                    ; Mode                       ; Location          ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
-+-------------------------------------------------------------------------+----------------------------+-------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; g01_dayseconds:inst|lpm_mult:mult2|mult_19o:auto_generated|result[0]    ; Simple Multiplier (18-bit) ; DSPOUT_X28_Y7_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    g01_dayseconds:inst|lpm_mult:mult2|mult_19o:auto_generated|mac_mult1 ;                            ; DSPMULT_X28_Y7_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
-; g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|result[0]    ; Simple Multiplier (9-bit)  ; DSPOUT_X28_Y8_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    g01_dayseconds:inst|lpm_mult:mult1|mult_e7o:auto_generated|mac_mult1 ;                            ; DSPMULT_X28_Y8_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
-+-------------------------------------------------------------------------+----------------------------+-------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                          ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                           ; Fan-Out ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[1] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[2] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[3] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[4] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[5] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[6] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[7] ; 7       ;
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|q_a[0] ; 7       ;
+; bin[5]                                                                                                         ; 1       ;
+; bin[4]                                                                                                         ; 1       ;
+; bin[3]                                                                                                         ; 1       ;
+; bin[2]                                                                                                         ; 1       ;
+; bin[1]                                                                                                         ; 1       ;
+; bin[0]                                                                                                         ; 1       ;
+; g01_7_segment_decoder:seg1|Mux1~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux2~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux3~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux4~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux5~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux6~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg1|Mux7~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux1~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux2~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux3~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux4~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux5~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux6~0                                                                              ; 1       ;
+; g01_7_segment_decoder:seg0|Mux7~0                                                                              ; 1       ;
++----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Interconnect Usage Summary                          ;
-+----------------------------+------------------------+
-; Interconnect Resource Type ; Usage                  ;
-+----------------------------+------------------------+
-; Block interconnects        ; 75 / 54,004 ( < 1 % )  ;
-; C16 interconnects          ; 1 / 2,100 ( < 1 % )    ;
-; C4 interconnects           ; 57 / 36,000 ( < 1 % )  ;
-; Direct links               ; 8 / 54,004 ( < 1 % )   ;
-; Global clocks              ; 0 / 16 ( 0 % )         ;
-; Local interconnects        ; 0 / 18,752 ( 0 % )     ;
-; R24 interconnects          ; 24 / 1,900 ( 1 % )     ;
-; R4 interconnects           ; 107 / 46,920 ( < 1 % ) ;
-+----------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------------+-------------+
+; Name                                                                                                               ; Type ; Mode ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF                   ; Location    ;
++--------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------------+-------------+
+; g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsyncram_v111:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; Single Clock ; 64           ; 8            ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 512  ; 64                          ; 8                           ; --                          ; --                          ; 512                 ; 1    ; g01_binary_to_BCD.mif ; M4K_X17_Y16 ;
++--------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------------+-------------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
++----------------------------------------------------+
+; Interconnect Usage Summary                         ;
++----------------------------+-----------------------+
+; Interconnect Resource Type ; Usage                 ;
++----------------------------+-----------------------+
+; Block interconnects        ; 28 / 54,004 ( < 1 % ) ;
+; C16 interconnects          ; 3 / 2,100 ( < 1 % )   ;
+; C4 interconnects           ; 22 / 36,000 ( < 1 % ) ;
+; Direct links               ; 2 / 54,004 ( < 1 % )  ;
+; Global clocks              ; 1 / 16 ( 6 % )        ;
+; Local interconnects        ; 0 / 18,752 ( 0 % )    ;
+; R24 interconnects          ; 11 / 1,900 ( < 1 % )  ;
+; R4 interconnects           ; 39 / 46,920 ( < 1 % ) ;
++----------------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 7.25) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 7.00) ; Number of LABs  (Total = 2) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
+; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
 ; 3                                          ; 0                           ;
 ; 4                                          ; 0                           ;
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 1                           ;
-; 9                                          ; 1                           ;
+; 7                                          ; 2                           ;
+; 8                                          ; 0                           ;
+; 9                                          ; 0                           ;
 ; 10                                         ; 0                           ;
-; 11                                         ; 1                           ;
+; 11                                         ; 0                           ;
 ; 12                                         ; 0                           ;
 ; 13                                         ; 0                           ;
 ; 14                                         ; 0                           ;
@@ -1070,67 +993,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 7.25) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 7.00) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 7                                           ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.25) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
+; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 1                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
+; 7                                               ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.25) ; Number of LABs  (Total = 4) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 1                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 4.00) ; Number of LABs  (Total = 2) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 2                           ;
++---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1175,7 +1077,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Wed Feb 12 17:07:32 2014
+    Info: Processing started: Thu Feb 13 13:49:22 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EP2C20F484C7 for design "Lab2"
@@ -1190,60 +1092,15 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location C4
     Info: Pin ~nCSO~ is reserved at location C3
     Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
-Critical Warning: No exact pin location assignment(s) for 34 pins of 34 total pins
-    Info: Pin DaySeconds[16] not assigned to an exact location on the device
-    Info: Pin DaySeconds[15] not assigned to an exact location on the device
-    Info: Pin DaySeconds[14] not assigned to an exact location on the device
-    Info: Pin DaySeconds[13] not assigned to an exact location on the device
-    Info: Pin DaySeconds[12] not assigned to an exact location on the device
-    Info: Pin DaySeconds[11] not assigned to an exact location on the device
-    Info: Pin DaySeconds[10] not assigned to an exact location on the device
-    Info: Pin DaySeconds[9] not assigned to an exact location on the device
-    Info: Pin DaySeconds[8] not assigned to an exact location on the device
-    Info: Pin DaySeconds[7] not assigned to an exact location on the device
-    Info: Pin DaySeconds[6] not assigned to an exact location on the device
-    Info: Pin DaySeconds[5] not assigned to an exact location on the device
-    Info: Pin DaySeconds[4] not assigned to an exact location on the device
-    Info: Pin DaySeconds[3] not assigned to an exact location on the device
-    Info: Pin DaySeconds[2] not assigned to an exact location on the device
-    Info: Pin DaySeconds[1] not assigned to an exact location on the device
-    Info: Pin DaySeconds[0] not assigned to an exact location on the device
-    Info: Pin Seconds[5] not assigned to an exact location on the device
-    Info: Pin Seconds[4] not assigned to an exact location on the device
-    Info: Pin Seconds[3] not assigned to an exact location on the device
-    Info: Pin Seconds[2] not assigned to an exact location on the device
-    Info: Pin Seconds[1] not assigned to an exact location on the device
-    Info: Pin Seconds[0] not assigned to an exact location on the device
-    Info: Pin Minutes[0] not assigned to an exact location on the device
-    Info: Pin Minutes[1] not assigned to an exact location on the device
-    Info: Pin Minutes[2] not assigned to an exact location on the device
-    Info: Pin Minutes[3] not assigned to an exact location on the device
-    Info: Pin Minutes[4] not assigned to an exact location on the device
-    Info: Pin Minutes[5] not assigned to an exact location on the device
-    Info: Pin Hours[0] not assigned to an exact location on the device
-    Info: Pin Hours[1] not assigned to an exact location on the device
-    Info: Pin Hours[2] not assigned to an exact location on the device
-    Info: Pin Hours[3] not assigned to an exact location on the device
-    Info: Pin Hours[4] not assigned to an exact location on the device
+Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info: Timing-driven compilation is using the Classic Timing Analyzer
 Info: Timing requirements not specified -- quality metrics such as performance and power consumption may be sacrificed to reduce compilation time.
+Info: Automatically promoted node clk (placed in PIN L1 (CLK0, LVDSCLK0p, Input))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info: Starting register packing
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
-Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 34 (unused VREF, 3.3V VCCIO, 17 input, 17 output, 0 bidirectional)
-        Info: I/O standards used: 3.3-V LVTTL.
-Info: I/O bank details before I/O pin placement
-    Info: Statistics of I/O banks
-        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  41 pins available
-        Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  31 pins available
-        Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-        Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
-        Info: I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  39 pins available
-        Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  35 pins available
-        Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
-        Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1251,43 +1108,41 @@ Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X25_Y0 to location X37_Y13
+    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
-Warning: Found 17 output pins without output pin load capacitance assignment
-    Info: Pin "DaySeconds[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "DaySeconds[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Warning: Found 14 output pins without output pin load capacitance assignment
+    Info: Pin "segments0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "segments1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
+Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Generated suppressed messages file C:/Users/mcarru/Desktop/DSD/Lab2.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
+Info: Generated suppressed messages file P:/DSDLabs/Lab2/Lab2.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 356 megabytes
-    Info: Processing ended: Wed Feb 12 17:07:37 2014
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Thu Feb 13 13:49:26 2014
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/mcarru/Desktop/DSD/Lab2.fit.smsg.
+The suppressed messages can be found in P:/DSDLabs/Lab2/Lab2.fit.smsg.
 
 
