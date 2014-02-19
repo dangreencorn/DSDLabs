@@ -1977,23 +1977,6 @@ g01_binary_to_BCD:BCD|lpm_rom:bcd_table|altrom:srom|altsyncram:rom_block|altsync
 
 # end
 # entity
-Lab2
-# storage
-db|Lab2.(0).cnf
-db|Lab2.(0).cnf
-# case_insensitive
-# source_file
-lab2.bdf
-c9a717f98d1bba379cfff935b57885ab
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
 g01_7_segment_decoder
 # storage
 db|Lab2.(15).cnf

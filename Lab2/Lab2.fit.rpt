@@ -1,5 +1,5 @@
 Fitter report for Lab2
-Thu Feb 13 13:49:25 2014
+Wed Feb 19 16:25:03 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Feb 13 13:49:25 2014         ;
+; Fitter Status                      ; Successful - Wed Feb 19 16:25:03 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab2                                          ;
 ; Top-level Entity Name              ; g01_BCD_to_display                            ;
@@ -1077,7 +1077,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Feb 13 13:49:22 2014
+    Info: Processing started: Wed Feb 19 16:24:59 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EP2C20F484C7 for design "Lab2"
@@ -1134,8 +1134,8 @@ Info: Design uses memory blocks. Violating setup or hold times of memory block a
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Generated suppressed messages file P:/DSDLabs/Lab2/Lab2.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 356 megabytes
-    Info: Processing ended: Thu Feb 13 13:49:26 2014
+    Info: Peak virtual memory: 352 megabytes
+    Info: Processing ended: Wed Feb 19 16:25:03 2014
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
