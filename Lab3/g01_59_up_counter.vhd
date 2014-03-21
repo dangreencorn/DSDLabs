@@ -1,0 +1,53 @@
+-- entity name: g01_59_up_counter
+--
+-- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
+-- Version 1.0
+-- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
+-- Date: February 27, 2014
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+library lpm;
+use lpm.lpm_components.all;
+
+entity g01_59_up_counter is
+	port ( clk : in std_logic;
+		reset : in std_logic;
+		output_5 : out std_logic_vector(2 downto 0);
+		output_9 : out std_logic_vector(3 downto 0)
+	);
+end g01_59_up_counter;
+
+
+architecture behaviour of g01_59_up_counter is
+	signal count_9 : std_logic_vector(3 downto 0);
+	signal is_9 : std_logic;
+begin
+	is_9 <= '1' when (count_9 = "1001") else '0';
+	output_9 <= count_9;
+
+	counter_5 : lpm_counter
+		GENERIC MAP(
+			lpm_width => 3,
+			lpm_modulus => 6
+		)
+		PORT MAP(
+			aclr => reset,
+			clock => clk,
+			cnt_en => is_9,
+			q => output_5
+		);	
+	counter_9 : lpm_counter
+		GENERIC MAP(
+			lpm_width => 4,
+			lpm_modulus => 10
+		)
+		PORT MAP(
+			aclr => reset,
+			clock => clk,
+			q => count_9
+		);	
+end behaviour;
+
