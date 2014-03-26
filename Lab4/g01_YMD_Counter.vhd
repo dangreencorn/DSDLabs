@@ -21,8 +21,7 @@ entity g01_YMD_Counter is
 		D_Set : in std_logic_vector(4 downto 0);
 		Years : out std_logic_vector(11 downto 0);
 		Months : out std_logic_vector(3 downto 0);
-		Days : out std_logic_vector(4 downto 0);
-		Leap_Year_blip : out std_logic
+		Days : out std_logic_vector(4 downto 0)
 	);
 end g01_YMD_Counter;
 
@@ -44,64 +43,65 @@ begin
 		else leap_year <='0';
 		end if;
 	end process;
+	
+	is_last_day_of_month : process(int_days)
+	begin
+		if ((int_days = 30 AND (int_months = 4 OR int_months = 6 OR int_months = 9 OR int_months = 11))
+				OR
+				(int_days = 31 AND (int_months = 1 OR int_months = 3 OR int_months = 5 OR int_months = 7 OR int_months = 8 OR int_months = 10 OR int_months = 12))
+				OR
+				(int_days = 28 AND int_months = 2 AND leap_year = '0')
+				OR
+				(int_days = 29 AND int_months = 2 AND leap_year = '1')) then
+			last_day_of_month <= '1';
+		else last_day_of_month <= '0';
+		end if;
+	end process;
+	
 	days_counter : process(clock, reset)
 	begin
-		if (reset = '1') then
-			int_days <= 1;
+		if (reset = '1') then int_days <= 1;
 		elsif (clock'event and clock = '1') then
 			if (day_count_en = '1') then
-				if (load_en = '1') then
-					int_days <= to_integer(unsigned(D_Set));
-				elsif (int_days = 30) then
-					int_days <= 1;
-				else
-					int_days <= int_days + 1;
+				if (load_en = '1') then int_days <= to_integer(unsigned(D_Set));
+				elsif (last_day_of_month = '1') then int_days <= 1;
+				else int_days <= int_days + 1;
 				end if;
 			end if;
-			if (int_days = 30) then
-				month_count_en <= '1';
-			else 
-				month_count_en <= '0';
+			if (last_day_of_month = '1') then month_count_en <= '1';
+			else month_count_en <= '0';
 			end if;
-
 		end if;
 	end process;
+	
 	months_counter : process(clock, reset)
 	begin
-		if (reset = '1') then
-			int_months <= 1;
+		if (reset = '1') then int_months <= 1;
 		elsif (clock'event and clock = '1') then
-			if (month_count_en = '1') then
-				if (load_en = '1') then
-					int_months <= to_integer(unsigned(M_Set));
-				elsif (int_months = 12) then
-					int_months <= 1;
-				elsif (day_count_en = '1') then
-					int_months <= int_months + 1;
+			if (day_count_en = '1' and load_en = '1') then int_months <= to_integer(unsigned(M_Set));
+			elsif (month_count_en = '1' and day_count_en = '1') then
+				if (int_months = 12) then int_months <= 1;
+				elsif (day_count_en = '1') then int_months <= int_months + 1;
 				end if;
 			end if;
-			if (int_months = 12) then
-				year_count_en <= '1';
-			else 
-				year_count_en <= '0';
+			if (int_months = 12 and last_day_of_month = '1') then year_count_en <= '1';
+			else year_count_en <= '0';
 			end if;
 		end if;
 	end process;
+	
 	years_counter : process(clock, reset)
 	begin
-		if (reset = '1') then
-			int_years <= 1;
+		if (reset = '1') then int_years <= 1;
 		elsif (clock'event and clock = '1') then
-			if (year_count_en = '1') then
-				if (load_en = '1') then
-					int_years <= to_integer(unsigned(Y_Set));
-				elsif (day_count_en = '1') then
-					int_years <= int_years + 1;
+			if (day_count_en = '1' and load_en = '1') then int_years <= to_integer(unsigned(Y_Set));
+			elsif (year_count_en = '1' and day_count_en = '1') then
+				if (day_count_en = '1') then int_years <= int_years + 1;
 				end if;
 			end if;
 		end if;
 	end process;
-	Leap_Year_blip <= leap_year;
+	
 	Years <= std_logic_vector(to_unsigned(int_years,12));
 	Months <= std_logic_vector(to_unsigned(int_months,4));
 	Days <= std_logic_vector(to_unsigned(int_days,5));

@@ -1,5 +1,5 @@
 Assembler report for Lab3
-Thu Mar 13 17:21:15 2014
+Fri Mar 21 09:03:26 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Lab3/Lab3/Lab3.sof
-  6. Assembler Device Options: C:/Lab3/Lab3/Lab3.pof
+  5. Assembler Device Options: P:/DSDLabs/Lab3/Lab3.sof
+  6. Assembler Device Options: P:/DSDLabs/Lab3/Lab3.pof
   7. Assembler Messages
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 13 17:21:15 2014 ;
+; Assembler Status      ; Successful - Fri Mar 21 09:03:26 2014 ;
 ; Revision Name         ; Lab3                                  ;
-; Top-level Entity Name ; Lab3                                  ;
+; Top-level Entity Name ; g01_timer_testbed                     ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -83,32 +83,32 @@ applicable agreement for further details.
 +---------------------------+
 ; File Name                 ;
 +---------------------------+
-; C:/Lab3/Lab3/Lab3.sof     ;
-; C:/Lab3/Lab3/Lab3.pof     ;
+; P:/DSDLabs/Lab3/Lab3.sof  ;
+; P:/DSDLabs/Lab3/Lab3.pof  ;
 +---------------------------+
 
 
-+-------------------------------------------------+
-; Assembler Device Options: C:/Lab3/Lab3/Lab3.sof ;
-+----------------+--------------------------------+
-; Option         ; Setting                        ;
-+----------------+--------------------------------+
-; Device         ; EP2C20F484C7                   ;
-; JTAG usercode  ; 0xFFFFFFFF                     ;
-; Checksum       ; 0x0024D924                     ;
-+----------------+--------------------------------+
++----------------------------------------------------+
+; Assembler Device Options: P:/DSDLabs/Lab3/Lab3.sof ;
++----------------+-----------------------------------+
+; Option         ; Setting                           ;
++----------------+-----------------------------------+
+; Device         ; EP2C20F484C7                      ;
+; JTAG usercode  ; 0xFFFFFFFF                        ;
+; Checksum       ; 0x00251300                        ;
++----------------+-----------------------------------+
 
 
-+-------------------------------------------------+
-; Assembler Device Options: C:/Lab3/Lab3/Lab3.pof ;
-+--------------------+----------------------------+
-; Option             ; Setting                    ;
-+--------------------+----------------------------+
-; Device             ; EPCS16                     ;
-; JTAG usercode      ; 0x00000000                 ;
-; Checksum           ; 0x1DC665C7                 ;
-; Compression Ratio  ; 3                          ;
-+--------------------+----------------------------+
++----------------------------------------------------+
+; Assembler Device Options: P:/DSDLabs/Lab3/Lab3.pof ;
++--------------------+-------------------------------+
+; Option             ; Setting                       ;
++--------------------+-------------------------------+
+; Device             ; EPCS16                        ;
+; JTAG usercode      ; 0x00000000                    ;
+; Checksum           ; 0x1DC64397                    ;
+; Compression Ratio  ; 3                             ;
++--------------------+-------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Mar 13 17:21:14 2014
+    Info: Processing started: Fri Mar 21 09:03:24 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab3 -c Lab3
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 274 megabytes
-    Info: Processing ended: Thu Mar 13 17:21:15 2014
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Mar 21 09:03:27 2014
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

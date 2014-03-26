@@ -1,395 +1,39 @@
-|Lab3
-end_of_day <= g01_HMS_Counter:inst1.end_of_day
-clk => g01_HMS_Counter:inst1.clock
-clk => g01_Earth_Mars_Timer:inst.clk
-reset => g01_HMS_Counter:inst1.reset
-reset => g01_Earth_Mars_Timer:inst.reset
-enable => g01_Earth_Mars_Timer:inst.enable
-enable => g01_HMS_Counter:inst1.count_enable
-load_enable => g01_HMS_Counter:inst1.load_enable
-H_Set[0] => g01_HMS_Counter:inst1.H_Set[0]
-H_Set[1] => g01_HMS_Counter:inst1.H_Set[1]
-H_Set[2] => g01_HMS_Counter:inst1.H_Set[2]
-H_Set[3] => g01_HMS_Counter:inst1.H_Set[3]
-H_Set[4] => g01_HMS_Counter:inst1.H_Set[4]
-M_Set[0] => g01_HMS_Counter:inst1.M_Set[0]
-M_Set[1] => g01_HMS_Counter:inst1.M_Set[1]
-M_Set[2] => g01_HMS_Counter:inst1.M_Set[2]
-M_Set[3] => g01_HMS_Counter:inst1.M_Set[3]
-M_Set[4] => g01_HMS_Counter:inst1.M_Set[4]
-M_Set[5] => g01_HMS_Counter:inst1.M_Set[5]
-S_Set[0] => g01_HMS_Counter:inst1.S_Set[0]
-S_Set[1] => g01_HMS_Counter:inst1.S_Set[1]
-S_Set[2] => g01_HMS_Counter:inst1.S_Set[2]
-S_Set[3] => g01_HMS_Counter:inst1.S_Set[3]
-S_Set[4] => g01_HMS_Counter:inst1.S_Set[4]
-S_Set[5] => g01_HMS_Counter:inst1.S_Set[5]
-Hours[0] <= g01_HMS_Counter:inst1.Hours[0]
-Hours[1] <= g01_HMS_Counter:inst1.Hours[1]
-Hours[2] <= g01_HMS_Counter:inst1.Hours[2]
-Hours[3] <= g01_HMS_Counter:inst1.Hours[3]
-Hours[4] <= g01_HMS_Counter:inst1.Hours[4]
-Minutes[0] <= g01_HMS_Counter:inst1.Minutes[0]
-Minutes[1] <= g01_HMS_Counter:inst1.Minutes[1]
-Minutes[2] <= g01_HMS_Counter:inst1.Minutes[2]
-Minutes[3] <= g01_HMS_Counter:inst1.Minutes[3]
-Minutes[4] <= g01_HMS_Counter:inst1.Minutes[4]
-Minutes[5] <= g01_HMS_Counter:inst1.Minutes[5]
-Seconds[0] <= g01_HMS_Counter:inst1.Seconds[0]
-Seconds[1] <= g01_HMS_Counter:inst1.Seconds[1]
-Seconds[2] <= g01_HMS_Counter:inst1.Seconds[2]
-Seconds[3] <= g01_HMS_Counter:inst1.Seconds[3]
-Seconds[4] <= g01_HMS_Counter:inst1.Seconds[4]
-Seconds[5] <= g01_HMS_Counter:inst1.Seconds[5]
+|g01_timer_testbed
+clk => g01_Earth_Mars_Timer:timer.clk
+reset => g01_Earth_Mars_Timer:timer.reset
+reset => g01_59_up_counter:earth_counter.reset
+reset => g01_59_up_counter:mars_counter.reset
+earth_5_led[0] <= g01_7_segment_decoder:earth_tens_display.segments[0]
+earth_5_led[1] <= g01_7_segment_decoder:earth_tens_display.segments[1]
+earth_5_led[2] <= g01_7_segment_decoder:earth_tens_display.segments[2]
+earth_5_led[3] <= g01_7_segment_decoder:earth_tens_display.segments[3]
+earth_5_led[4] <= g01_7_segment_decoder:earth_tens_display.segments[4]
+earth_5_led[5] <= g01_7_segment_decoder:earth_tens_display.segments[5]
+earth_5_led[6] <= g01_7_segment_decoder:earth_tens_display.segments[6]
+earth_9_led[0] <= g01_7_segment_decoder:earth_ones_display.segments[0]
+earth_9_led[1] <= g01_7_segment_decoder:earth_ones_display.segments[1]
+earth_9_led[2] <= g01_7_segment_decoder:earth_ones_display.segments[2]
+earth_9_led[3] <= g01_7_segment_decoder:earth_ones_display.segments[3]
+earth_9_led[4] <= g01_7_segment_decoder:earth_ones_display.segments[4]
+earth_9_led[5] <= g01_7_segment_decoder:earth_ones_display.segments[5]
+earth_9_led[6] <= g01_7_segment_decoder:earth_ones_display.segments[6]
+mars_5_led[0] <= g01_7_segment_decoder:mars_tens_display.segments[0]
+mars_5_led[1] <= g01_7_segment_decoder:mars_tens_display.segments[1]
+mars_5_led[2] <= g01_7_segment_decoder:mars_tens_display.segments[2]
+mars_5_led[3] <= g01_7_segment_decoder:mars_tens_display.segments[3]
+mars_5_led[4] <= g01_7_segment_decoder:mars_tens_display.segments[4]
+mars_5_led[5] <= g01_7_segment_decoder:mars_tens_display.segments[5]
+mars_5_led[6] <= g01_7_segment_decoder:mars_tens_display.segments[6]
+mars_9_led[0] <= g01_7_segment_decoder:mars_ones_display.segments[0]
+mars_9_led[1] <= g01_7_segment_decoder:mars_ones_display.segments[1]
+mars_9_led[2] <= g01_7_segment_decoder:mars_ones_display.segments[2]
+mars_9_led[3] <= g01_7_segment_decoder:mars_ones_display.segments[3]
+mars_9_led[4] <= g01_7_segment_decoder:mars_ones_display.segments[4]
+mars_9_led[5] <= g01_7_segment_decoder:mars_ones_display.segments[5]
+mars_9_led[6] <= g01_7_segment_decoder:mars_ones_display.segments[6]
 
 
-|Lab3|g01_HMS_Counter:inst1
-clock => LPM_COUNTER:counter_seconds.CLOCK
-clock => hour_en.CLK
-clock => minute_en.CLK
-clock => end_of_day~reg0.CLK
-clock => old_sec_clock.CLK
-clock => LPM_COUNTER:counter_minutes.CLOCK
-clock => LPM_COUNTER:counter_hours.CLOCK
-reset => LPM_COUNTER:counter_seconds.ACLR
-reset => LPM_COUNTER:counter_minutes.ACLR
-reset => LPM_COUNTER:counter_hours.ACLR
-sec_clock => rising.IN1
-sec_clock => comb.IN0
-sec_clock => comb.IN1
-sec_clock => comb.IN1
-sec_clock => old_sec_clock.DATAIN
-sec_clock => rising.IN1
-count_enable => rising.IN1
-count_enable => rising.IN1
-count_enable => rising.IN1
-count_enable => comb.IN1
-load_enable => LPM_COUNTER:counter_seconds.SLOAD
-load_enable => LPM_COUNTER:counter_minutes.SLOAD
-load_enable => LPM_COUNTER:counter_hours.SLOAD
-H_Set[0] => LPM_COUNTER:counter_hours.DATA[0]
-H_Set[1] => LPM_COUNTER:counter_hours.DATA[1]
-H_Set[2] => LPM_COUNTER:counter_hours.DATA[2]
-H_Set[3] => LPM_COUNTER:counter_hours.DATA[3]
-H_Set[4] => LPM_COUNTER:counter_hours.DATA[4]
-M_Set[0] => LPM_COUNTER:counter_minutes.DATA[0]
-M_Set[1] => LPM_COUNTER:counter_minutes.DATA[1]
-M_Set[2] => LPM_COUNTER:counter_minutes.DATA[2]
-M_Set[3] => LPM_COUNTER:counter_minutes.DATA[3]
-M_Set[4] => LPM_COUNTER:counter_minutes.DATA[4]
-M_Set[5] => LPM_COUNTER:counter_minutes.DATA[5]
-S_Set[0] => LPM_COUNTER:counter_seconds.DATA[0]
-S_Set[1] => LPM_COUNTER:counter_seconds.DATA[1]
-S_Set[2] => LPM_COUNTER:counter_seconds.DATA[2]
-S_Set[3] => LPM_COUNTER:counter_seconds.DATA[3]
-S_Set[4] => LPM_COUNTER:counter_seconds.DATA[4]
-S_Set[5] => LPM_COUNTER:counter_seconds.DATA[5]
-Hours[0] <= LPM_COUNTER:counter_hours.Q[0]
-Hours[1] <= LPM_COUNTER:counter_hours.Q[1]
-Hours[2] <= LPM_COUNTER:counter_hours.Q[2]
-Hours[3] <= LPM_COUNTER:counter_hours.Q[3]
-Hours[4] <= LPM_COUNTER:counter_hours.Q[4]
-Minutes[0] <= LPM_COUNTER:counter_minutes.Q[0]
-Minutes[1] <= LPM_COUNTER:counter_minutes.Q[1]
-Minutes[2] <= LPM_COUNTER:counter_minutes.Q[2]
-Minutes[3] <= LPM_COUNTER:counter_minutes.Q[3]
-Minutes[4] <= LPM_COUNTER:counter_minutes.Q[4]
-Minutes[5] <= LPM_COUNTER:counter_minutes.Q[5]
-Seconds[0] <= LPM_COUNTER:counter_seconds.Q[0]
-Seconds[1] <= LPM_COUNTER:counter_seconds.Q[1]
-Seconds[2] <= LPM_COUNTER:counter_seconds.Q[2]
-Seconds[3] <= LPM_COUNTER:counter_seconds.Q[3]
-Seconds[4] <= LPM_COUNTER:counter_seconds.Q[4]
-Seconds[5] <= LPM_COUNTER:counter_seconds.Q[5]
-end_of_day <= end_of_day~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_seconds
-clock => cntr_gvj:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_gvj:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => cntr_gvj:auto_generated.aclr
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_gvj:auto_generated.sload
-data[0] => cntr_gvj:auto_generated.data[0]
-data[1] => cntr_gvj:auto_generated.data[1]
-data[2] => cntr_gvj:auto_generated.data[2]
-data[3] => cntr_gvj:auto_generated.data[3]
-data[4] => cntr_gvj:auto_generated.data[4]
-data[5] => cntr_gvj:auto_generated.data[5]
-cin => ~NO_FANOUT~
-q[0] <= cntr_gvj:auto_generated.q[0]
-q[1] <= cntr_gvj:auto_generated.q[1]
-q[2] <= cntr_gvj:auto_generated.q[2]
-q[3] <= cntr_gvj:auto_generated.q[3]
-q[4] <= cntr_gvj:auto_generated.q[4]
-q[5] <= cntr_gvj:auto_generated.q[5]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_seconds|cntr_gvj:auto_generated
-aclr => counter_reg_bit1a[5].ACLR
-aclr => counter_reg_bit1a[4].ACLR
-aclr => counter_reg_bit1a[3].ACLR
-aclr => counter_reg_bit1a[2].ACLR
-aclr => counter_reg_bit1a[1].ACLR
-aclr => counter_reg_bit1a[0].ACLR
-clock => counter_reg_bit1a[5].CLK
-clock => counter_reg_bit1a[4].CLK
-clock => counter_reg_bit1a[3].CLK
-clock => counter_reg_bit1a[2].CLK
-clock => counter_reg_bit1a[1].CLK
-clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-q[0] <= counter_reg_bit1a[0].REGOUT
-q[1] <= counter_reg_bit1a[1].REGOUT
-q[2] <= counter_reg_bit1a[2].REGOUT
-q[3] <= counter_reg_bit1a[3].REGOUT
-q[4] <= counter_reg_bit1a[4].REGOUT
-q[5] <= counter_reg_bit1a[5].REGOUT
-sload => _.IN1
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-dataa[4] => data_wire[2].IN0
-dataa[5] => data_wire[2].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
-datab[4] => data_wire[2].IN1
-datab[5] => data_wire[2].IN1
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_minutes
-clock => cntr_gvj:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_gvj:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => cntr_gvj:auto_generated.aclr
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_gvj:auto_generated.sload
-data[0] => cntr_gvj:auto_generated.data[0]
-data[1] => cntr_gvj:auto_generated.data[1]
-data[2] => cntr_gvj:auto_generated.data[2]
-data[3] => cntr_gvj:auto_generated.data[3]
-data[4] => cntr_gvj:auto_generated.data[4]
-data[5] => cntr_gvj:auto_generated.data[5]
-cin => ~NO_FANOUT~
-q[0] <= cntr_gvj:auto_generated.q[0]
-q[1] <= cntr_gvj:auto_generated.q[1]
-q[2] <= cntr_gvj:auto_generated.q[2]
-q[3] <= cntr_gvj:auto_generated.q[3]
-q[4] <= cntr_gvj:auto_generated.q[4]
-q[5] <= cntr_gvj:auto_generated.q[5]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_minutes|cntr_gvj:auto_generated
-aclr => counter_reg_bit1a[5].ACLR
-aclr => counter_reg_bit1a[4].ACLR
-aclr => counter_reg_bit1a[3].ACLR
-aclr => counter_reg_bit1a[2].ACLR
-aclr => counter_reg_bit1a[1].ACLR
-aclr => counter_reg_bit1a[0].ACLR
-clock => counter_reg_bit1a[5].CLK
-clock => counter_reg_bit1a[4].CLK
-clock => counter_reg_bit1a[3].CLK
-clock => counter_reg_bit1a[2].CLK
-clock => counter_reg_bit1a[1].CLK
-clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-q[0] <= counter_reg_bit1a[0].REGOUT
-q[1] <= counter_reg_bit1a[1].REGOUT
-q[2] <= counter_reg_bit1a[2].REGOUT
-q[3] <= counter_reg_bit1a[3].REGOUT
-q[4] <= counter_reg_bit1a[4].REGOUT
-q[5] <= counter_reg_bit1a[5].REGOUT
-sload => _.IN1
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-dataa[4] => data_wire[2].IN0
-dataa[5] => data_wire[2].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
-datab[4] => data_wire[2].IN1
-datab[5] => data_wire[2].IN1
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_hours
-clock => cntr_fvj:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_fvj:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => cntr_fvj:auto_generated.aclr
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => cntr_fvj:auto_generated.sload
-data[0] => cntr_fvj:auto_generated.data[0]
-data[1] => cntr_fvj:auto_generated.data[1]
-data[2] => cntr_fvj:auto_generated.data[2]
-data[3] => cntr_fvj:auto_generated.data[3]
-data[4] => cntr_fvj:auto_generated.data[4]
-cin => ~NO_FANOUT~
-q[0] <= cntr_fvj:auto_generated.q[0]
-q[1] <= cntr_fvj:auto_generated.q[1]
-q[2] <= cntr_fvj:auto_generated.q[2]
-q[3] <= cntr_fvj:auto_generated.q[3]
-q[4] <= cntr_fvj:auto_generated.q[4]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_hours|cntr_fvj:auto_generated
-aclr => counter_reg_bit1a[4].ACLR
-aclr => counter_reg_bit1a[3].ACLR
-aclr => counter_reg_bit1a[2].ACLR
-aclr => counter_reg_bit1a[1].ACLR
-aclr => counter_reg_bit1a[0].ACLR
-clock => counter_reg_bit1a[4].CLK
-clock => counter_reg_bit1a[3].CLK
-clock => counter_reg_bit1a[2].CLK
-clock => counter_reg_bit1a[1].CLK
-clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-q[0] <= counter_reg_bit1a[0].REGOUT
-q[1] <= counter_reg_bit1a[1].REGOUT
-q[2] <= counter_reg_bit1a[2].REGOUT
-q[3] <= counter_reg_bit1a[3].REGOUT
-q[4] <= counter_reg_bit1a[4].REGOUT
-sload => _.IN1
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN0
-sload => _.IN1
-
-
-|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-dataa[4] => data_wire[2].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
-datab[4] => data_wire[2].IN1
-
-
-|Lab3|g01_Earth_Mars_Timer:inst
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer
 clk => g01_Basic_Timer:earth.clk
 clk => g01_Basic_Timer:mars.clk
 enable => g01_Basic_Timer:earth.enable
@@ -400,14 +44,14 @@ epulse <= g01_Basic_Timer:earth.pulse
 mpulse <= g01_Basic_Timer:mars.pulse
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:earth
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth
 clk => LPM_COUNTER:counter.CLOCK
 enable => LPM_COUNTER:counter.CNT_EN
 reset => sload.IN1
 pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:earth|LPM_COUNTER:counter
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
 clock => cntr_8fl:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => cntr_8fl:auto_generated.cnt_en
@@ -520,7 +164,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated
 clock => counter_reg_bit1a[39].CLK
 clock => counter_reg_bit1a[38].CLK
 clock => counter_reg_bit1a[37].CLK
@@ -646,14 +290,14 @@ sload => _.IN1
 sload => counter_reg_bit1a[39].IN1
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:mars
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars
 clk => LPM_COUNTER:counter.CLOCK
 enable => LPM_COUNTER:counter.CNT_EN
 reset => sload.IN1
 pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:mars|LPM_COUNTER:counter
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
 clock => cntr_8fl:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => cntr_8fl:auto_generated.cnt_en
@@ -766,7 +410,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:mars|LPM_COUNTER:counter|cntr_8fl:auto_generated
+|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter|cntr_8fl:auto_generated
 clock => counter_reg_bit1a[39].CLK
 clock => counter_reg_bit1a[38].CLK
 clock => counter_reg_bit1a[37].CLK
@@ -890,5 +534,493 @@ q[38] <= counter_reg_bit1a[38].REGOUT
 q[39] <= counter_reg_bit1a[39].REGOUT
 sload => _.IN1
 sload => counter_reg_bit1a[39].IN1
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter
+clk => LPM_COUNTER:counter_5.CLOCK
+clk => LPM_COUNTER:counter_9.CLOCK
+reset => LPM_COUNTER:counter_5.ACLR
+reset => LPM_COUNTER:counter_9.ACLR
+output_5[0] <= LPM_COUNTER:counter_5.Q[0]
+output_5[1] <= LPM_COUNTER:counter_5.Q[1]
+output_5[2] <= LPM_COUNTER:counter_5.Q[2]
+output_9[0] <= LPM_COUNTER:counter_9.Q[0]
+output_9[1] <= LPM_COUNTER:counter_9.Q[1]
+output_9[2] <= LPM_COUNTER:counter_9.Q[2]
+output_9[3] <= LPM_COUNTER:counter_9.Q[3]
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_5
+clock => cntr_gui:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gui:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_gui:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_gui:auto_generated.q[0]
+q[1] <= cntr_gui:auto_generated.q[1]
+q[2] <= cntr_gui:auto_generated.q[2]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_5|cntr_gui:auto_generated
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => counter_reg_bit1a[2].IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_9
+clock => cntr_5bi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_5bi:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_5bi:auto_generated.q[0]
+q[1] <= cntr_5bi:auto_generated.q[1]
+q[2] <= cntr_5bi:auto_generated.q[2]
+q[3] <= cntr_5bi:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_9|cntr_5bi:auto_generated
+aclr => counter_reg_bit1a[3].ACLR
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_9|cntr_5bi:auto_generated|cmpr_8cc:cmpr2
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter
+clk => LPM_COUNTER:counter_5.CLOCK
+clk => LPM_COUNTER:counter_9.CLOCK
+reset => LPM_COUNTER:counter_5.ACLR
+reset => LPM_COUNTER:counter_9.ACLR
+output_5[0] <= LPM_COUNTER:counter_5.Q[0]
+output_5[1] <= LPM_COUNTER:counter_5.Q[1]
+output_5[2] <= LPM_COUNTER:counter_5.Q[2]
+output_9[0] <= LPM_COUNTER:counter_9.Q[0]
+output_9[1] <= LPM_COUNTER:counter_9.Q[1]
+output_9[2] <= LPM_COUNTER:counter_9.Q[2]
+output_9[3] <= LPM_COUNTER:counter_9.Q[3]
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_5
+clock => cntr_gui:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gui:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_gui:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_gui:auto_generated.q[0]
+q[1] <= cntr_gui:auto_generated.q[1]
+q[2] <= cntr_gui:auto_generated.q[2]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_5|cntr_gui:auto_generated
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => counter_reg_bit1a[2].IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_9
+clock => cntr_5bi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_5bi:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_5bi:auto_generated.q[0]
+q[1] <= cntr_5bi:auto_generated.q[1]
+q[2] <= cntr_5bi:auto_generated.q[2]
+q[3] <= cntr_5bi:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_9|cntr_5bi:auto_generated
+aclr => counter_reg_bit1a[3].ACLR
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_9|cntr_5bi:auto_generated|cmpr_8cc:cmpr2
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|g01_timer_testbed|g01_7_segment_decoder:earth_tens_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g01_timer_testbed|g01_7_segment_decoder:earth_ones_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g01_timer_testbed|g01_7_segment_decoder:mars_tens_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g01_timer_testbed|g01_7_segment_decoder:mars_ones_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 

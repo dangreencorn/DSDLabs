@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.078 ns
-From           : M_Set[1]
-To             : g01_HMS_Counter:inst1|lpm_counter:counter_minutes|cntr_gvj:auto_generated|safe_q[1]
+Actual Time    : 2.128 ns
+From           : reset
+To             : g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[16]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.720 ns
-From           : g01_HMS_Counter:inst1|lpm_counter:counter_seconds|cntr_gvj:auto_generated|safe_q[4]
-To             : Seconds[4]
+Actual Time    : 15.962 ns
+From           : g01_59_up_counter:mars_counter|lpm_counter:counter_5|cntr_gui:auto_generated|current_reg_q_w[1]
+To             : mars_5_led[6]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.952 ns
+Actual Time    : 2.399 ns
 From           : altera_internal_jtag~TMSUTAP
-To             : sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm|tms_cnt[0]
+To             : sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm|state[2]
 From Clock     : --
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
@@ -45,8 +45,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 116.41 MHz ( period = 8.590 ns )
-From           : sld_hub:auto_hub|irf_reg[1][5]
+Actual Time    : 111.28 MHz ( period = 8.986 ns )
+From           : sld_hub:auto_hub|irf_reg[1][4]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
@@ -55,9 +55,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 153.59 MHz ( period = 6.511 ns )
-From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:last_trigger_address_var[11]
+Actual Time    : 172.59 MHz ( period = 5.794 ns )
+From           : g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[39]
+To             : g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[16]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -66,11 +66,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : g01_HMS_Counter:inst1|lpm_counter:counter_hours|cntr_fvj:auto_generated|safe_q[4]
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_data_in_reg[4]
+From           : g01_59_up_counter:earth_counter|lpm_counter:counter_5|cntr_gui:auto_generated|current_reg_q_w[1]
+To             : g01_59_up_counter:earth_counter|lpm_counter:counter_5|cntr_gui:auto_generated|current_reg_q_w[1]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 82
+Failed Paths   : 31
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 82
+Failed Paths   : 31
 
 --------------------------------------------------------------------------------------
 
