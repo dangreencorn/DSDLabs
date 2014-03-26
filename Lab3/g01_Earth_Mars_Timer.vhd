@@ -1,5 +1,8 @@
 -- entity name: g01_Earth_Mars_Timer
 --
+-- This circuit is supposed to use a 50 MHz clock to produce a 
+-- 20ns pulse every earth and mars second on the EPULSE and MPULSE lines respectively
+--
 -- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
 -- Version 1.0
 -- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
@@ -35,7 +38,7 @@ begin
 		PORT MAP ( clk => clk, enable => enable, reset => reset, pulse => epulse);
 	mars : g01_Basic_Timer
 		GENERIC MAP ( count_val => 51374562)
---		GENERIC MAP ( count_val => 102)
+--		GENERIC MAP ( count_val => 1027)
 		PORT MAP ( clk => clk, enable => enable, reset => reset, pulse => mpulse);
 end behaviour;
 

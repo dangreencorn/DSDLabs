@@ -1,5 +1,8 @@
 -- entity name: g01_Basic_Timer
 --
+-- This frequency divider is supposed to divide the input clock by a factor of (count_val + 1)
+-- It produces a one-clock period pulse for every (count_val + 1) clock pulses, when enabled
+--
 -- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
 -- Version 1.0
 -- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
