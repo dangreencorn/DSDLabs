@@ -17,6 +17,7 @@ entity g01_YMD_TestBed is
 		load_en : in std_logic;
 		s0 : in std_logic;
 		s1 : in std_logic;
+		input : in std_logic_vector(5 downto 0);
 		led0 : out std_logic_vector(6 downto 0);
 		led1 : out std_logic_vector(6 downto 0);
 		led2 : out std_logic_vector(6 downto 0);
@@ -66,6 +67,9 @@ architecture behaviour of g01_YMD_TestBed is
 	signal bcd_out : std_logic_vector(15 downto 0);
 	signal led1_rb : std_logic;
 	signal led2_rb : std_logic;
+	signal year_set : std_logic_vector(11 downto 0);
+	signal month_set : std_logic_vector(3 downto 0);
+	signal day_set : std_logic_vector(4 downto 0);
 	------- binary to bcd converter
 	------- Uses the ADD-3 (or Double-Dabble) algorithm
 	------- 12 bit std_logic_vector in, 16 bit std_logic_vector out (4 BCD digits)
@@ -108,9 +112,9 @@ begin
 					reset => reset,
 					day_count_en => epulse, 
 					load_en => load_en, 
-					Y_Set => "011111000101",
-					M_Set => "1010",
-					D_Set => "10111",
+					Y_Set => year_set,
+					M_Set => month_set,
+					D_Set => day_set,
 					Years => year,
 					Months => month,
 					Days => day
@@ -118,17 +122,29 @@ begin
 	mux : process(s0, s1, year, month, day)
 	begin
 		if (s0='0' AND s1='0') then
-			bcd_in <= year;
+			bcd_in <= "0000000" & day;
 		elsif (s0='1' AND s1='0') then
 			bcd_in <= "00000000" & month;
 		elsif (s0='0' AND s1='1') then
-			bcd_in <= "0000000" & day;
+			bcd_in <= year;
 		elsif (s0='1' AND s1='1') then
-			bcd_in <= "000000000000";
+			bcd_in <= year;
 		end if;
+		bcd_out <= to_bcd(bcd_in);
 	end process;
 	
-	bcd_out <= to_bcd(bcd_in);
+	demux : process(s0, s1, input)
+	begin
+		if (s0='0' AND s1='0') then
+			day_set <= input(4 downto 0);
+		elsif (s0='1' AND s1='0') then
+			month_set <= input(3 downto 0);
+		elsif (s0='0' AND s1='1') then
+			year_set(5 downto 0) <= input;
+		elsif (s0='1' AND s1='1') then
+			year_set(11 downto 6) <= input;
+		end if;
+	end process;
 	
 	led0_decoder : g01_7_segment_decoder
 		PORT MAP (code => bcd_out(3 downto 0), RippleBlank_In => '0', segments => led0);
@@ -137,6 +153,6 @@ begin
 	led2_decoder : g01_7_segment_decoder
 		PORT MAP (code => bcd_out(11 downto 8), RippleBlank_In => led2_rb, RippleBlank_Out => led1_rb, segments => led2);
 	led3_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(15 downto 12), RippleBlank_In => '1', RippleBlank_Out => led1_rb, segments => led3);
+		PORT MAP (code => bcd_out(15 downto 12), RippleBlank_In => '1', RippleBlank_Out => led2_rb, segments => led3);
 end behaviour;
 

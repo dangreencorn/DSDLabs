@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g01_YMD_Counter
-Tue Mar 25 19:41:23 2014
+Wed Mar 26 17:06:02 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -13,22 +13,22 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
- 13. Source assignments for g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
- 14. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth
- 15. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
- 16. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars
- 17. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
- 18. Parameter Settings for Inferred Entity Instance: g01_YMD_Counter:ymd|lpm_divide:Mod0
- 19. Parameter Settings for Inferred Entity Instance: g01_YMD_Counter:ymd|lpm_divide:Mod1
- 20. Port Connectivity Checks: "g01_7_segment_decoder:led3_decoder"
- 21. Port Connectivity Checks: "g01_7_segment_decoder:led1_decoder"
- 22. Port Connectivity Checks: "g01_7_segment_decoder:led0_decoder"
- 23. Port Connectivity Checks: "g01_YMD_Counter:ymd"
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
+ 14. Source assignments for g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
+ 15. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth
+ 16. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
+ 17. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars
+ 18. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
+ 19. Parameter Settings for Inferred Entity Instance: g01_YMD_Counter:ymd|lpm_divide:Mod0
+ 20. Parameter Settings for Inferred Entity Instance: g01_YMD_Counter:ymd|lpm_divide:Mod1
+ 21. Port Connectivity Checks: "g01_7_segment_decoder:led3_decoder"
+ 22. Port Connectivity Checks: "g01_7_segment_decoder:led1_decoder"
+ 23. Port Connectivity Checks: "g01_7_segment_decoder:led0_decoder"
  24. Port Connectivity Checks: "g01_Earth_Mars_Timer:timer"
  25. Analysis & Synthesis Messages
 
@@ -56,16 +56,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 25 19:41:22 2014         ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 26 17:06:02 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g01_YMD_Counter                               ;
 ; Top-level Entity Name              ; g01_YMD_TestBed                               ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 511                                           ;
-;     Total combinational functions  ; 511                                           ;
-;     Dedicated logic registers      ; 63                                            ;
-; Total registers                    ; 63                                            ;
-; Total pins                         ; 34                                            ;
+; Total logic elements               ; 525                                           ;
+;     Total combinational functions  ; 504                                           ;
+;     Dedicated logic registers      ; 84                                            ;
+; Total registers                    ; 84                                            ;
+; Total pins                         ; 40                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -192,27 +192,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 511   ;
+; Estimated Total logic elements              ; 525   ;
 ;                                             ;       ;
-; Total combinational functions               ; 511   ;
+; Total combinational functions               ; 504   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 209   ;
-;     -- 3 input functions                    ; 101   ;
-;     -- <=2 input functions                  ; 201   ;
+;     -- 4 input functions                    ; 201   ;
+;     -- 3 input functions                    ; 98    ;
+;     -- <=2 input functions                  ; 205   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 383   ;
+;     -- normal mode                          ; 376   ;
 ;     -- arithmetic mode                      ; 128   ;
 ;                                             ;       ;
-; Total registers                             ; 63    ;
-;     -- Dedicated logic registers            ; 63    ;
+; Total registers                             ; 84    ;
+;     -- Dedicated logic registers            ; 84    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 34    ;
+; I/O pins                                    ; 40    ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 63    ;
-; Total fan-out                               ; 1813  ;
-; Average fan-out                             ; 2.98  ;
+; Maximum fan-out                             ; 84    ;
+; Total fan-out                               ; 1843  ;
+; Average fan-out                             ; 2.93  ;
 +---------------------------------------------+-------+
 
 
@@ -221,16 +221,16 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g01_YMD_TestBed                          ; 511 (92)          ; 63 (0)       ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |g01_YMD_TestBed                                                                                                                     ; work         ;
-;    |g01_7_segment_decoder:led0_decoder|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led0_decoder                                                                                  ; work         ;
-;    |g01_7_segment_decoder:led1_decoder|   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led1_decoder                                                                                  ; work         ;
-;    |g01_7_segment_decoder:led2_decoder|   ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led2_decoder                                                                                  ; work         ;
-;    |g01_7_segment_decoder:led3_decoder|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led3_decoder                                                                                  ; work         ;
+; |g01_YMD_TestBed                          ; 504 (85)          ; 84 (21)      ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |g01_YMD_TestBed                                                                                                                     ; work         ;
+;    |g01_7_segment_decoder:led0_decoder|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led0_decoder                                                                                  ;              ;
+;    |g01_7_segment_decoder:led1_decoder|   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led1_decoder                                                                                  ;              ;
+;    |g01_7_segment_decoder:led2_decoder|   ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led2_decoder                                                                                  ;              ;
+;    |g01_7_segment_decoder:led3_decoder|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_7_segment_decoder:led3_decoder                                                                                  ;              ;
 ;    |g01_Earth_Mars_Timer:timer|           ; 56 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer                                                                                          ;              ;
 ;       |g01_Basic_Timer:earth|             ; 56 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth                                                                    ;              ;
-;          |lpm_counter:counter|            ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter                                                ; work         ;
-;             |cntr_8fl:auto_generated|     ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                        ; work         ;
-;    |g01_YMD_Counter:ymd|                  ; 316 (83)          ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd                                                                                                 ; work         ;
+;          |lpm_counter:counter|            ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter                                                ;              ;
+;             |cntr_8fl:auto_generated|     ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                        ;              ;
+;    |g01_YMD_Counter:ymd|                  ; 317 (84)          ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd                                                                                                 ;              ;
 ;       |lpm_divide:Mod0|                   ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod0                                                                                 ;              ;
 ;          |lpm_divide_u7m:auto_generated|  ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
 ;             |sign_div_unsign_5nh:divider| ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
@@ -241,6 +241,23 @@ applicable agreement for further details.
 ;                |alt_u_div_e6f:divider|    ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; bcd_in[5]                                          ; VCC                 ; yes                    ;
+; bcd_in[6]                                          ; VCC                 ; yes                    ;
+; bcd_in[7]                                          ; VCC                 ; yes                    ;
+; bcd_in[8]                                          ; VCC                 ; yes                    ;
+; bcd_in[9]                                          ; VCC                 ; yes                    ;
+; bcd_in[11]                                         ; VCC                 ; yes                    ;
+; bcd_in[10]                                         ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
@@ -258,12 +275,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 63    ;
+; Total registers                              ; 84    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 40    ;
 ; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Clock Enable       ; 82    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -273,9 +290,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; g01_YMD_Counter:ymd|int_days[0]        ; 6       ;
+; g01_YMD_Counter:ymd|int_months[0]      ; 7       ;
 ; g01_YMD_Counter:ymd|int_years[0]       ; 4       ;
-; g01_YMD_Counter:ymd|int_days[0]        ; 7       ;
-; g01_YMD_Counter:ymd|int_months[0]      ; 8       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
@@ -285,10 +302,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|int_years[9]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|int_days[3]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|int_months[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |g01_YMD_TestBed|bcd_in[1]                         ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|int_years[4]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g01_YMD_TestBed|g01_YMD_Counter:ymd|int_months[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |g01_YMD_TestBed|bcd_in[1]                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -463,27 +480,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "g01_YMD_Counter:ymd" ;
-+--------------+-------+----------+---------------+
-; Port         ; Type  ; Severity ; Details       ;
-+--------------+-------+----------+---------------+
-; y_set[10..6] ; Input ; Info     ; Stuck at VCC  ;
-; y_set[5..3]  ; Input ; Info     ; Stuck at GND  ;
-; y_set[11]    ; Input ; Info     ; Stuck at GND  ;
-; y_set[2]     ; Input ; Info     ; Stuck at VCC  ;
-; y_set[1]     ; Input ; Info     ; Stuck at GND  ;
-; y_set[0]     ; Input ; Info     ; Stuck at VCC  ;
-; m_set[3]     ; Input ; Info     ; Stuck at VCC  ;
-; m_set[2]     ; Input ; Info     ; Stuck at GND  ;
-; m_set[1]     ; Input ; Info     ; Stuck at VCC  ;
-; m_set[0]     ; Input ; Info     ; Stuck at GND  ;
-; d_set[2..0]  ; Input ; Info     ; Stuck at VCC  ;
-; d_set[4]     ; Input ; Info     ; Stuck at VCC  ;
-; d_set[3]     ; Input ; Info     ; Stuck at GND  ;
-+--------------+-------+----------+---------------+
-
-
 +------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "g01_Earth_Mars_Timer:timer"                                                           ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -499,7 +495,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Mar 25 19:41:16 2014
+    Info: Processing started: Wed Mar 26 17:05:56 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c g01_YMD_Counter
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g01_ymd_counter.vhd
@@ -509,19 +505,21 @@ Info: Found 2 design units, including 1 entities, in source file g01_ymd_testbed
     Info: Found design unit 1: g01_YMD_TestBed-behaviour
     Info: Found entity 1: g01_YMD_TestBed
 Info: Elaborating entity "g01_YMD_TestBed" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at g01_YMD_TestBed.vhd(118): inferring latch(es) for signal or variable "bcd_in", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "bcd_in[0]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[1]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[2]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[3]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[4]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[5]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[6]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[7]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[8]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[9]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[10]" at g01_YMD_TestBed.vhd(118)
-Info (10041): Inferred latch for "bcd_in[11]" at g01_YMD_TestBed.vhd(118)
+Warning (10492): VHDL Process Statement warning at g01_YMD_TestBed.vhd(133): signal "bcd_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at g01_YMD_TestBed.vhd(122): inferring latch(es) for signal or variable "bcd_in", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at g01_YMD_TestBed.vhd(138): signal "clock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "bcd_in[0]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[1]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[2]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[3]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[4]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[5]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[6]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[7]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[8]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[9]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[10]" at g01_YMD_TestBed.vhd(122)
+Info (10041): Inferred latch for "bcd_in[11]" at g01_YMD_TestBed.vhd(122)
 Warning: Using design file g01_earth_mars_timer.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: g01_Earth_Mars_Timer-behaviour
     Info: Found entity 1: g01_Earth_Mars_Timer
@@ -573,25 +571,11 @@ Warning: LATCH primitive "bcd_in[1]" is permanently enabled
 Warning: LATCH primitive "bcd_in[2]" is permanently enabled
 Warning: LATCH primitive "bcd_in[3]" is permanently enabled
 Warning: LATCH primitive "bcd_in[4]" is permanently enabled
-Warning: LATCH primitive "bcd_in[5]" is permanently enabled
-Warning: LATCH primitive "bcd_in[6]" is permanently enabled
-Warning: LATCH primitive "bcd_in[7]" is permanently enabled
-Warning: LATCH primitive "bcd_in[8]" is permanently enabled
-Warning: LATCH primitive "bcd_in[9]" is permanently enabled
-Warning: LATCH primitive "bcd_in[10]" is permanently enabled
-Warning: LATCH primitive "bcd_in[11]" is permanently enabled
 Warning: LATCH primitive "bcd_in[0]" is permanently enabled
 Warning: LATCH primitive "bcd_in[1]" is permanently enabled
 Warning: LATCH primitive "bcd_in[2]" is permanently enabled
 Warning: LATCH primitive "bcd_in[3]" is permanently enabled
 Warning: LATCH primitive "bcd_in[4]" is permanently enabled
-Warning: LATCH primitive "bcd_in[5]" is permanently enabled
-Warning: LATCH primitive "bcd_in[6]" is permanently enabled
-Warning: LATCH primitive "bcd_in[7]" is permanently enabled
-Warning: LATCH primitive "bcd_in[8]" is permanently enabled
-Warning: LATCH primitive "bcd_in[9]" is permanently enabled
-Warning: LATCH primitive "bcd_in[10]" is permanently enabled
-Warning: LATCH primitive "bcd_in[11]" is permanently enabled
 Warning: LATCH primitive "bcd_in[0]" is permanently enabled
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_YMD_Counter:ymd|Mod0"
@@ -657,14 +641,14 @@ Info: 40 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
     Info: Register "g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[1]" lost all its fanouts during netlist optimizations.
     Info: Register "g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[0]" lost all its fanouts during netlist optimizations.
-Info: Implemented 546 device resources after synthesis - the final resource count might be different
-    Info: Implemented 6 input pins
+Info: Implemented 566 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
     Info: Implemented 28 output pins
-    Info: Implemented 512 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 323 megabytes
-    Info: Processing ended: Tue Mar 25 19:41:23 2014
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Implemented 526 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 324 megabytes
+    Info: Processing ended: Wed Mar 26 17:06:02 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
