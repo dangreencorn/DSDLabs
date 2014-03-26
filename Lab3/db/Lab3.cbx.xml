@@ -1,17 +1,18 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Lab3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter" CBX_FILE_NAME="cntr_hui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|g01_Earth_Mars_Timer:inst|g01_Basic_Timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_hours" CBX_FILE_NAME="cntr_fvj.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_minutes" CBX_FILE_NAME="cntr_gvj.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|g01_HMS_Counter:inst1|LPM_COUNTER:counter_seconds" CBX_FILE_NAME="cntr_gvj.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_doc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter" CBX_FILE_NAME="cntr_65j.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_hss3.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Lab3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter" CBX_FILE_NAME="cntr_5ci.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_5" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_59_up_counter:mars_counter|LPM_COUNTER:counter_9" CBX_FILE_NAME="cntr_5bi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter" CBX_FILE_NAME="cntr_hui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_5" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_59_up_counter:earth_counter|LPM_COUNTER:counter_9" CBX_FILE_NAME="cntr_5bi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter" CBX_FILE_NAME="cntr_65j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_hss3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter" CBX_FILE_NAME="cntr_5ci.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_doc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_timer_testbed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

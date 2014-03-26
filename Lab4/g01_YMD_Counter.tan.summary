@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.739 ns
-From           : D_Set[4]
-To             : int_days[4]
+Actual Time    : 5.417 ns
+From           : load_en
+To             : g01_YMD_Counter:ymd|int_months[2]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,19 +15,29 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.990 ns
-From           : int_days[4]
-To             : Days[4]
+Actual Time    : 24.906 ns
+From           : g01_YMD_Counter:ymd|int_years[9]
+To             : led1[1]
 From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.680 ns
+From           : s0
+To             : led1[1]
+From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.153 ns
-From           : D_Set[2]
-To             : int_days[2]
+Actual Time    : -0.777 ns
+From           : reset
+To             : g01_YMD_Counter:ymd|month_count_en
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -35,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : int_years[0]
-To             : int_years[11]
+Actual Time    : 45.87 MHz ( period = 21.803 ns )
+From           : g01_YMD_Counter:ymd|int_years[7]
+To             : g01_YMD_Counter:ymd|int_days[4]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
