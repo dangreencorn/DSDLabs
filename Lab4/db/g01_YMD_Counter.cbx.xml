@@ -1,9 +1,13 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g01_YMD_Counter">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_YMD_TestBed|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_YMD_TestBed|g01_YMD_Counter:ymd|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|LPM_COUNTER:day_count" CBX_FILE_NAME="cntr_pvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours" CBX_FILE_NAME="cntr_fvj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes" CBX_FILE_NAME="cntr_gvj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds" CBX_FILE_NAME="cntr_gvj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|lpm_mult:Mult0" CBX_FILE_NAME="mult_9ct.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|LPM_COUNTER:sec_count" CBX_FILE_NAME="cntr_h6j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_UTC_to_MTC|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
