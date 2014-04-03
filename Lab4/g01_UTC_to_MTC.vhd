@@ -20,7 +20,7 @@ end g01_UTC_to_MTC;
 architecture behaviour of g01_UTC_to_MTC is
 	-- components
 	-- 	lpm_counter
-	component g01_HMS_Counter is
+	component g01_HMS_Counter
 		port ( 
 			clock : in std_logic;
 			reset : in std_logic;
@@ -36,7 +36,7 @@ architecture behaviour of g01_UTC_to_MTC is
 			end_of_day : out std_logic
 		);
 	end component;
-	component g01_YMD_Counter is
+	component g01_YMD_Counter
 		port ( 
 			clock : in std_logic;
 			reset : in std_logic;
@@ -50,7 +50,7 @@ architecture behaviour of g01_UTC_to_MTC is
 			Days : out std_logic_vector(4 downto 0)
 		);
 	end component;
-	entity g01_Seconds_to_Days is
+	entity g01_Seconds_to_Days
 		port ( 	seconds			: in unsigned(16 downto 0);
 				day_fraction 	: out unsigned(39 downto 0));
 	end g01_Seconds_to_Days;
