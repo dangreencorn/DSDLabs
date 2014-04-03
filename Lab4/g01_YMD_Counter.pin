@@ -75,20 +75,20 @@ GND                          : A1        : gnd    :                   :         
 VCCIO3                       : A2        : power  :                   : 3.3V    : 3         :                
 GND*                         : A3        :        :                   :         : 3         :                
 GND*                         : A4        :        :                   :         : 3         :                
-GND*                         : A5        :        :                   :         : 3         :                
-GND*                         : A6        :        :                   :         : 3         :                
+JD_day[28]                   : A5        : output : 3.3-V LVTTL       :         : 3         : N              
+JD_second[16]                : A6        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : A7        :        :                   :         : 3         :                
 GND*                         : A8        :        :                   :         : 3         :                
-GND*                         : A9        :        :                   :         : 3         :                
-led2[2]                      : A10       : output : 3.3-V LVTTL       :         : 3         : N              
-led1[4]                      : A11       : output : 3.3-V LVTTL       :         : 3         : N              
+JD_day[27]                   : A9        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : A10       :        :                   :         : 3         :                
+year[7]                      : A11       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : A12       :        :                   :         : 4         :                
-led3[3]                      : A13       : output : 3.3-V LVTTL       :         : 4         : N              
-led3[1]                      : A14       : output : 3.3-V LVTTL       :         : 4         : N              
-load_en                      : A15       : input  : 3.3-V LVTTL       :         : 4         : N              
-s1                           : A16       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : A17       :        :                   :         : 4         :                
-GND*                         : A18       :        :                   :         : 4         :                
+seconds_int_out[1]           : A13       : output : 3.3-V LVTTL       :         : 4         : N              
+years_int_out[10]            : A14       : output : 3.3-V LVTTL       :         : 4         : N              
+hours_int_out[3]             : A15       : output : 3.3-V LVTTL       :         : 4         : N              
+minute[3]                    : A16       : input  : 3.3-V LVTTL       :         : 4         : N              
+days_int_out[0]              : A17       : output : 3.3-V LVTTL       :         : 4         : N              
+JD_second[0]                 : A18       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : A19       :        :                   :         : 4         :                
 GND*                         : A20       :        :                   :         : 4         :                
 VCCIO4                       : A21       : power  :                   : 3.3V    : 4         :                
@@ -96,67 +96,67 @@ GND                          : A22       : gnd    :                   :         
 VCCIO1                       : AA1       : power  :                   : 3.3V    : 1         :                
 GND                          : AA2       : gnd    :                   :         :           :                
 GND*                         : AA3       :        :                   :         : 8         :                
-GND*                         : AA4       :        :                   :         : 8         :                
+JD_day[15]                   : AA4       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AA5       :        :                   :         : 8         :                
-GND*                         : AA6       :        :                   :         : 8         :                
-GND*                         : AA7       :        :                   :         : 8         :                
-GND*                         : AA8       :        :                   :         : 8         :                
-GND*                         : AA9       :        :                   :         : 8         :                
-led2[5]                      : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
-led1[3]                      : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
-GND*                         : AA12      :        :                   :         : 7         :                
-GND*                         : AA13      :        :                   :         : 7         :                
-GND*                         : AA14      :        :                   :         : 7         :                
-GND*                         : AA15      :        :                   :         : 7         :                
-GND*                         : AA16      :        :                   :         : 7         :                
-GND*                         : AA17      :        :                   :         : 7         :                
+MSecond[2]                   : AA6       : output : 3.3-V LVTTL       :         : 8         : N              
+MMinute[4]                   : AA7       : output : 3.3-V LVTTL       :         : 8         : N              
+JD_day[6]                    : AA8       : output : 3.3-V LVTTL       :         : 8         : N              
+MHour[3]                     : AA9       : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AA10      :        :                   :         : 8         :                
+second[5]                    : AA11      : input  : 3.3-V LVTTL       :         : 8         : N              
+seconds_int_out[2]           : AA12      : output : 3.3-V LVTTL       :         : 7         : N              
+seconds_int_out[4]           : AA13      : output : 3.3-V LVTTL       :         : 7         : N              
+hours_int_out[2]             : AA14      : output : 3.3-V LVTTL       :         : 7         : N              
+hour[1]                      : AA15      : input  : 3.3-V LVTTL       :         : 7         : N              
+minutes_int_out[1]           : AA16      : output : 3.3-V LVTTL       :         : 7         : N              
+hour[3]                      : AA17      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AA18      :        :                   :         : 7         :                
 GND*                         : AA19      :        :                   :         : 7         :                
-GND*                         : AA20      :        :                   :         : 7         :                
+JD_day[13]                   : AA20      : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AA21      : gnd    :                   :         :           :                
 VCCIO6                       : AA22      : power  :                   : 3.3V    : 6         :                
 GND                          : AB1       : gnd    :                   :         :           :                
 VCCIO8                       : AB2       : power  :                   : 3.3V    : 8         :                
-GND*                         : AB3       :        :                   :         : 8         :                
+JD_day[1]                    : AB3       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AB4       :        :                   :         : 8         :                
 GND*                         : AB5       :        :                   :         : 8         :                
-GND*                         : AB6       :        :                   :         : 8         :                
+MSecond[5]                   : AB6       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AB7       :        :                   :         : 8         :                
 GND*                         : AB8       :        :                   :         : 8         :                
-GND*                         : AB9       :        :                   :         : 8         :                
-led1[1]                      : AB10      : output : 3.3-V LVTTL       :         : 8         : N              
-led0[1]                      : AB11      : output : 3.3-V LVTTL       :         : 8         : N              
-GND*                         : AB12      :        :                   :         : 7         :                
-GND*                         : AB13      :        :                   :         : 7         :                
-GND*                         : AB14      :        :                   :         : 7         :                
-GND*                         : AB15      :        :                   :         : 7         :                
-GND*                         : AB16      :        :                   :         : 7         :                
+MHour[2]                     : AB9       : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AB10      :        :                   :         : 8         :                
+sec_clock                    : AB11      : input  : 3.3-V LVTTL       :         : 8         : N              
+year[11]                     : AB12      : input  : 3.3-V LVTTL       :         : 7         : N              
+seconds_int_out[5]           : AB13      : output : 3.3-V LVTTL       :         : 7         : N              
+hours_int_out[4]             : AB14      : output : 3.3-V LVTTL       :         : 7         : N              
+minute[0]                    : AB15      : input  : 3.3-V LVTTL       :         : 7         : N              
+hour[2]                      : AB16      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AB17      :        :                   :         : 7         :                
 GND*                         : AB18      :        :                   :         : 7         :                
-GND*                         : AB19      :        :                   :         : 7         :                
-GND*                         : AB20      :        :                   :         : 7         :                
+JD_second[12]                : AB19      : output : 3.3-V LVTTL       :         : 7         : N              
+JD_second[4]                 : AB20      : output : 3.3-V LVTTL       :         : 7         : N              
 VCCIO7                       : AB21      : power  :                   : 3.3V    : 7         :                
 GND                          : AB22      : gnd    :                   :         :           :                
 VCCIO2                       : B1        : power  :                   : 3.3V    : 2         :                
 GND                          : B2        : gnd    :                   :         :           :                
-GND*                         : B3        :        :                   :         : 3         :                
+JD_second[3]                 : B3        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : B4        :        :                   :         : 3         :                
 GND*                         : B5        :        :                   :         : 3         :                
 GND*                         : B6        :        :                   :         : 3         :                
 GND*                         : B7        :        :                   :         : 3         :                
-GND*                         : B8        :        :                   :         : 3         :                
-GND*                         : B9        :        :                   :         : 3         :                
-led1[0]                      : B10       : output : 3.3-V LVTTL       :         : 3         : N              
-led1[2]                      : B11       : output : 3.3-V LVTTL       :         : 3         : N              
+JD_second[9]                 : B8        : output : 3.3-V LVTTL       :         : 3         : N              
+JD_day[7]                    : B9        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : B10       :        :                   :         : 3         :                
+JD_day[22]                   : B11       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : B12       :        :                   :         : 4         :                
-led3[2]                      : B13       : output : 3.3-V LVTTL       :         : 4         : N              
-led3[5]                      : B14       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : B15       :        :                   :         : 4         :                
-GND*                         : B16       :        :                   :         : 4         :                
-GND*                         : B17       :        :                   :         : 4         :                
-GND*                         : B18       :        :                   :         : 4         :                
-GND*                         : B19       :        :                   :         : 4         :                
-GND*                         : B20       :        :                   :         : 4         :                
+year[1]                      : B13       : input  : 3.3-V LVTTL       :         : 4         : N              
+years_int_out[11]            : B14       : output : 3.3-V LVTTL       :         : 4         : N              
+day[4]                       : B15       : input  : 3.3-V LVTTL       :         : 4         : N              
+minute[4]                    : B16       : input  : 3.3-V LVTTL       :         : 4         : N              
+months_int_out[2]            : B17       : output : 3.3-V LVTTL       :         : 4         : N              
+JD_day[16]                   : B18       : output : 3.3-V LVTTL       :         : 4         : N              
+days_int_out[3]              : B19       : output : 3.3-V LVTTL       :         : 4         : N              
+JD_day[5]                    : B20       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : B21       : gnd    :                   :         :           :                
 VCCIO5                       : B22       : power  :                   : 3.3V    : 5         :                
 GND*                         : C1        :        :                   :         : 2         :                
@@ -168,63 +168,63 @@ VCCIO3                       : C6        : power  :                   : 3.3V    
 GND*                         : C7        :        :                   :         : 3         :                
 GND                          : C8        : gnd    :                   :         :           :                
 GND*                         : C9        :        :                   :         : 3         :                
-led2[0]                      : C10       : output : 3.3-V LVTTL       :         : 3         : N              
+JD_day[30]                   : C10       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : C12       : power  :                   : 3.3V    : 4         :                
-led3[6]                      : C13       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : C14       :        :                   :         : 4         :                
+years_int_out[0]             : C13       : output : 3.3-V LVTTL       :         : 4         : N              
+years_int_out[1]             : C14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : C15       : gnd    :                   :         :           :                
-GND*                         : C16       :        :                   :         : 4         :                
-GND*                         : C17       :        :                   :         : 4         :                
+months_int_out[0]            : C16       : output : 3.3-V LVTTL       :         : 4         : N              
+days_int_out[2]              : C17       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : C18       :        :                   :         : 4         :                
-led0[4]                      : C19       : output : 3.3-V LVTTL       :         : 5         : N              
-GND*                         : C20       :        :                   :         : 5         :                
+year[9]                      : C19       : input  : 3.3-V LVTTL       :         : 5         : N              
+JD_second[11]                : C20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : C21       :        :                   :         : 5         :                
 GND*                         : C22       :        :                   :         : 5         :                
 GND*                         : D1        :        :                   :         : 2         :                
 GND*                         : D2        :        :                   :         : 2         :                
-led3[0]                      : D3        : output : 3.3-V LVTTL       :         : 2         : N              
-led2[4]                      : D4        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : D5        :        :                   :         : 2         :                
-led0[6]                      : D6        : output : 3.3-V LVTTL       :         : 2         : N              
+year[0]                      : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
+JD_day[19]                   : D4        : output : 3.3-V LVTTL       :         : 2         : N              
+JD_second[7]                 : D5        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : D6        :        :                   :         : 2         :                
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
 GND*                         : D9        :        :                   :         : 3         :                
 GND                          : D10       : gnd    :                   :         :           :                
-led0[3]                      : D11       : output : 3.3-V LVTTL       :         : 3         : N              
+JD_day[17]                   : D11       : output : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : D12       :        :                   :         : 3         :                
 GND                          : D13       : gnd    :                   :         :           :                
-GND*                         : D14       :        :                   :         : 4         :                
-GND*                         : D15       :        :                   :         : 4         :                
-GND*                         : D16       :        :                   :         : 4         :                
+months_int_out[3]            : D14       : output : 3.3-V LVTTL       :         : 4         : N              
+months_int_out[1]            : D15       : output : 3.3-V LVTTL       :         : 4         : N              
+year[8]                      : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : D17       : power  :                   : 3.3V    : 4         :                
 GND                          : D18       : gnd    :                   :         :           :                
-led2[1]                      : D19       : output : 3.3-V LVTTL       :         : 5         : N              
-GND*                         : D20       :        :                   :         : 5         :                
-GND*                         : D21       :        :                   :         : 5         :                
-GND*                         : D22       :        :                   :         : 5         :                
+GND*                         : D19       :        :                   :         : 5         :                
+month[1]                     : D20       : input  : 3.3-V LVTTL       :         : 5         : N              
+day[2]                       : D21       : input  : 3.3-V LVTTL       :         : 5         : N              
+years_int_out[2]             : D22       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : E1        :        :                   :         : 2         :                
 GND*                         : E2        :        :                   :         : 2         :                
-led0[2]                      : E3        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : E4        :        :                   :         : 2         :                
+GND*                         : E3        :        :                   :         : 2         :                
+JD_day[29]                   : E4        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
 VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
 GND*                         : E7        :        :                   :         : 3         :                
 GND*                         : E8        :        :                   :         : 3         :                
 GND*                         : E9        :        :                   :         : 3         :                
 VCCIO3                       : E10       : power  :                   : 3.3V    : 3         :                
-led1[5]                      : E11       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : E11       :        :                   :         : 3         :                
 GND+                         : E12       :        :                   :         : 3         :                
 VCCIO4                       : E13       : power  :                   : 3.3V    : 4         :                
-GND*                         : E14       :        :                   :         : 4         :                
-GND*                         : E15       :        :                   :         : 4         :                
+hour[0]                      : E14       : input  : 3.3-V LVTTL       :         : 4         : N              
+month[2]                     : E15       : input  : 3.3-V LVTTL       :         : 4         : N              
 GNDA_PLL2                    : E16       : gnd    :                   :         :           :                
 GND_PLL2                     : E17       : gnd    :                   :         :           :                
-led3[4]                      : E18       : output : 3.3-V LVTTL       :         : 5         : N              
+GND*                         : E18       :        :                   :         : 5         :                
 GND*                         : E19       :        :                   :         : 5         :                
-GND*                         : E20       :        :                   :         : 5         :                
-GND*                         : E21       :        :                   :         : 5         :                
-GND*                         : E22       :        :                   :         : 5         :                
+year[3]                      : E20       : input  : 3.3-V LVTTL       :         : 5         : N              
+day[3]                       : E21       : input  : 3.3-V LVTTL       :         : 5         : N              
+year[10]                     : E22       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : F1        :        :                   :         : 2         :                
 GND*                         : F2        :        :                   :         : 2         :                
 GND*                         : F3        :        :                   :         : 2         :                
@@ -233,23 +233,23 @@ GND_PLL3                     : F5        : gnd    :                   :         
 GND_PLL3                     : F6        : gnd    :                   :         :           :                
 GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
 GND*                         : F8        :        :                   :         : 3         :                
-GND*                         : F9        :        :                   :         : 3         :                
-led2[6]                      : F10       : output : 3.3-V LVTTL       :         : 3         : N              
-led1[6]                      : F11       : output : 3.3-V LVTTL       :         : 3         : N              
-s0                           : F12       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : F13       :        :                   :         : 4         :                
-GND*                         : F14       :        :                   :         : 4         :                
-GND*                         : F15       :        :                   :         : 4         :                
+JD_day[18]                   : F9        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : F10       :        :                   :         : 3         :                
+JD_day[12]                   : F11       : output : 3.3-V LVTTL       :         : 3         : N              
+years_int_out[7]             : F12       : output : 3.3-V LVTTL       :         : 4         : N              
+years_int_out[5]             : F13       : output : 3.3-V LVTTL       :         : 4         : N              
+days_int_out[4]              : F14       : output : 3.3-V LVTTL       :         : 4         : N              
+days_int_out[1]              : F15       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCA_PLL2                    : F16       : power  :                   : 1.2V    :           :                
 VCCD_PLL2                    : F17       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : F18       : gnd    :                   :         :           :                
 GND                          : F19       : gnd    :                   :         :           :                
-GND*                         : F20       :        :                   :         : 5         :                
+years_int_out[3]             : F20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : F21       :        :                   :         : 5         :                
 GND*                         : F22       :        :                   :         : 5         :                
 NC                           : G1        :        :                   :         :           :                
 NC                           : G2        :        :                   :         :           :                
-GND*                         : G3        :        :                   :         : 2         :                
+JD_second[13]                : G3        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : G4        : gnd    :                   :         :           :                
 GND*                         : G5        :        :                   :         : 2         :                
 GND*                         : G6        :        :                   :         : 2         :                
@@ -257,36 +257,36 @@ GND*                         : G7        :        :                   :         
 GND*                         : G8        :        :                   :         : 3         :                
 VCCIO3                       : G9        : power  :                   : 3.3V    : 3         :                
 GND                          : G10       : gnd    :                   :         :           :                
-led0[0]                      : G11       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : G12       :        :                   :         : 4         :                
+GND*                         : G11       :        :                   :         : 3         :                
+years_int_out[6]             : G12       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO4                       : G14       : power  :                   : 3.3V    : 4         :                
-GND*                         : G15       :        :                   :         : 4         :                
-GND*                         : G16       :        :                   :         : 4         :                
-GND*                         : G17       :        :                   :         : 5         :                
-GND*                         : G18       :        :                   :         : 5         :                
+years_int_out[4]             : G15       : output : 3.3-V LVTTL       :         : 4         : N              
+month[0]                     : G16       : input  : 3.3-V LVTTL       :         : 4         : N              
+JD_day[21]                   : G17       : output : 3.3-V LVTTL       :         : 5         : N              
+JD_day[24]                   : G18       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : G19       : power  :                   : 3.3V    : 5         :                
-GND*                         : G20       :        :                   :         : 5         :                
+years_int_out[9]             : G20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : G21       :        :                   :         : 5         :                
 GND*                         : G22       :        :                   :         : 5         :                
 GND*                         : H1        :        :                   :         : 2         :                
-GND*                         : H2        :        :                   :         : 2         :                
+JD_second[8]                 : H2        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : H3        :        :                   :         : 2         :                
 GND*                         : H4        :        :                   :         : 2         :                
 GND*                         : H5        :        :                   :         : 2         :                
 GND*                         : H6        :        :                   :         : 2         :                
 GND*                         : H7        :        :                   :         : 3         :                
-GND*                         : H8        :        :                   :         : 3         :                
+JD_day[3]                    : H8        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : H9        :        :                   :         : 3         :                
-led2[3]                      : H10       : output : 3.3-V LVTTL       :         : 3         : N              
-led0[5]                      : H11       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : H12       :        :                   :         : 4         :                
-GND*                         : H13       :        :                   :         : 4         :                
-GND*                         : H14       :        :                   :         : 4         :                
-GND*                         : H15       :        :                   :         : 4         :                
+GND*                         : H10       :        :                   :         : 3         :                
+GND*                         : H11       :        :                   :         : 3         :                
+year[6]                      : H12       : input  : 3.3-V LVTTL       :         : 4         : N              
+day[1]                       : H13       : input  : 3.3-V LVTTL       :         : 4         : N              
+year[2]                      : H14       : input  : 3.3-V LVTTL       :         : 4         : N              
+day[0]                       : H15       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : H16       :        :                   :         : 5         :                
-GND*                         : H17       :        :                   :         : 5         :                
-GND*                         : H18       :        :                   :         : 5         :                
+year[5]                      : H17       : input  : 3.3-V LVTTL       :         : 5         : N              
+year[4]                      : H18       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : H19       :        :                   :         : 5         :                
 GND                          : H20       : gnd    :                   :         :           :                
 NC                           : H21       :        :                   :         :           :                
@@ -304,7 +304,7 @@ VCCINT                       : J10       : power  :                   : 1.2V    
 VCCINT                       : J11       : power  :                   : 1.2V    :           :                
 VCCINT                       : J12       : power  :                   : 1.2V    :           :                
 VCCINT                       : J13       : power  :                   : 1.2V    :           :                
-GND*                         : J14       :        :                   :         : 4         :                
+years_int_out[8]             : J14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : J15       :        :                   :         : 5         :                
 VCCIO5                       : J16       : power  :                   : 3.3V    : 5         :                
 GND*                         : J17       :        :                   :         : 5         :                
@@ -332,10 +332,10 @@ GND                          : K16       : gnd    :                   :         
 NC                           : K17       :        :                   :         :           :                
 NC                           : K18       :        :                   :         :           :                
 GND                          : K19       : gnd    :                   :         :           :                
-enable                       : K20       : input  : 3.3-V LVTTL       :         : 5         : N              
-GND*                         : K21       :        :                   :         : 5         :                
-GND*                         : K22       :        :                   :         : 5         :                
-GND+                         : L1        :        :                   :         : 2         :                
+GND*                         : K20       :        :                   :         : 5         :                
+minutes_int_out[2]           : K21       : output : 3.3-V LVTTL       :         : 5         : N              
+second[4]                    : K22       : input  : 3.3-V LVTTL       :         : 5         : N              
+clock                        : L1        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND+                         : L2        :        :                   :         : 2         :                
 VCCIO2                       : L3        : power  :                   : 3.3V    : 2         :                
 nCONFIG                      : L4        :        :                   :         : 2         :                
@@ -352,17 +352,17 @@ VCCINT                       : L14       : power  :                   : 1.2V    
 NC                           : L15       :        :                   :         :           :                
 NC                           : L16       :        :                   :         :           :                
 NC                           : L17       :        :                   :         :           :                
-GND*                         : L18       :        :                   :         : 5         :                
-GND*                         : L19       :        :                   :         : 5         :                
+hour[4]                      : L18       : input  : 3.3-V LVTTL       :         : 5         : N              
+finished                     : L19       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
 GND+                         : L21       :        :                   :         : 5         :                
-GND+                         : L22       :        :                   :         : 5         :                
-clock                        : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
-reset                        : M2        : input  : 3.3-V LVTTL       :         : 1         : N              
+reset                        : L22       : input  : 3.3-V LVTTL       :         : 5         : Y              
+second[1]                    : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
+second[0]                    : M2        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : M3        : power  :                   : 3.3V    : 1         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GND*                         : M5        :        :                   :         : 1         :                
-GND*                         : M6        :        :                   :         : 1         :                
+JD_day[26]                   : M6        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : M7        :        :                   :         :           :                
 NC                           : M8        :        :                   :         :           :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
@@ -374,8 +374,8 @@ VCCINT                       : M14       : power  :                   : 1.2V    
 NC                           : M15       :        :                   :         :           :                
 NC                           : M16       :        :                   :         :           :                
 MSEL0                        : M17       :        :                   :         : 6         :                
-GND*                         : M18       :        :                   :         : 6         :                
-GND*                         : M19       :        :                   :         : 6         :                
+hours_int_out[0]             : M18       : output : 3.3-V LVTTL       :         : 6         : N              
+hours_int_out[1]             : M19       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : M20       : power  :                   : 3.3V    : 6         :                
 GND+                         : M21       :        :                   :         : 6         :                
 GND+                         : M22       :        :                   :         : 6         :                
@@ -393,14 +393,14 @@ GND                          : N11       : gnd    :                   :         
 GND                          : N12       : gnd    :                   :         :           :                
 GND                          : N13       : gnd    :                   :         :           :                
 VCCINT                       : N14       : power  :                   : 1.2V    :           :                
-GND*                         : N15       :        :                   :         : 6         :                
+second[2]                    : N15       : input  : 3.3-V LVTTL       :         : 6         : N              
 GND                          : N16       : gnd    :                   :         :           :                
 MSEL1                        : N17       :        :                   :         : 6         :                
 CONF_DONE                    : N18       :        :                   :         : 6         :                
 GND                          : N19       : gnd    :                   :         :           :                
 nSTATUS                      : N20       :        :                   :         : 6         :                
-GND*                         : N21       :        :                   :         : 6         :                
-GND*                         : N22       :        :                   :         : 6         :                
+minutes_int_out[3]           : N21       : output : 3.3-V LVTTL       :         : 6         : N              
+seconds_int_out[3]           : N22       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : P1        :        :                   :         : 1         :                
 GND*                         : P2        :        :                   :         : 1         :                
 GND*                         : P3        :        :                   :         : 1         :                
@@ -409,15 +409,15 @@ GND*                         : P5        :        :                   :         
 GND*                         : P6        :        :                   :         : 1         :                
 VCCIO1                       : P7        : power  :                   : 3.3V    : 1         :                
 GND*                         : P8        :        :                   :         : 8         :                
-GND*                         : P9        :        :                   :         : 8         :                
+JD_day[4]                    : P9        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCINT                       : P10       : power  :                   : 1.2V    :           :                
 VCCINT                       : P11       : power  :                   : 1.2V    :           :                
 VCCINT                       : P12       : power  :                   : 1.2V    :           :                
 VCCINT                       : P13       : power  :                   : 1.2V    :           :                
 NC                           : P14       :        :                   :         :           :                
-GND*                         : P15       :        :                   :         : 6         :                
+seconds_int_out[0]           : P15       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : P16       : power  :                   : 3.3V    : 6         :                
-GND*                         : P17       :        :                   :         : 6         :                
+JD_day[23]                   : P17       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : P18       :        :                   :         : 6         :                
 NC                           : P19       :        :                   :         :           :                
 NC                           : P20       :        :                   :         :           :                
@@ -433,33 +433,33 @@ GND*                         : R7        :        :                   :         
 GND*                         : R8        :        :                   :         : 1         :                
 GND*                         : R9        :        :                   :         : 8         :                
 GND*                         : R10       :        :                   :         : 8         :                
-GND*                         : R11       :        :                   :         : 8         :                
-GND*                         : R12       :        :                   :         : 7         :                
-GND*                         : R13       :        :                   :         : 7         :                
-GND*                         : R14       :        :                   :         : 7         :                
+JD_second[14]                : R11       : output : 3.3-V LVTTL       :         : 8         : N              
+minute[2]                    : R12       : input  : 3.3-V LVTTL       :         : 7         : N              
+minute[5]                    : R13       : input  : 3.3-V LVTTL       :         : 7         : N              
+JD_day[14]                   : R14       : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : R15       :        :                   :         : 7         :                
 GND*                         : R16       :        :                   :         : 7         :                
 GND*                         : R17       :        :                   :         : 6         :                
 GND*                         : R18       :        :                   :         : 6         :                
 GND*                         : R19       :        :                   :         : 6         :                
-GND*                         : R20       :        :                   :         : 6         :                
-GND*                         : R21       :        :                   :         : 6         :                
-GND*                         : R22       :        :                   :         : 6         :                
-GND*                         : T1        :        :                   :         : 1         :                
+minutes_int_out[0]           : R20       : output : 3.3-V LVTTL       :         : 6         : N              
+MHour[4]                     : R21       : output : 3.3-V LVTTL       :         : 6         : N              
+enable                       : R22       : input  : 3.3-V LVTTL       :         : 6         : Y              
+JD_second[15]                : T1        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : T2        :        :                   :         : 1         :                
 GND*                         : T3        :        :                   :         : 1         :                
 VCCIO1                       : T4        : power  :                   : 3.3V    : 1         :                
 GND*                         : T5        :        :                   :         : 1         :                
-GND*                         : T6        :        :                   :         : 1         :                
+JD_second[1]                 : T6        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : T7        :        :                   :         : 8         :                
 GND*                         : T8        :        :                   :         : 8         :                
 VCCIO8                       : T9        : power  :                   : 3.3V    : 8         :                
 GND                          : T10       : gnd    :                   :         :           :                
-GND*                         : T11       :        :                   :         : 8         :                
-GND*                         : T12       :        :                   :         : 7         :                
+MHour[0]                     : T11       : output : 3.3-V LVTTL       :         : 8         : N              
+second[3]                    : T12       : input  : 3.3-V LVTTL       :         : 7         : N              
 GND                          : T13       : gnd    :                   :         :           :                
 VCCIO7                       : T14       : power  :                   : 3.3V    : 7         :                
-GND*                         : T15       :        :                   :         : 7         :                
+JD_second[10]                : T15       : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : T16       :        :                   :         : 7         :                
 GND_PLL4                     : T17       : gnd    :                   :         :           :                
 GND*                         : T18       :        :                   :         : 6         :                
@@ -467,21 +467,21 @@ VCCIO6                       : T19       : power  :                   : 3.3V    
 GND                          : T20       : gnd    :                   :         :           :                
 GND*                         : T21       :        :                   :         : 6         :                
 GND*                         : T22       :        :                   :         : 6         :                
-GND*                         : U1        :        :                   :         : 1         :                
-GND*                         : U2        :        :                   :         : 1         :                
+JD_day[31]                   : U1        : output : 3.3-V LVTTL       :         : 1         : N              
+JD_day[10]                   : U2        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : U3        :        :                   :         : 1         :                
-GND*                         : U4        :        :                   :         : 1         :                
+JD_day[0]                    : U4        : output : 3.3-V LVTTL       :         : 1         : N              
 GND_PLL1                     : U5        : gnd    :                   :         :           :                
 VCCD_PLL1                    : U6        : power  :                   : 1.2V    :           :                
 VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
 GND*                         : U8        :        :                   :         : 8         :                
-GND*                         : U9        :        :                   :         : 8         :                
-GND*                         : U10       :        :                   :         : 8         :                
+JD_day[9]                    : U9        : output : 3.3-V LVTTL       :         : 8         : N              
+JD_day[2]                    : U10       : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : U11       :        :                   :         : 8         :                
 GND+                         : U12       :        :                   :         : 8         :                
-GND*                         : U13       :        :                   :         : 7         :                
+minutes_int_out[5]           : U13       : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : U14       :        :                   :         : 7         :                
-GND*                         : U15       :        :                   :         : 7         :                
+JD_day[8]                    : U15       : output : 3.3-V LVTTL       :         : 7         : N              
 VCCA_PLL4                    : U16       : power  :                   : 1.2V    :           :                
 VCCD_PLL4                    : U17       : power  :                   : 1.2V    :           :                
 GND*                         : U18       :        :                   :         : 6         :                
@@ -490,20 +490,20 @@ GND*                         : U20       :        :                   :         
 GND*                         : U21       :        :                   :         : 6         :                
 GND*                         : U22       :        :                   :         : 6         :                
 GND*                         : V1        :        :                   :         : 1         :                
-GND*                         : V2        :        :                   :         : 1         :                
+JD_second[6]                 : V2        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : V3        : gnd    :                   :         :           :                
 GND*                         : V4        :        :                   :         : 1         :                
 GND_PLL1                     : V5        : gnd    :                   :         :           :                
 GND                          : V6        : gnd    :                   :         :           :                
 GNDA_PLL1                    : V7        : gnd    :                   :         :           :                
-GND*                         : V8        :        :                   :         : 8         :                
-GND*                         : V9        :        :                   :         : 8         :                
+MSecond[1]                   : V8        : output : 3.3-V LVTTL       :         : 8         : N              
+MMinute[2]                   : V9        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : V10       : power  :                   : 3.3V    : 8         :                
 GND*                         : V11       :        :                   :         : 8         :                
 GND+                         : V12       :        :                   :         : 7         :                
 VCCIO7                       : V13       : power  :                   : 3.3V    : 7         :                
-GND*                         : V14       :        :                   :         : 7         :                
-GND*                         : V15       :        :                   :         : 7         :                
+month[3]                     : V14       : input  : 3.3-V LVTTL       :         : 7         : N              
+JD_second[5]                 : V15       : output : 3.3-V LVTTL       :         : 7         : N              
 GNDA_PLL4                    : V16       : gnd    :                   :         :           :                
 GND                          : V17       : gnd    :                   :         :           :                
 GND_PLL4                     : V18       : gnd    :                   :         :           :                
@@ -512,20 +512,20 @@ GND*                         : V20       :        :                   :         
 GND*                         : V21       :        :                   :         : 6         :                
 GND*                         : V22       :        :                   :         : 6         :                
 GND*                         : W1        :        :                   :         : 1         :                
-GND*                         : W2        :        :                   :         : 1         :                
-GND*                         : W3        :        :                   :         : 1         :                
+JD_day[11]                   : W2        : output : 3.3-V LVTTL       :         : 1         : N              
+MMinute[1]                   : W3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : W4        :        :                   :         : 1         :                
 GND*                         : W5        :        :                   :         : 1         :                
 VCCIO8                       : W6        : power  :                   : 3.3V    : 8         :                
-GND*                         : W7        :        :                   :         : 8         :                
-GND*                         : W8        :        :                   :         : 8         :                
-GND*                         : W9        :        :                   :         : 8         :                
+MSecond[4]                   : W7        : output : 3.3-V LVTTL       :         : 8         : N              
+MSecond[0]                   : W8        : output : 3.3-V LVTTL       :         : 8         : N              
+MMinute[0]                   : W9        : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : W10       : gnd    :                   :         :           :                
 GND*                         : W11       :        :                   :         : 8         :                
 GND+                         : W12       :        :                   :         : 7         :                
 GND                          : W13       : gnd    :                   :         :           :                
-GND*                         : W14       :        :                   :         : 7         :                
-GND*                         : W15       :        :                   :         : 7         :                
+minute[1]                    : W14       : input  : 3.3-V LVTTL       :         : 7         : N              
+JD_day[25]                   : W15       : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : W16       :        :                   :         : 7         :                
 VCCIO7                       : W17       : power  :                   : 3.3V    : 7         :                
 NC                           : W18       :        :                   :         :           :                
@@ -535,17 +535,17 @@ GND*                         : W21       :        :                   :         
 GND*                         : W22       :        :                   :         : 6         :                
 GND*                         : Y1        :        :                   :         : 1         :                
 GND*                         : Y2        :        :                   :         : 1         :                
-GND*                         : Y3        :        :                   :         : 1         :                
-GND*                         : Y4        :        :                   :         : 1         :                
-GND*                         : Y5        :        :                   :         : 8         :                
-GND*                         : Y6        :        :                   :         : 8         :                
+MMinute[5]                   : Y3        : output : 3.3-V LVTTL       :         : 1         : N              
+MSecond[3]                   : Y4        : output : 3.3-V LVTTL       :         : 1         : N              
+JD_second[2]                 : Y5        : output : 3.3-V LVTTL       :         : 8         : N              
+JD_day[20]                   : Y6        : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : Y7        :        :                   :         : 8         :                
 GND                          : Y8        : gnd    :                   :         :           :                
-GND*                         : Y9        :        :                   :         : 8         :                
-GND*                         : Y10       :        :                   :         : 8         :                
+MMinute[3]                   : Y9        : output : 3.3-V LVTTL       :         : 8         : N              
+MHour[1]                     : Y10       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : Y11       : power  :                   : 3.3V    : 8         :                
 VCCIO7                       : Y12       : power  :                   : 3.3V    : 7         :                
-GND*                         : Y13       :        :                   :         : 7         :                
+minutes_int_out[4]           : Y13       : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : Y14       :        :                   :         : 7         :                
 GND                          : Y15       : gnd    :                   :         :           :                
 GND*                         : Y16       :        :                   :         : 7         :                

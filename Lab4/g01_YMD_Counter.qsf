@@ -38,22 +38,14 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY g01_YMD_TestBed
+set_global_assignment -name TOP_LEVEL_ENTITY g01_UTC_to_MTC
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:28:12  MARCH 19, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
-set_global_assignment -name VHDL_FILE g01_YMD_Counter.vhd
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name VECTOR_WAVEFORM_FILE g01_YMD_Counter.vwf
-set_global_assignment -name VHDL_FILE g01_YMD_TestBed.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_E2 -to led0[6]
 set_location_assignment PIN_F1 -to led0[5]
@@ -84,9 +76,30 @@ set_location_assignment PIN_L8 -to led3[4]
 set_location_assignment PIN_F3 -to led3[5]
 set_location_assignment PIN_D4 -to led3[6]
 set_location_assignment PIN_L1 -to clock
-set_location_assignment PIN_L22 -to enable
-set_location_assignment PIN_M22 -to load_en
-set_location_assignment PIN_L21 -to reset
-set_location_assignment PIN_V12 -to s0
-set_location_assignment PIN_W12 -to s1
+set_location_assignment PIN_R22 -to enable
+set_location_assignment PIN_L21 -to load_en
+set_location_assignment PIN_L22 -to reset
+set_location_assignment PIN_M22 -to s0
+set_location_assignment PIN_V12 -to s1
 set_global_assignment -name MISC_FILE "P:/DSDLabs/Lab4/g01_YMD_Counter.dpf"
+set_location_assignment PIN_L2 -to input[5]
+set_location_assignment PIN_M1 -to input[4]
+set_location_assignment PIN_M2 -to input[3]
+set_location_assignment PIN_U11 -to input[2]
+set_location_assignment PIN_U12 -to input[1]
+set_location_assignment PIN_W12 -to input[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VHDL_FILE ../Lab3/g01_HMS_Counter.vhd
+set_global_assignment -name VHDL_FILE ../Lab2/g01_dayseconds.vhd
+set_global_assignment -name VHDL_FILE g01_Earth_Mars_Timer.vhd
+set_global_assignment -name VHDL_FILE g01_UTC_to_MTC.vhd
+set_global_assignment -name VHDL_FILE g01_YMD_Counter.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_YMD_Counter.vwf
+set_global_assignment -name VHDL_FILE g01_YMD_TestBed.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE g01_UTC_to_MTC.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g01_UTC_to_MTC.vwf
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS ON
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

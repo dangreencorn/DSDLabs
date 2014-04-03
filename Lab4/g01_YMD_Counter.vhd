@@ -62,9 +62,9 @@ begin
 	begin
 		if (reset = '1') then int_days <= 1;
 		elsif (clock'event and clock = '1') then
-			if (day_count_en = '1') then
-				if (load_en = '1') then int_days <= to_integer(unsigned(D_Set));
-				elsif (last_day_of_month = '1') then int_days <= 1;
+			if (load_en = '1') then int_days <= to_integer(unsigned(D_Set));
+			elsif (day_count_en = '1') then
+				if (last_day_of_month = '1') then int_days <= 1;
 				else int_days <= int_days + 1;
 				end if;
 			end if;
@@ -78,7 +78,7 @@ begin
 	begin
 		if (reset = '1') then int_months <= 1;
 		elsif (clock'event and clock = '1') then
-			if (day_count_en = '1' and load_en = '1') then int_months <= to_integer(unsigned(M_Set));
+			if (load_en = '1') then int_months <= to_integer(unsigned(M_Set));
 			elsif (month_count_en = '1' and day_count_en = '1') then
 				if (int_months = 12) then int_months <= 1;
 				elsif (day_count_en = '1') then int_months <= int_months + 1;
@@ -94,7 +94,7 @@ begin
 	begin
 		if (reset = '1') then int_years <= 1;
 		elsif (clock'event and clock = '1') then
-			if (day_count_en = '1' and load_en = '1') then int_years <= to_integer(unsigned(Y_Set));
+			if (load_en = '1') then int_years <= to_integer(unsigned(Y_Set));
 			elsif (year_count_en = '1' and day_count_en = '1') then
 				if (day_count_en = '1') then int_years <= int_years + 1;
 				end if;

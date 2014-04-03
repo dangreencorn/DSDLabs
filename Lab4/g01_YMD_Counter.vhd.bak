@@ -93,8 +93,8 @@ begin
 	years_counter : process(clock, reset)
 	begin
 		if (reset = '1') then int_years <= 1;
-		elsif (clock'event and clock = '1') then int_years <= to_integer(unsigned(Y_Set));
-			if (day_count_en = '1' and load_en = '1') then 
+		elsif (clock'event and clock = '1') then
+			if (day_count_en = '1' and load_en = '1') then int_years <= to_integer(unsigned(Y_Set));
 			elsif (year_count_en = '1' and day_count_en = '1') then
 				if (day_count_en = '1') then int_years <= int_years + 1;
 				end if;
