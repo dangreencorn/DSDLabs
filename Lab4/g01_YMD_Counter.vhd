@@ -1,9 +1,12 @@
 -- entity name: g01_YMD_Counter
 --
+-- Counts up in years, months, and days. Can be arbitrarily set to any date or reset to 0001-01-01.
+-- This circuit does take leap years into account.
+--
 -- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
 -- Version 1.0
 -- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
--- Date: February 27, 2014
+-- Date: March 27, 2014
 
 
 library ieee;

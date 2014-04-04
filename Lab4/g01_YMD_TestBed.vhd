@@ -1,9 +1,11 @@
 -- entity name: g01_YMD_TestBed
 --
+-- Circuit to test the g01_YMD_Counter's functionality on the board
+--
 -- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
 -- Version 1.0
 -- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
--- Date: February 27, 2014
+-- Date: March 28, 2014
 
 
 library ieee;

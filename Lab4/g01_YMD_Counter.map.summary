@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Mar 27 17:26:07 2014
+Analysis & Synthesis Status : Successful - Fri Apr 04 04:26:52 2014
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : g01_YMD_Counter
-Top-level Entity Name : g01_UTC_to_MTC
+Top-level Entity Name : g01_YMD_Counter
 Family : Cyclone II
-Total logic elements : 821
-    Total combinational functions : 820
-    Dedicated logic registers : 99
-Total registers : 99
-Total pins : 60
+Total logic elements : 317
+    Total combinational functions : 317
+    Dedicated logic registers : 23
+Total registers : 23
+Total pins : 46
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 8
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

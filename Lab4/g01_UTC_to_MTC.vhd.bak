@@ -63,7 +63,7 @@ architecture behaviour of g01_UTC_to_MTC is
 
 	-- components
 	-- 	lpm_counter
-	component g01_HMS_Counter is
+	component g01_HMS_Counter
 		port ( 
 			clock : in std_logic;
 			reset : in std_logic;
@@ -79,7 +79,7 @@ architecture behaviour of g01_UTC_to_MTC is
 			end_of_day : out std_logic
 		);
 	end component;
-	component g01_YMD_Counter is
+	component g01_YMD_Counter
 		port ( 
 			clock : in std_logic;
 			reset : in std_logic;
@@ -93,6 +93,7 @@ architecture behaviour of g01_UTC_to_MTC is
 			Days : out std_logic_vector(4 downto 0)
 		);
 	end component;
+	
 	-- signals
 	signal done : std_logic := '0';
 	--signal sec_clock : std_logic;
@@ -108,15 +109,6 @@ architecture behaviour of g01_UTC_to_MTC is
 	signal JD_seconds : std_logic_vector (16 downto 0);
 	signal JD_days : std_logic_vector (19 downto 0);	
 begin
-	-- sec_clock <= clock;
-	JD_second <= JD_seconds;
-	JD_day <= JD_days;
-	years_int_out <= years_int;
-	months_int_out <= months_int;
-	days_int_out <= days_int;
-	hours_int_out <= hours_int;
-	minutes_int_out <= minutes_int;
-	seconds_int_out <= seconds_int;
 	
 	-- determines when we are done counting
 	done_count : process (years_int,months_int,days_int,hours_int,minutes_int,seconds_int, clock)
@@ -161,7 +153,7 @@ begin
 			fractionalPart := afterSub(43 downto 12);
 			-- get MTC (shifted 32 bits; need 6 bits to represent up to 60 [mins/seconds])
 			MTC := std_logic_vector(24 * unsigned(fractionalPart))(36 downto 5);
-			outMTC <= MTC;
+			
 			-- set hours
 			MHour <= MTC(31 downto 27);
 			

@@ -2143,9 +2143,6 @@ aeb
 -1
 3
 }
-# hierarchies {
-lpm_counter:sec_count|cntr_h6j:auto_generated|cmpr_sdc:cmpr2
-}
 # macro_sequence
 
 # end
@@ -2321,9 +2318,6 @@ USR
 PARAMETER_STRING
 USR
 }
-# hierarchies {
-g01_HMS_Counter:HMS_count
-}
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -2464,10 +2458,6 @@ ACLR
 -1
 3
 }
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds
-g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes
-}
 # macro_sequence
 
 # end
@@ -2531,10 +2521,6 @@ aclr
 -1
 3
 }
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated
-g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated
-}
 # macro_sequence
 
 # end
@@ -2588,10 +2574,6 @@ dataa0
 aeb
 -1
 3
-}
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2
-g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2
 }
 # macro_sequence
 
@@ -2724,9 +2706,6 @@ ACLR
 -1
 3
 }
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_hours
-}
 # macro_sequence
 
 # end
@@ -2784,9 +2763,6 @@ aclr
 -1
 3
 }
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated
-}
 # macro_sequence
 
 # end
@@ -2834,9 +2810,6 @@ dataa0
 aeb
 -1
 3
-}
-# hierarchies {
-g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2
 }
 # macro_sequence
 
@@ -3109,9 +3082,6 @@ ACLR
 -1
 3
 }
-# hierarchies {
-lpm_counter:sec_count
-}
 # macro_sequence
 
 # end
@@ -3186,9 +3156,6 @@ clock
 aclr
 -1
 3
-}
-# hierarchies {
-lpm_counter:sec_count|cntr_h6j:auto_generated
 }
 # macro_sequence
 
@@ -3557,9 +3524,6 @@ USR
 PARAMETER_STRING
 USR
 }
-# hierarchies {
-g01_YMD_Counter:YMD_Count
-}
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -3883,9 +3847,6 @@ ACLR
 -1
 3
 }
-# hierarchies {
-lpm_counter:day_count
-}
 # macro_sequence
 
 # end
@@ -3969,9 +3930,6 @@ clock
 aclr
 -1
 3
-}
-# hierarchies {
-lpm_counter:day_count|cntr_pvi:auto_generated
 }
 # macro_sequence
 
@@ -7023,7 +6981,37 @@ ON
 # case_insensitive
 # source_file
 g01_utc_to_mtc.vhd
-58a1135f4bb157b8094b96f94371a7b
+5e4b688a9de26acc3bea8f23b13065d6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+g01_YMD_Counter
+# storage
+db|g01_YMD_Counter.(44).cnf
+db|g01_YMD_Counter.(44).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+g01_ymd_counter.vhd
+8bc4167365543c4da694bf244dc14
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

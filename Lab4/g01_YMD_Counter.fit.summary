@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Mar 27 16:07:09 2014
+Fitter Status : Successful - Fri Apr 04 04:27:01 2014
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : g01_YMD_Counter
-Top-level Entity Name : g01_UTC_to_MTC
+Top-level Entity Name : g01_YMD_Counter
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 815 / 18,752 ( 4 % )
-    Total combinational functions : 814 / 18,752 ( 4 % )
-    Dedicated logic registers : 99 / 18,752 ( < 1 % )
-Total registers : 99
-Total pins : 147 / 315 ( 47 % )
+Total logic elements : 317 / 18,752 ( 2 % )
+    Total combinational functions : 317 / 18,752 ( 2 % )
+    Dedicated logic registers : 23 / 18,752 ( < 1 % )
+Total registers : 23
+Total pins : 46 / 315 ( 15 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
-Embedded Multiplier 9-bit elements : 8 / 52 ( 15 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -1,9 +1,11 @@
--- entity name: g01_HMS_Counter
+-- entity name: g01_UTC_to_MTC
+--
+-- Calculates an approximated time on Mars for a given date and time on Earth (UTC)
 --
 -- Copyright (C) 2014 Alex Carruthers, Dan Grencorn 
 -- Version 1.0
 -- Author: Alex Carruthers, Dan Greencorn; michael.carruthers@mail.mcgill.ca, dan.greencorn@mail.mcgill.ca 
--- Date: February 27, 2014
+-- Date: March 27, 2014
 
 
 library ieee;
@@ -93,11 +95,6 @@ architecture behaviour of g01_UTC_to_MTC is
 			Days : out std_logic_vector(4 downto 0)
 		);
 	end component;
-	
-	entity g01_Seconds_to_Days
-		port ( 	seconds			: in unsigned(16 downto 0);
-				day_fraction 	: out unsigned(39 downto 0));
-	end g01_Seconds_to_Days;
 	
 	-- signals
 	signal done : std_logic := '0';

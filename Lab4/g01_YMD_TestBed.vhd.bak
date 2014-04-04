@@ -135,14 +135,16 @@ begin
 	
 	demux : process(s0, s1, input)
 	begin
-		if (s0='0' AND s1='0') then
-			day_set <= input(4 downto 0);
-		elsif (s0='1' AND s1='0') then
-			month_set <= input(3 downto 0);
-		elsif (s0='0' AND s1='1') then
-			year_set(5 downto 0) <= input;
-		elsif (s0='1' AND s1='1') then
-			year_set(11 downto 6) <= input;
+		if (clock'event and clock = '1') then
+			if (s0='0' AND s1='0') then
+				day_set <= input(4 downto 0);
+			elsif (s0='1' AND s1='0') then
+				month_set <= input(3 downto 0);
+			elsif (s0='0' AND s1='1') then
+				year_set(5 downto 0) <= input;
+			elsif (s0='1' AND s1='1') then
+				year_set(11 downto 6) <= input;
+			end if;
 		end if;
 	end process;
 	

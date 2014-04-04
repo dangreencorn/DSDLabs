@@ -1,5 +1,5 @@
 Assembler report for g01_YMD_Counter
-Thu Mar 27 16:07:17 2014
+Fri Apr 04 04:27:08 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 27 16:07:16 2014 ;
+; Assembler Status      ; Successful - Fri Apr 04 04:27:08 2014 ;
 ; Revision Name         ; g01_YMD_Counter                       ;
-; Top-level Entity Name ; g01_UTC_to_MTC                        ;
+; Top-level Entity Name ; g01_YMD_Counter                       ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+----------------------------------------------+
 ; Device         ; EP2C20F484C7                                 ;
 ; JTAG usercode  ; 0xFFFFFFFF                                   ;
-; Checksum       ; 0x0023C977                                   ;
+; Checksum       ; 0x001E64D0                                   ;
 +----------------+----------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+------------------------------------------+
 ; Device             ; EPCS16                                   ;
 ; JTAG usercode      ; 0x00000000                               ;
-; Checksum           ; 0x1DC99BCD                               ;
+; Checksum           ; 0x1DD1463A                               ;
 ; Compression Ratio  ; 3                                        ;
 +--------------------+------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Mar 27 16:07:15 2014
+    Info: Processing started: Fri Apr 04 04:27:06 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab4 -c g01_YMD_Counter
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 273 megabytes
-    Info: Processing ended: Thu Mar 27 16:07:17 2014
+    Info: Peak virtual memory: 271 megabytes
+    Info: Processing ended: Fri Apr 04 04:27:08 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

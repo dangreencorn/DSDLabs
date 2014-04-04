@@ -23,10 +23,10 @@ applicable agreement for further details.
 VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 1497849344;
-		NUMERATOR = 1225;
-		DENOMINATOR = 1497849344;
+		ZBEGIN = 66027644;
+		ZEND = 201751136;
+		NUMERATOR = 1127;
+		DENOMINATOR = 135723492;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -62,7 +62,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "year_count_en";
+		SIGNAL = "last_day_of_month";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -70,7 +70,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "load_en";
+		SIGNAL = "year_count_en";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -78,7 +78,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reset";
+		SIGNAL = "load_en";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -86,8 +86,16 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Days";
+		SIGNAL = "reset";
 		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Days";
+		INDEX = 7;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -95,14 +103,6 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 	}
 	LINE{
 		SIGNAL = "Days[4]";
-		INDEX = 7;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Days[3]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -110,7 +110,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Days[2]";
+		SIGNAL = "Days[3]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -118,7 +118,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Days[1]";
+		SIGNAL = "Days[2]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -126,7 +126,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Days[0]";
+		SIGNAL = "Days[1]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -134,8 +134,16 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Months";
+		SIGNAL = "Days[0]";
 		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Months";
+		INDEX = 13;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -143,14 +151,6 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 	}
 	LINE{
 		SIGNAL = "Months[3]";
-		INDEX = 13;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Months[2]";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -158,7 +158,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Months[1]";
+		SIGNAL = "Months[2]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -166,7 +166,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Months[0]";
+		SIGNAL = "Months[1]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -174,8 +174,16 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years";
+		SIGNAL = "Months[0]";
 		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Years";
+		INDEX = 18;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -183,14 +191,6 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 	}
 	LINE{
 		SIGNAL = "Years[11]";
-		INDEX = 18;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Years[10]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -198,7 +198,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[9]";
+		SIGNAL = "Years[10]";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -206,7 +206,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[8]";
+		SIGNAL = "Years[9]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -214,7 +214,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[7]";
+		SIGNAL = "Years[8]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -222,7 +222,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[6]";
+		SIGNAL = "Years[7]";
 		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
@@ -230,7 +230,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[5]";
+		SIGNAL = "Years[6]";
 		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
@@ -238,7 +238,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[4]";
+		SIGNAL = "Years[5]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -246,7 +246,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[3]";
+		SIGNAL = "Years[4]";
 		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
@@ -254,7 +254,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[2]";
+		SIGNAL = "Years[3]";
 		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
@@ -262,7 +262,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[1]";
+		SIGNAL = "Years[2]";
 		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
@@ -270,7 +270,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Years[0]";
+		SIGNAL = "Years[1]";
 		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
@@ -278,7 +278,7 @@ VECTOR("P:/DSDLabs/Lab4/g01_YMD_Counter.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "last_day_of_month";
+		SIGNAL = "Years[0]";
 		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
