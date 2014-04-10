@@ -18,7 +18,7 @@ entity g01_Mars_Clock_System is
 		set : in std_logic;
 		data : in std_logic_vector(5 downto 0);
 		state : in std_logic_vector(1 downto 0);
-		buttons : in std_logic_vector( 3 downto 0);
+		buttons : in std_logic_vector(3 downto 0);
 		ledsRed : out std_logic_vector(9 downto 0);
 		ledsGreen : out std_logic_vector(7 downto 0);
 		lcd0 : out std_logic_vector(6 downto 0);
@@ -99,9 +99,29 @@ architecture behaviour of g01_Mars_Clock_System is
 			MMinute : out std_logic_vector(5 downto 0);
 			MSecond : out std_logic_vector(5 downto 0)
 		);
-		
 	end component;
 	
+	component g01_to_local is
+		PORT (
+			Year_in : in std_logic_vector(11 downto 0);
+			Month_in : in std_logic_vector(3 downto 0);
+			Day_in : in std_logic_vector(4 downto 0);
+			Hour_in : in std_logic_vector(4 downto 0);
+			Minute_in : in std_logic_vector(5 downto 0);
+			Second_in : in std_logic_vector(5 downto 0);
+			
+			DST : in std_logic;
+			Time_Zone : in std_logic_vector(4 downto 0);
+			
+			Year_out : out std_logic_vector(11 downto 0);
+			Month_out : out std_logic_vector(3 downto 0);
+			Day_out : out std_logic_vector(4 downto 0);
+			Hour_out : out std_logic_vector(4 downto 0);
+			Minute_out : out std_logic_vector(5 downto 0);
+			Second_out : out std_logic_vector(5 downto 0)
+		);
+	end component;
+
 	function to_bcd ( bin : std_logic_vector((11) downto 0) ) return std_logic_vector is
 
 		variable i : integer:=0;
@@ -132,6 +152,7 @@ architecture behaviour of g01_Mars_Clock_System is
 
 	-- Earth timezone
 	signal E_timezone : std_logic_vector(4 downto 0);
+	signal E_DST : std_logic;
 
 	-- Earth hours, minutes, seconds, year, month, day (UTC)
 	signal E_Hour : std_logic_vector(4 downto 0);
@@ -175,15 +196,28 @@ architecture behaviour of g01_Mars_Clock_System is
 	signal M_Second_tz : std_logic_vector(5 downto 0);
 
 
+
+	-- signals for converting UTC to MTC
+	signal convert_done : std_logic;
+	signal convert_en : std_logic;
+	signal convert_clr : std_logic;
+
 	-- BCD output and ripple blanks for LCD Display
 	signal bcd_out : std_logic_vector(15 downto 0);
 	signal lcd1_rb : std_logic;
 	signal lcd2_rb : std_logic;
 begin
+	-- The Earth_Mars second Pulse Timer
 	timer : g01_Earth_Mars_timer
-		PORT MAP ( clk => clock, reset => reset, enable => '1', epulse => E_pulse_sec);
+		PORT MAP ( 
+			clk => clock, 
+			reset => reset, 
+			enable => '1', 
+			epulse => E_pulse_sec
+		);
 	
-	E_ymd : g01_YMD_Counter
+	-- Earth Counters
+	E_YMD : g01_YMD_Counter
 		PORT MAP ( clock => clock,
 			reset => reset,
 			day_count_en => E_pulse_day, 
@@ -195,8 +229,7 @@ begin
 			Months => E_Month,
 			Days => E_Day
 		);
-
-	E_hms : g01_HMS_Counter
+	E_HMS : g01_HMS_Counter
 		PORT MAP (
 			clock => clock,
 			reset => reset,
@@ -212,7 +245,8 @@ begin
 			end_of_day => E_pulse_day
 		);
 
-	M_hms : g01_HMS_Counter
+	-- Mars Counter and Converter
+	M_HMS : g01_HMS_Counter
 		PORT MAP (
 			clock => clock,
 			reset => reset,
@@ -226,18 +260,89 @@ begin
 			Minutes => M_Minute,
 			Seconds => M_Second
 		);
+	M_Convert : g01_UTC_to_MTC
+		PORT MAP (
+			clk => clock,
+			sec_clk => clock,
+			reset => reset OR convert_clr,
+			enable => convert_en,
+			year => E_Year,
+			month => E_Month,
+			day => E_Day,
+			hour => E_Hour,
+			minute => E_Minute,
+			second E_Second,
 
-	
-	-----------------------------------------
+			finished => convert_done,
+			
+			MHour => M_Hour_set,
+			MMinute => M_Minute_set,
+			MSecond => M_Second_set
+		);
+
+	-- Timezone Converters
+	E_Timezone_Converter : g01_to_local
+		PORT MAP (
+			Year_in => E_year,
+			Month_in => E_month,
+			Day_in => E_day,
+			Hour_in => E_hour,
+			Minute_in => E_minute,
+			Second_in => E_second,
+			
+			DST => E_DST,
+			Time_Zone => E_timezone,
+			
+			Year_out => E_year_tz,
+			Month_out => E_month_tz,
+			Day_out => E_day_tz,
+			Hour_out => E_hour_tz,
+			Minute_out => E_minute_tz,
+			Second_out => E_second_tz
+		)
+	M_Timezone_Converter : g01_to_local
+		PORT MAP (
+			Year_in => "000000000100",
+			Month_in => "0100",
+			Day_in => "00100",
+			Hour_in => M_hour,
+			Minute_in => M_minute,
+			Second_in => M_second,
+			
+			DST => '0',
+			Time_Zone => M_timezone,
+			
+			Hour_out => M_hour_tz,
+			Minute_out => M_minute_tz,
+			Second_out => M_second_tz
+		)
+
 	-- LCD Decoders, for displaying values --
-	-----------------------------------------
 	lcd0_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(3 downto 0), RippleBlank_In => '0', segments => lcd0);
+		PORT MAP (
+			code => bcd_out(3 downto 0), 
+			RippleBlank_In => '0', 
+			segments => lcd0
+		);
 	lcd1_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(7 downto 4), RippleBlank_In => lcd1_rb, segments => lcd1);
+		PORT MAP (
+			code => bcd_out(7 downto 4), 
+			RippleBlank_In => lcd1_rb, 
+			segments => lcd1
+		);
 	lcd2_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(11 downto 8), RippleBlank_In => lcd2_rb, RippleBlank_Out => lcd1_rb, segments => lcd2);
+		PORT MAP (
+			code => bcd_out(11 downto 8), 
+			RippleBlank_In => lcd2_rb, 
+			RippleBlank_Out => lcd1_rb, 
+			segments => lcd2
+		);
 	lcd3_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(15 downto 12), RippleBlank_In => '1', RippleBlank_Out => lcd2_rb, segments => lcd3);
+		PORT MAP (
+			code => bcd_out(15 downto 12), 
+			RippleBlank_In => '1', 
+			RippleBlank_Out => lcd2_rb, 
+			segments => lcd3
+		);
 end behaviour;
 
