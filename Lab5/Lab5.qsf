@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY g01_to_local
+set_global_assignment -name TOP_LEVEL_ENTITY g01_Mars_Clock_System
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:17:06  APRIL 09, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -46,7 +46,11 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g01_to_UTC.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VHDL_FILE g01_UTC_to_MTC.vhd
 set_global_assignment -name VHDL_FILE g01_to_local.vhd
 set_global_assignment -name VHDL_FILE g01_HMS_Counter.vhd
 set_global_assignment -name VHDL_FILE g01_7_segment_decoder.vhd
@@ -57,8 +61,68 @@ set_global_assignment -name VHDL_FILE g01_to_UTC.vhd
 set_global_assignment -name VHDL_FILE g01_YMD_Counter.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE g01_to_UTC.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE g01_Mars_Clock.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g01_Mars_Clock.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_T21 -to buttons[3]
+set_location_assignment PIN_T22 -to buttons[2]
+set_location_assignment PIN_R21 -to buttons[1]
+set_location_assignment PIN_R22 -to buttons[0]
+set_location_assignment PIN_L1 -to clock
+set_location_assignment PIN_L2 -to data[5]
+set_location_assignment PIN_M1 -to data[4]
+set_location_assignment PIN_M2 -to data[3]
+set_location_assignment PIN_U11 -to data[2]
+set_location_assignment PIN_U12 -to data[1]
+set_location_assignment PIN_W12 -to data[0]
+set_location_assignment PIN_E2 -to lcd0[6]
+set_location_assignment PIN_F1 -to lcd0[5]
+set_location_assignment PIN_F2 -to lcd0[4]
+set_location_assignment PIN_H1 -to lcd0[3]
+set_location_assignment PIN_H2 -to lcd0[2]
+set_location_assignment PIN_J1 -to lcd0[1]
+set_location_assignment PIN_J2 -to lcd0[0]
+set_location_assignment PIN_D1 -to lcd1[6]
+set_location_assignment PIN_D2 -to lcd1[5]
+set_location_assignment PIN_G3 -to lcd1[4]
+set_location_assignment PIN_H4 -to lcd1[3]
+set_location_assignment PIN_H5 -to lcd1[2]
+set_location_assignment PIN_H6 -to lcd1[1]
+set_location_assignment PIN_E1 -to lcd1[0]
+set_location_assignment PIN_D3 -to lcd2[6]
+set_location_assignment PIN_E4 -to lcd2[5]
+set_location_assignment PIN_E3 -to lcd2[4]
+set_location_assignment PIN_C1 -to lcd2[3]
+set_location_assignment PIN_C2 -to lcd2[2]
+set_location_assignment PIN_G6 -to lcd2[1]
+set_location_assignment PIN_G5 -to lcd2[0]
+set_location_assignment PIN_D4 -to lcd3[6]
+set_location_assignment PIN_F3 -to lcd3[5]
+set_location_assignment PIN_L8 -to lcd3[4]
+set_location_assignment PIN_J4 -to lcd3[3]
+set_location_assignment PIN_D6 -to lcd3[2]
+set_location_assignment PIN_D5 -to lcd3[1]
+set_location_assignment PIN_F4 -to lcd3[0]
+set_location_assignment PIN_Y21 -to ledsGreen[7]
+set_location_assignment PIN_Y22 -to ledsGreen[6]
+set_location_assignment PIN_W21 -to ledsGreen[5]
+set_location_assignment PIN_W22 -to ledsGreen[4]
+set_location_assignment PIN_V21 -to ledsGreen[3]
+set_location_assignment PIN_V22 -to ledsGreen[2]
+set_location_assignment PIN_U21 -to ledsGreen[1]
+set_location_assignment PIN_U22 -to ledsGreen[0]
+set_location_assignment PIN_R17 -to ledsRed[9]
+set_location_assignment PIN_R18 -to ledsRed[8]
+set_location_assignment PIN_U18 -to ledsRed[7]
+set_location_assignment PIN_Y18 -to ledsRed[6]
+set_location_assignment PIN_V19 -to ledsRed[5]
+set_location_assignment PIN_T18 -to ledsRed[4]
+set_location_assignment PIN_Y19 -to ledsRed[3]
+set_location_assignment PIN_U19 -to ledsRed[2]
+set_location_assignment PIN_R19 -to ledsRed[1]
+set_location_assignment PIN_R20 -to ledsRed[0]
+set_location_assignment PIN_M22 -to mode[2]
+set_location_assignment PIN_L21 -to mode[1]
+set_location_assignment PIN_L22 -to mode[0]
+set_location_assignment PIN_V12 -to set
+set_global_assignment -name MISC_FILE "C:/Users/mcarru/DSDLabs/Lab5/Lab5.dpf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
