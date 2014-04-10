@@ -20,7 +20,7 @@ entity g01_Mars_Clock_System is
 		state : in std_logic_vector(1 downto 0);
 		buttons : in std_logic_vector( 3 downto 0);
 		ledsRed : out std_logic_vector(9 downto 0);
-		ledsGreen : out std_logic_vector(7 doento 0);
+		ledsGreen : out std_logic_vector(7 downto 0);
 		lcd0 : out std_logic_vector(6 downto 0);
 		lcd1 : out std_logic_vector(6 downto 0);
 		lcd2 : out std_logic_vector(6 downto 0);
@@ -125,7 +125,7 @@ architecture behaviour of g01_Mars_Clock_System is
 		return bcd;
 	end to_bcd; 
 	
-begin
+
 	-- Earth second and day pulse signals
 	signal E_pulse_sec : std_logic;
 	signal E_pulse_day : std_logic;
@@ -179,15 +179,15 @@ begin
 	signal bcd_out : std_logic_vector(15 downto 0);
 	signal lcd1_rb : std_logic;
 	signal lcd2_rb : std_logic;
-
+begin
 	timer : g01_Earth_Mars_timer
-		PORT MAP ( clk => clock, reset => reset, enable => enable, epulse => epulse);
+		PORT MAP ( clk => clock, reset => reset, enable => '1', epulse => E_pulse_sec);
 	
 	E_ymd : g01_YMD_Counter
 		PORT MAP ( clock => clock,
 			reset => reset,
 			day_count_en => E_pulse_day, 
-			load_en => load_en, 
+			load_en => '0', 
 			Y_Set => E_Year_set,
 			M_Set => E_Month_set,
 			D_Set => E_Day_set,
@@ -200,31 +200,31 @@ begin
 		PORT MAP (
 			clock => clock,
 			reset => reset,
-			sec_clock : E_pulse_sec,
-			count_enable : NOT set,
-			load_enable : set,
-			H_Set : E_Hour_set,
-			M_Set : E_Minute_set,
-			S_Set : E_Second_set,
-			Hours : E_Hour,
-			Minutes : E_Minute,
-			Seconds : E_Second,
-			end_of_day : E_pulse_day
+			sec_clock => E_pulse_sec,
+			count_enable => NOT set,
+			load_enable => set,
+			H_Set => E_Hour_set,
+			M_Set => E_Minute_set,
+			S_Set => E_Second_set,
+			Hours => E_Hour,
+			Minutes => E_Minute,
+			Seconds => E_Second,
+			end_of_day => E_pulse_day
 		);
 
 	M_hms : g01_HMS_Counter
 		PORT MAP (
 			clock => clock,
 			reset => reset,
-			sec_clock : M_pulse_sec,
-			count_enable : NOT set,
-			load_enable : mtc_set,
-			H_Set : "00000",
-			M_Set : "000000",
-			S_Set : "000000",
-			Hours : M_Hour,
-			Minutes : M_Minute,
-			Seconds : M_Second
+			sec_clock => M_pulse_sec,
+			count_enable => NOT set,
+			load_enable => mtc_set,
+			H_Set => "00000",
+			M_Set => "000000",
+			S_Set => "000000",
+			Hours => M_Hour,
+			Minutes => M_Minute,
+			Seconds => M_Second
 		);
 
 	
@@ -238,6 +238,6 @@ begin
 	lcd2_decoder : g01_7_segment_decoder
 		PORT MAP (code => bcd_out(11 downto 8), RippleBlank_In => lcd2_rb, RippleBlank_Out => lcd1_rb, segments => lcd2);
 	lcd3_decoder : g01_7_segment_decoder
-		PORT MAP (code => bcd_out(15 downto 12), RippleBlank_In => '1', RippleBlank_Out => led2_rb, segments => lcd3);
+		PORT MAP (code => bcd_out(15 downto 12), RippleBlank_In => '1', RippleBlank_Out => lcd2_rb, segments => lcd3);
 end behaviour;
 
