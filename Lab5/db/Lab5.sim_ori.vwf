@@ -996,7 +996,8 @@ TRANSITION_LIST("Day_in[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 700.0;
 	}
 }
 
@@ -1014,7 +1015,8 @@ TRANSITION_LIST("Day_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 700.0;
 	}
 }
 
@@ -1023,7 +1025,8 @@ TRANSITION_LIST("Day_in[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 700.0;
 	}
 }
 
@@ -1032,8 +1035,9 @@ TRANSITION_LIST("DST")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 600.0;
+		LEVEL 1 FOR 100.0;
 		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 700.0;
 	}
 }
 
@@ -1042,7 +1046,8 @@ TRANSITION_LIST("Hour_in[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 400.0;
+		LEVEL 0 FOR 600.0;
 	}
 }
 
@@ -1051,8 +1056,8 @@ TRANSITION_LIST("Hour_in[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 950.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 600.0;
 	}
 }
 
@@ -1061,8 +1066,7 @@ TRANSITION_LIST("Hour_in[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 950.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1071,7 +1075,8 @@ TRANSITION_LIST("Hour_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 600.0;
 	}
 }
 
@@ -1080,8 +1085,8 @@ TRANSITION_LIST("Hour_in[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 950.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 600.0;
 	}
 }
 
@@ -1153,7 +1158,8 @@ TRANSITION_LIST("Month_in[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 800.0;
 	}
 }
 
@@ -1162,7 +1168,8 @@ TRANSITION_LIST("Month_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 800.0;
 	}
 }
 
@@ -1234,7 +1241,8 @@ TRANSITION_LIST("Time_Zone[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 500.0;
 	}
 }
 
@@ -1243,7 +1251,8 @@ TRANSITION_LIST("Time_Zone[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 500.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1252,7 +1261,8 @@ TRANSITION_LIST("Time_Zone[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 500.0;
 	}
 }
 
@@ -1351,7 +1361,8 @@ TRANSITION_LIST("Year_in[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 900.0;
 	}
 }
 
@@ -1360,7 +1371,8 @@ TRANSITION_LIST("Year_in[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 900.0;
 	}
 }
 
@@ -1369,7 +1381,8 @@ TRANSITION_LIST("Year_in[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 900.0;
 	}
 }
 
@@ -1387,7 +1400,8 @@ TRANSITION_LIST("Day_out[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 300.0;
+		LEVEL 1 FOR 700.0;
 	}
 }
 
@@ -1396,7 +1410,7 @@ TRANSITION_LIST("Day_out[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1405,7 +1419,8 @@ TRANSITION_LIST("Day_out[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 300.0;
+		LEVEL 1 FOR 700.0;
 	}
 }
 
@@ -1414,7 +1429,7 @@ TRANSITION_LIST("Day_out[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1423,7 +1438,8 @@ TRANSITION_LIST("Day_out[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 400.0;
+		LEVEL 0 FOR 600.0;
 	}
 }
 
@@ -1432,7 +1448,9 @@ TRANSITION_LIST("Hour_out[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1441,7 +1459,7 @@ TRANSITION_LIST("Hour_out[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1450,7 +1468,8 @@ TRANSITION_LIST("Hour_out[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 500.0;
 	}
 }
 
@@ -1459,7 +1478,8 @@ TRANSITION_LIST("Hour_out[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 600.0;
 	}
 }
 
@@ -1468,7 +1488,10 @@ TRANSITION_LIST("Hour_out[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
 
@@ -1531,7 +1554,8 @@ TRANSITION_LIST("Month_out[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 800.0;
 	}
 }
 
@@ -1540,7 +1564,7 @@ TRANSITION_LIST("Month_out[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1549,7 +1573,8 @@ TRANSITION_LIST("Month_out[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 800.0;
 	}
 }
 
@@ -1558,7 +1583,8 @@ TRANSITION_LIST("Month_out[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 300.0;
+		LEVEL 0 FOR 700.0;
 	}
 }
 
@@ -1621,7 +1647,7 @@ TRANSITION_LIST("Year_out[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1630,7 +1656,7 @@ TRANSITION_LIST("Year_out[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1639,7 +1665,7 @@ TRANSITION_LIST("Year_out[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1648,7 +1674,7 @@ TRANSITION_LIST("Year_out[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1657,7 +1683,7 @@ TRANSITION_LIST("Year_out[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1666,7 +1692,7 @@ TRANSITION_LIST("Year_out[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1675,7 +1701,7 @@ TRANSITION_LIST("Year_out[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1684,7 +1710,7 @@ TRANSITION_LIST("Year_out[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -1693,7 +1719,8 @@ TRANSITION_LIST("Year_out[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 900.0;
 	}
 }
 
@@ -1702,7 +1729,8 @@ TRANSITION_LIST("Year_out[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 800.0;
 	}
 }
 
@@ -1711,7 +1739,9 @@ TRANSITION_LIST("Year_out[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 800.0;
 	}
 }
 
@@ -1720,7 +1750,8 @@ TRANSITION_LIST("Year_out[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 800.0;
 	}
 }
 

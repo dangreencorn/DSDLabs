@@ -1,5 +1,5 @@
 Flow report for Lab5
-Wed Apr 09 18:45:59 2014
+Wed Apr 09 22:06:43 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 09 18:45:59 2014         ;
+; Flow Status                        ; Successful - Wed Apr 09 22:06:43 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab5                                          ;
-; Top-level Entity Name              ; g01_to_UTC                                    ;
+; Top-level Entity Name              ; g01_to_local                                  ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; N/A                                           ;
-; Total logic elements               ; 398                                           ;
-;     Total combinational functions  ; 398                                           ;
+; Total logic elements               ; 360                                           ;
+;     Total combinational functions  ; 360                                           ;
 ;     Dedicated logic registers      ; 0                                             ;
 ; Total registers                    ; 0                                             ;
-; Total pins                         ; 87                                            ;
+; Total pins                         ; 82                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -63,25 +63,25 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/09/2014 18:45:58 ;
+; Start date & time ; 04/09/2014 22:06:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab5                ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129495996696.139708355704356 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                        ; --            ; g01_to_UTC  ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g01_to_UTC  ; Top            ;
-; TOP_LEVEL_ENTITY                   ; g01_to_UTC                      ; Lab5          ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++------------------------------------+---------------------------------+---------------+--------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name  ; Section Id     ;
++------------------------------------+---------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 132129495996696.139709560203500 ; --            ; --           ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --           ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; g01_to_local ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g01_to_local ; Top            ;
+; TOP_LEVEL_ENTITY                   ; g01_to_local                    ; Lab5          ; --           ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --           ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+--------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -89,7 +89,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 319 MB              ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 320 MB              ; 00:00:02                           ;
 ; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

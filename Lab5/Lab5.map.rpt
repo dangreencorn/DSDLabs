@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab5
-Wed Apr 09 18:45:59 2014
+Wed Apr 09 22:06:43 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -13,13 +13,11 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Logic Cells Representing Combinational Loops
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +43,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 09 18:45:59 2014         ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 09 22:06:43 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab5                                          ;
-; Top-level Entity Name              ; g01_to_UTC                                    ;
+; Top-level Entity Name              ; g01_to_local                                  ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 398                                           ;
-;     Total combinational functions  ; 398                                           ;
+; Total logic elements               ; 360                                           ;
+;     Total combinational functions  ; 360                                           ;
 ;     Dedicated logic registers      ; 0                                             ;
 ; Total registers                    ; 0                                             ;
-; Total pins                         ; 87                                            ;
+; Total pins                         ; 82                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -68,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; g01_to_UTC         ; Lab5               ;
+; Top-level entity name                                                      ; g01_to_local       ; Lab5               ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -163,128 +161,61 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+
-; g01_to_UTC.vhd                   ; yes             ; User VHDL File               ; C:/Users/dgreen22/DSDLabs/Lab5/g01_to_UTC.vhd                  ;
+; g01_to_local.vhd                 ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_to_local.vhd                  ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf ;
-; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgreen22/DSDLabs/Lab5/db/lpm_divide_u7m.tdf           ;
-; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgreen22/DSDLabs/Lab5/db/sign_div_unsign_5nh.tdf      ;
-; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgreen22/DSDLabs/Lab5/db/alt_u_div_c5f.tdf            ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgreen22/DSDLabs/Lab5/db/add_sub_lkc.tdf              ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dgreen22/DSDLabs/Lab5/db/add_sub_mkc.tdf              ;
+; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/lpm_divide_u7m.tdf             ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/sign_div_unsign_5nh.tdf        ;
+; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/alt_u_div_c5f.tdf              ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/add_sub_lkc.tdf                ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/add_sub_mkc.tdf                ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 398               ;
-;                                             ;                   ;
-; Total combinational functions               ; 398               ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 104               ;
-;     -- 3 input functions                    ; 116               ;
-;     -- <=2 input functions                  ; 178               ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 281               ;
-;     -- arithmetic mode                      ; 117               ;
-;                                             ;                   ;
-; Total registers                             ; 0                 ;
-;     -- Dedicated logic registers            ; 0                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 87                ;
-; Maximum fan-out node                        ; Hour_out_int[6]~7 ;
-; Maximum fan-out                             ; 47                ;
-; Total fan-out                               ; 1138              ;
-; Average fan-out                             ; 2.35              ;
-+---------------------------------------------+-------------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 360     ;
+;                                             ;         ;
+; Total combinational functions               ; 360     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 103     ;
+;     -- 3 input functions                    ; 107     ;
+;     -- <=2 input functions                  ; 150     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 262     ;
+;     -- arithmetic mode                      ; 98      ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 82      ;
+; Maximum fan-out node                        ; Add2~14 ;
+; Maximum fan-out                             ; 32      ;
+; Total fan-out                               ; 1048    ;
+; Average fan-out                             ; 2.37    ;
++---------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |g01_to_UTC                            ; 398 (168)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |g01_to_UTC                                                                                                 ; work         ;
-;    |lpm_divide:Mod0|                   ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod0                                                                                 ;              ;
-;       |lpm_divide_u7m:auto_generated|  ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
-;          |sign_div_unsign_5nh:divider| ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;             |alt_u_div_c5f:divider|    ; 131 (131)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
-;    |lpm_divide:Mod1|                   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod1                                                                                 ;              ;
-;       |lpm_divide_u7m:auto_generated|  ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
-;          |sign_div_unsign_5nh:divider| ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;             |alt_u_div_c5f:divider|    ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_UTC|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; |g01_to_local                          ; 360 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |g01_to_local                                                                                                 ; work         ;
+;    |lpm_divide:Mod0|                   ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod0                                                                                 ;              ;
+;       |lpm_divide_u7m:auto_generated|  ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
+;          |sign_div_unsign_5nh:divider| ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;             |alt_u_div_c5f:divider|    ; 134 (134)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
+;    |lpm_divide:Mod1|                   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod1                                                                                 ;              ;
+;       |lpm_divide_u7m:auto_generated|  ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
+;          |sign_div_unsign_5nh:divider| ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;             |alt_u_div_c5f:divider|    ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_to_local|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; Hour_out_int[0]                                    ; Add1                ; yes                    ;
-; Hour_out_int[1]                                    ; Add1                ; yes                    ;
-; Hour_out_int[2]                                    ; Add1                ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; Year_out[0]                                            ;    ;
-; Year_out_int~20                                        ;    ;
-; Year_out_int~21                                        ;    ;
-; Add1                                                   ;    ;
-; Month_out_int~1                                        ;    ;
-; Add1                                                   ;    ;
-; Hour_out[4]                                            ;    ;
-; Hour_out[3]                                            ;    ;
-; Month_out_int~2                                        ;    ;
-; Year_out_int~1                                         ;    ;
-; Month_out_int~7                                        ;    ;
-; Year_out_int~18                                        ;    ;
-; Year_out_int~19                                        ;    ;
-; Year_out_int~16                                        ;    ;
-; Year_out_int~17                                        ;    ;
-; Year_out_int~14                                        ;    ;
-; Year_out_int~15                                        ;    ;
-; Year_out_int~12                                        ;    ;
-; Year_out_int~13                                        ;    ;
-; Year_out_int~10                                        ;    ;
-; Year_out_int~11                                        ;    ;
-; Year_out_int~8                                         ;    ;
-; Year_out_int~9                                         ;    ;
-; Year_out_int~6                                         ;    ;
-; Year_out_int~7                                         ;    ;
-; Year_out_int~4                                         ;    ;
-; Year_out_int~5                                         ;    ;
-; Year_out_int~2                                         ;    ;
-; Year_out_int~3                                         ;    ;
-; Year_out[11]                                           ;    ;
-; Month_out_int~5                                        ;    ;
-; Month_out_int~6                                        ;    ;
-; Month_out[1]                                           ;    ;
-; Month_out[2]                                           ;    ;
-; Month_out[3]                                           ;    ;
-; Day_out_int~8                                          ;    ;
-; Day_out_int~9                                          ;    ;
-; Day_out_int~6                                          ;    ;
-; Day_out_int~7                                          ;    ;
-; Day_out_int~5                                          ;    ;
-; Day_out_int~4                                          ;    ;
-; Day_out[3]                                             ;    ;
-; Day_out[4]                                             ;    ;
-; Add2                                                   ;    ;
-; Number of logic cells representing combinational loops ; 44 ;
-+--------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -302,16 +233,17 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |g01_to_UTC|Hour_out_int[6] ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |g01_to_UTC|Month_out_int   ;
-; 7:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |g01_to_UTC|Year_out_int    ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 25 LEs               ; 5 LEs                  ; No         ; |g01_to_UTC|Day_out_int     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |g01_to_local|hour         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g01_to_local|hour         ;
+; 6:1                ; 12 bits   ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |g01_to_local|year         ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |g01_to_local|month        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 25 LEs               ; 5 LEs                  ; No         ; |g01_to_local|day          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +------------------------------------------------------------------+
@@ -366,78 +298,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Wed Apr 09 18:45:57 2014
+    Info: Processing started: Wed Apr 09 22:06:41 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c Lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 2 design units, including 1 entities, in source file g01_to_local.vhd
+    Info: Found design unit 1: g01_to_local-behaviour
+    Info: Found entity 1: g01_to_local
+Info: Found 2 design units, including 1 entities, in source file g01_hms_counter.vhd
+    Info: Found design unit 1: g01_HMS_Counter-behaviour
+    Info: Found entity 1: g01_HMS_Counter
+Info: Found 2 design units, including 1 entities, in source file g01_7_segment_decoder.vhd
+    Info: Found design unit 1: g01_7_segment_decoder-decode
+    Info: Found entity 1: g01_7_segment_decoder
+Info: Found 2 design units, including 1 entities, in source file g01_basic_timer.vhd
+    Info: Found design unit 1: g01_Basic_Timer-behaviour
+    Info: Found entity 1: g01_Basic_Timer
+Info: Found 2 design units, including 1 entities, in source file g01_earth_mars_timer.vhd
+    Info: Found design unit 1: g01_Earth_Mars_Timer-behaviour
+    Info: Found entity 1: g01_Earth_Mars_Timer
+Info: Found 2 design units, including 1 entities, in source file g01_mars_clock.vhd
+    Info: Found design unit 1: g01_Mars_Clock_System-behaviour
+    Info: Found entity 1: g01_Mars_Clock_System
 Info: Found 2 design units, including 1 entities, in source file g01_to_utc.vhd
     Info: Found design unit 1: g01_to_UTC-behaviour
     Info: Found entity 1: g01_to_UTC
-Info: Elaborating entity "g01_to_UTC" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(60): signal "Year_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(61): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(62): signal "Day_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(63): signal "Hour_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(65): signal "Year_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(66): signal "Year_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(67): signal "Year_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(72): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(75): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(75): signal "tz_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(77): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(78): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(79): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(80): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(81): signal "Month_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(83): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(84): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(85): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(86): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(87): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(88): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(90): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(91): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(92): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(93): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(95): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(95): signal "leap_year" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(97): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(97): signal "leap_year" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(101): signal "Month_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(103): signal "Year_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(106): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(107): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(108): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(110): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(110): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(111): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(112): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(113): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(114): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(115): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(116): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(117): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(117): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(118): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(119): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(120): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(121): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(121): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(121): signal "leap_year" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(122): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(122): signal "Month_in_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(122): signal "leap_year" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(123): signal "Month_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(125): signal "Month_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(126): signal "Year_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(131): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(132): signal "Year_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(133): signal "Month_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(134): signal "Day_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_to_UTC.vhd(135): signal "Hour_out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at g01_to_UTC.vhd(52): inferring latch(es) for signal or variable "Hour_out_int", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Hour_out_int[0]" at g01_to_UTC.vhd(52)
-Info (10041): Inferred latch for "Hour_out_int[1]" at g01_to_UTC.vhd(52)
-Info (10041): Inferred latch for "Hour_out_int[2]" at g01_to_UTC.vhd(52)
+Info: Found 2 design units, including 1 entities, in source file g01_ymd_counter.vhd
+    Info: Found design unit 1: g01_YMD_Counter-behaviour
+    Info: Found entity 1: g01_YMD_Counter
+Info: Elaborating entity "g01_to_local" for the top level hierarchy
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
@@ -463,20 +351,13 @@ Info: Instantiated megafunction "lpm_divide:Mod1" with the following parameter:
     Info: Parameter "LPM_WIDTHD" = "12"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Warning: Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Hour_in[0]"
-    Warning (15610): No output dependent on input pin "Hour_in[1]"
-    Warning (15610): No output dependent on input pin "Hour_in[2]"
-    Warning (15610): No output dependent on input pin "Hour_in[3]"
-    Warning (15610): No output dependent on input pin "Hour_in[4]"
-    Warning (15610): No output dependent on input pin "DST"
-Info: Implemented 485 device resources after synthesis - the final resource count might be different
+Info: Implemented 442 device resources after synthesis - the final resource count might be different
     Info: Implemented 44 input pins
-    Info: Implemented 43 output pins
-    Info: Implemented 398 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 319 megabytes
-    Info: Processing ended: Wed Apr 09 18:45:59 2014
+    Info: Implemented 38 output pins
+    Info: Implemented 360 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 320 megabytes
+    Info: Processing ended: Wed Apr 09 22:06:43 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
