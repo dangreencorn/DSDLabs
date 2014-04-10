@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY g01_YMD_Counter
+set_global_assignment -name TOP_LEVEL_ENTITY g01_UTC_to_MTC
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:28:12  MARCH 19, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"

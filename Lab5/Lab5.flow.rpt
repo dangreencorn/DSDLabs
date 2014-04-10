@@ -1,5 +1,5 @@
 Flow report for Lab5
-Thu Apr 10 02:49:48 2014
+Thu Apr 10 15:08:11 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 10 02:49:48 2014         ;
+; Flow Status                        ; Successful - Thu Apr 10 15:08:11 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab5                                          ;
 ; Top-level Entity Name              ; g01_Mars_Clock_System                         ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 1,791 / 18,752 ( 10 % )                       ;
-;     Total combinational functions  ; 1,791 / 18,752 ( 10 % )                       ;
-;     Dedicated logic registers      ; 251 / 18,752 ( 1 % )                          ;
-; Total registers                    ; 251                                           ;
+; Total logic elements               ; 2,258 / 18,752 ( 12 % )                       ;
+;     Total combinational functions  ; 2,256 / 18,752 ( 12 % )                       ;
+;     Dedicated logic registers      ; 296 / 18,752 ( 2 % )                          ;
+; Total registers                    ; 296                                           ;
 ; Total pins                         ; 61 / 315 ( 19 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2014 02:49:23 ;
+; Start date & time ; 04/10/2014 15:07:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab5                ;
 +-------------------+---------------------+
@@ -74,10 +74,11 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------------+---------------+-----------------------+----------------+
 ; Assignment Name                    ; Value                                 ; Default Value ; Entity Name           ; Section Id     ;
 +------------------------------------+---------------------------------------+---------------+-----------------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129495996696.139711256304332       ; --            ; --                    ; --             ;
+; COMPILER_SIGNATURE_ID              ; 132129496019038.139715685900700       ; --            ; --                    ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                    ; --            ; --                    ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                     ; --            ; --                    ; --             ;
 ; MISC_FILE                          ; C:/Users/mcarru/DSDLabs/Lab5/Lab5.dpf ; --            ; --                    ; --             ;
+; MISC_FILE                          ; P:/DSDLabs/Lab5/Lab5.dpf              ; --            ; --                    ; --             ;
 ; PARTITION_COLOR                    ; 16764057                              ; --            ; g01_Mars_Clock_System ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                                ; --            ; g01_Mars_Clock_System ; Top            ;
 ; TOP_LEVEL_ENTITY                   ; g01_Mars_Clock_System                 ; Lab5          ; --                    ; --             ;
@@ -90,11 +91,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:11     ; 1.0                     ; 336 MB              ; 00:00:08                           ;
-; Fitter                  ; 00:00:08     ; 2.5                     ; 370 MB              ; 00:00:06                           ;
-; Assembler               ; 00:00:03     ; 1.0                     ; 275 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 217 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:25     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis    ; 00:00:13     ; 1.0                     ; 335 MB              ; 00:00:10                           ;
+; Fitter                  ; 00:00:09     ; 1.0                     ; 373 MB              ; 00:00:07                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 276 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 220 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:29     ; --                      ; --                  ; 00:00:19                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +104,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; 156TR4060DS-06   ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; 156TR4060DS-06   ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; 156TR4060DS-06   ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; 156TR4060DS-06   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; 156TR4060DS-05   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-05   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-05   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-05   ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

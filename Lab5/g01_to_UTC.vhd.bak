@@ -38,14 +38,11 @@ begin
 	Minute_out <= Minute_in;
 	Second_out <= Second_in;
 
-	Month_in_int <= to_integer(unsigned(Month_in));
-
 	calculate_hour : process(Year_in, Month_in, Day_in, Hour_in, DST, Time_Zone, leap_year)
 		variable year : integer := to_integer(unsigned(Year_in));
 		variable month : integer := to_integer(unsigned(Month_in));
 		variable day : integer := to_integer(unsigned(Day_in));
 		variable hour : integer := to_integer(unsigned(Hour_in));
-		
 		variable orig_month : integer := to_integer(unsigned(Month_in));
 	begin
 		year := to_integer(unsigned(Year_in));
@@ -72,21 +69,21 @@ begin
 			if (day = 0) then
 				month := month - 1;
 				
-				if (Month_in_int = 1 
-						OR Month_in_int = 2 
-						OR Month_in_int = 4 
-						OR Month_in_int = 6 
-						OR Month_in_int = 9 
-						OR Month_in_int = 11) then
+				if (orig_month = 1 
+						OR orig_month = 2 
+						OR orig_month = 4 
+						OR orig_month = 6 
+						OR orig_month = 9 
+						OR orig_month = 11) then
 					day := 31;
-				elsif (Month_in_int = 5 
-						OR Month_in_int = 5 
-						OR Month_in_int = 10 
-						OR Month_in_int = 12) then
+				elsif (orig_month = 5 
+						OR orig_month = 5 
+						OR orig_month = 10 
+						OR orig_month = 12) then
 					day := 30;
-				elsif (Month_in_int = 3 AND leap_year = '1') then
+				elsif (orig_month = 3 AND leap_year = '1') then
 					day := 29;
-				elsif (Month_in_int = 3 AND leap_year = '0') then
+				elsif (orig_month = 3 AND leap_year = '0') then
 					day := 28;
 				end if;
 				
@@ -99,19 +96,19 @@ begin
 			day := day + 1;
 			hour := 24 - hour;
 			
-			if ( ( day = 32 AND ( Month_in_int = 1
-										  OR Month_in_int = 3
-										  OR Month_in_int = 5
-										  OR Month_in_int = 7
-										  OR Month_in_int = 8
-										  OR Month_in_int = 10
-										  OR Month_in_int = 12 ) )
-					OR ( day = 31 AND ( Month_in_int = 4
-												OR Month_in_int = 6
-												OR Month_in_int = 9
-												OR Month_in_int = 11 ) )
-					OR ( day = 30 AND Month_in_int = 2 AND leap_year = '1')
-					OR ( day = 30 AND Month_in_int = 2 AND leap_year = '0')) then
+			if ( ( day = 32 AND ( orig_month = 1
+								  OR orig_month = 3
+								  OR orig_month = 5
+								  OR orig_month = 7
+								  OR orig_month = 8
+								  OR orig_month = 10
+								  OR orig_month = 12 ) )
+					OR ( day = 31 AND ( orig_month = 4
+										OR orig_month = 6
+										OR orig_month = 9
+										OR orig_month = 11 ) )
+					OR ( day = 30 AND orig_month = 2 AND leap_year = '1')
+					OR ( day = 30 AND orig_month = 2 AND leap_year = '0')) then
 				month := month + 1;
 				day := 1;
 				if (month = 13) then

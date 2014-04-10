@@ -108,7 +108,7 @@ begin
 										OR orig_month = 9
 										OR orig_month = 11 ) )
 					OR ( day = 30 AND orig_month = 2 AND leap_year = '1')
-					OR ( day = 30 AND orig_month = 2 AND leap_year = '0')) then
+					OR ( day = 29 AND orig_month = 2 AND leap_year = '0')) then
 				month := month + 1;
 				day := 1;
 				if (month = 13) then

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab5
-Thu Apr 10 02:49:31 2014
+Thu Apr 10 15:07:49 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -24,45 +24,51 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
  16. Source assignments for g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_seconds
  17. Source assignments for g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_minutes
  18. Source assignments for g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_hours
- 19. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds
- 20. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_minutes
- 21. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_hours
- 22. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds
- 23. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes
- 24. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours
- 25. Source assignments for g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count
- 26. Source assignments for g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count
- 27. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth
- 28. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
- 29. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars
- 30. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
- 31. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_seconds
- 32. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_minutes
- 33. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_hours
- 34. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds
- 35. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_minutes
- 36. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_hours
- 37. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds
- 38. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes
- 39. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours
- 40. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count
- 41. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count
- 42. Parameter Settings for Inferred Entity Instance: g01_to_local:E_Timezone_Converter|lpm_divide:Mod0
- 43. Parameter Settings for Inferred Entity Instance: g01_to_local:E_Timezone_Converter|lpm_divide:Mod1
- 44. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0
- 45. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1
- 46. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0
- 47. lpm_mult Parameter Settings by Entity Instance
- 48. Port Connectivity Checks: "g01_7_segment_decoder:lcd3_decoder"
- 49. Port Connectivity Checks: "g01_7_segment_decoder:lcd1_decoder"
- 50. Port Connectivity Checks: "g01_7_segment_decoder:lcd0_decoder"
- 51. Port Connectivity Checks: "g01_to_local:M_Timezone_Converter"
- 52. Port Connectivity Checks: "g01_to_local:E_Timezone_Converter"
- 53. Port Connectivity Checks: "g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count"
- 54. Port Connectivity Checks: "g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count"
- 55. Port Connectivity Checks: "g01_HMS_Counter:M_HMS"
- 56. Port Connectivity Checks: "g01_HMS_Counter:E_HMS"
- 57. Analysis & Synthesis Messages
+ 19. Source assignments for g01_Basic_Timer:clock_convert|LPM_COUNTER:counter
+ 20. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds
+ 21. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_minutes
+ 22. Source assignments for g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_hours
+ 23. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds
+ 24. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes
+ 25. Source assignments for g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours
+ 26. Source assignments for g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count
+ 27. Source assignments for g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count
+ 28. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth
+ 29. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter
+ 30. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars
+ 31. Parameter Settings for User Entity Instance: g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter
+ 32. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_seconds
+ 33. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_minutes
+ 34. Parameter Settings for User Entity Instance: g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_hours
+ 35. Parameter Settings for User Entity Instance: g01_Basic_Timer:clock_convert
+ 36. Parameter Settings for User Entity Instance: g01_Basic_Timer:clock_convert|LPM_COUNTER:counter
+ 37. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds
+ 38. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_minutes
+ 39. Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_hours
+ 40. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds
+ 41. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes
+ 42. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours
+ 43. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count
+ 44. Parameter Settings for User Entity Instance: g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count
+ 45. Parameter Settings for Inferred Entity Instance: g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0
+ 46. Parameter Settings for Inferred Entity Instance: g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1
+ 47. Parameter Settings for Inferred Entity Instance: g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0
+ 48. Parameter Settings for Inferred Entity Instance: g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1
+ 49. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0
+ 50. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1
+ 51. Parameter Settings for Inferred Entity Instance: g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0
+ 52. lpm_mult Parameter Settings by Entity Instance
+ 53. Port Connectivity Checks: "g01_7_segment_decoder:lcd3_decoder"
+ 54. Port Connectivity Checks: "g01_7_segment_decoder:lcd1_decoder"
+ 55. Port Connectivity Checks: "g01_7_segment_decoder:lcd0_decoder"
+ 56. Port Connectivity Checks: "g01_to_local:M_Display_Timezone_Converter"
+ 57. Port Connectivity Checks: "g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count"
+ 58. Port Connectivity Checks: "g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count"
+ 59. Port Connectivity Checks: "g01_HMS_Counter:M_HMS"
+ 60. Port Connectivity Checks: "g01_Basic_Timer:clock_convert"
+ 61. Port Connectivity Checks: "g01_HMS_Counter:E_HMS"
+ 62. Port Connectivity Checks: "g01_YMD_Counter:E_YMD"
+ 63. Analysis & Synthesis Messages
 
 
 
@@ -88,15 +94,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 10 02:49:31 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 10 15:07:49 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; Lab5                                          ;
 ; Top-level Entity Name              ; g01_Mars_Clock_System                         ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 1,793                                         ;
-;     Total combinational functions  ; 1,791                                         ;
-;     Dedicated logic registers      ; 251                                           ;
-; Total registers                    ; 251                                           ;
+; Total logic elements               ; 2,258                                         ;
+;     Total combinational functions  ; 2,256                                         ;
+;     Dedicated logic registers      ; 296                                           ;
+; Total registers                    ; 296                                           ;
 ; Total pins                         ; 61                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -206,31 +212,32 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+
-; g01_UTC_to_MTC.vhd               ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_UTC_to_MTC.vhd                 ;
-; g01_to_local.vhd                 ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_to_local.vhd                   ;
-; g01_HMS_Counter.vhd              ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_HMS_Counter.vhd                ;
-; g01_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_7_segment_decoder.vhd          ;
-; g01_Basic_Timer.vhd              ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_Basic_Timer.vhd                ;
-; g01_Earth_Mars_Timer.vhd         ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_Earth_Mars_Timer.vhd           ;
-; g01_Mars_Clock.vhd               ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_Mars_Clock.vhd                 ;
-; g01_YMD_Counter.vhd              ; yes             ; User VHDL File               ; C:/Users/mcarru/DSDLabs/Lab5/g01_YMD_Counter.vhd                ;
+; g01_UTC_to_MTC.vhd               ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_UTC_to_MTC.vhd                              ;
+; g01_to_local.vhd                 ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_to_local.vhd                                ;
+; g01_HMS_Counter.vhd              ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_HMS_Counter.vhd                             ;
+; g01_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_7_segment_decoder.vhd                       ;
+; g01_Basic_Timer.vhd              ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_Basic_Timer.vhd                             ;
+; g01_Earth_Mars_Timer.vhd         ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_Earth_Mars_Timer.vhd                        ;
+; g01_Mars_Clock.vhd               ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_Mars_Clock.vhd                              ;
+; g01_to_UTC.vhd                   ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_to_UTC.vhd                                  ;
+; g01_YMD_Counter.vhd              ; yes             ; User VHDL File               ; P:/DSDLabs/Lab5/g01_YMD_Counter.vhd                             ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf ;
-; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cntr_8fl.tdf                    ;
-; db/cntr_gvj.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cntr_gvj.tdf                    ;
-; db/cmpr_acc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cmpr_acc.tdf                    ;
-; db/cntr_fvj.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cntr_fvj.tdf                    ;
-; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cmpr_9cc.tdf                    ;
-; db/cntr_h6j.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cntr_h6j.tdf                    ;
-; db/cmpr_sdc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cmpr_sdc.tdf                    ;
-; db/cntr_pvi.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/cntr_pvi.tdf                    ;
+; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cntr_8fl.tdf                                 ;
+; db/cntr_gvj.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cntr_gvj.tdf                                 ;
+; db/cmpr_acc.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cmpr_acc.tdf                                 ;
+; db/cntr_fvj.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cntr_fvj.tdf                                 ;
+; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cmpr_9cc.tdf                                 ;
+; db/cntr_h6j.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cntr_h6j.tdf                                 ;
+; db/cmpr_sdc.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cmpr_sdc.tdf                                 ;
+; db/cntr_pvi.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/cntr_pvi.tdf                                 ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf  ;
-; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/lpm_divide_u7m.tdf              ;
-; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/sign_div_unsign_5nh.tdf         ;
-; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/alt_u_div_c5f.tdf               ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/add_sub_lkc.tdf                 ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/add_sub_mkc.tdf                 ;
+; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/lpm_divide_u7m.tdf                           ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/sign_div_unsign_5nh.tdf                      ;
+; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/alt_u_div_c5f.tdf                            ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/add_sub_lkc.tdf                              ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/add_sub_mkc.tdf                              ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf    ;
-; db/mult_9ct.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/mcarru/DSDLabs/Lab5/db/mult_9ct.tdf                    ;
+; db/mult_9ct.tdf                  ; yes             ; Auto-Generated Megafunction  ; P:/DSDLabs/Lab5/db/mult_9ct.tdf                                 ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+
 
 
@@ -239,106 +246,118 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,793 ;
+; Estimated Total logic elements              ; 2,258 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1791  ;
+; Total combinational functions               ; 2256  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 527   ;
-;     -- 3 input functions                    ; 567   ;
-;     -- <=2 input functions                  ; 697   ;
+;     -- 4 input functions                    ; 725   ;
+;     -- 3 input functions                    ; 642   ;
+;     -- <=2 input functions                  ; 889   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1031  ;
-;     -- arithmetic mode                      ; 760   ;
+;     -- normal mode                          ; 1365  ;
+;     -- arithmetic mode                      ; 891   ;
 ;                                             ;       ;
-; Total registers                             ; 251   ;
-;     -- Dedicated logic registers            ; 251   ;
+; Total registers                             ; 296   ;
+;     -- Dedicated logic registers            ; 296   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 61    ;
 ; Embedded Multiplier 9-bit elements          ; 8     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 235   ;
-; Total fan-out                               ; 6276  ;
+; Maximum fan-out                             ; 274   ;
+; Total fan-out                               ; 7779  ;
 ; Average fan-out                             ; 2.97  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                       ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g01_Mars_Clock_System                       ; 1791 (299)        ; 251 (8)      ; 0           ; 8            ; 0       ; 4         ; 61   ; 0            ; |g01_Mars_Clock_System                                                                                                                                                    ; work         ;
-;    |g01_7_segment_decoder:lcd0_decoder|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd0_decoder                                                                                                                 ;              ;
-;    |g01_7_segment_decoder:lcd1_decoder|      ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd1_decoder                                                                                                                 ;              ;
-;    |g01_7_segment_decoder:lcd2_decoder|      ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd2_decoder                                                                                                                 ;              ;
-;    |g01_7_segment_decoder:lcd3_decoder|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd3_decoder                                                                                                                 ;              ;
-;    |g01_Earth_Mars_Timer:timer|              ; 112 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer                                                                                                                         ;              ;
-;       |g01_Basic_Timer:earth|                ; 56 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth                                                                                                   ;              ;
-;          |lpm_counter:counter|               ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter                                                                               ;              ;
-;             |cntr_8fl:auto_generated|        ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                                                       ;              ;
-;       |g01_Basic_Timer:mars|                 ; 56 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars                                                                                                    ;              ;
-;          |lpm_counter:counter|               ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter                                                                                ;              ;
-;             |cntr_8fl:auto_generated|        ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter|cntr_8fl:auto_generated                                                        ;              ;
-;    |g01_HMS_Counter:E_HMS|                   ; 54 (6)            ; 21 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS                                                                                                                              ;              ;
-;       |lpm_counter:counter_hours|            ; 14 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours                                                                                                    ;              ;
-;          |cntr_fvj:auto_generated|           ; 14 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated                                                                            ;              ;
-;             |cmpr_9cc:cmpr2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                                             ;              ;
-;       |lpm_counter:counter_minutes|          ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes                                                                                                  ;              ;
-;          |cntr_gvj:auto_generated|           ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                                                          ;              ;
-;             |cmpr_acc:cmpr2|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
-;       |lpm_counter:counter_seconds|          ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds                                                                                                  ;              ;
-;          |cntr_gvj:auto_generated|           ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                                                          ;              ;
-;             |cmpr_acc:cmpr2|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
-;    |g01_HMS_Counter:M_HMS|                   ; 51 (5)            ; 20 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS                                                                                                                              ;              ;
-;       |lpm_counter:counter_hours|            ; 14 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours                                                                                                    ;              ;
-;          |cntr_fvj:auto_generated|           ; 14 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated                                                                            ;              ;
-;             |cmpr_9cc:cmpr2|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                                             ;              ;
-;       |lpm_counter:counter_minutes|          ; 15 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_minutes                                                                                                  ;              ;
-;          |cntr_gvj:auto_generated|           ; 15 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                                                          ;              ;
-;       |lpm_counter:counter_seconds|          ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds                                                                                                  ;              ;
-;          |cntr_gvj:auto_generated|           ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                                                          ;              ;
-;             |cmpr_acc:cmpr2|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
-;    |g01_UTC_to_MTC:M_Convert|                ; 829 (367)         ; 99 (18)      ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert                                                                                                                           ;              ;
-;       |g01_HMS_Counter:HMS_count|            ; 37 (6)            ; 21 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count                                                                                                 ;              ;
-;          |lpm_counter:counter_hours|         ; 9 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours                                                                       ;              ;
-;             |cntr_fvj:auto_generated|        ; 9 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated                                               ;              ;
-;                |cmpr_9cc:cmpr2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                ;              ;
-;          |lpm_counter:counter_minutes|       ; 11 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes                                                                     ;              ;
-;             |cntr_gvj:auto_generated|        ; 11 (9)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                             ;              ;
-;                |cmpr_acc:cmpr2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2                              ;              ;
-;          |lpm_counter:counter_seconds|       ; 11 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds                                                                     ;              ;
-;             |cntr_gvj:auto_generated|        ; 11 (9)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                             ;              ;
-;                |cmpr_acc:cmpr2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                              ;              ;
-;       |g01_YMD_Counter:YMD_Count|            ; 329 (84)          ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count                                                                                                 ;              ;
-;          |lpm_divide:Mod0|                   ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0                                                                                 ;              ;
-;             |lpm_divide_u7m:auto_generated|  ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
-;                |sign_div_unsign_5nh:divider| ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;                   |alt_u_div_c5f:divider|    ; 146 (146)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
-;          |lpm_divide:Mod1|                   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1                                                                                 ;              ;
-;             |lpm_divide_u7m:auto_generated|  ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
-;                |sign_div_unsign_5nh:divider| ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;                   |alt_u_div_c5f:divider|    ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
-;       |lpm_counter:day_count|                ; 20 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:day_count                                                                                                     ;              ;
-;          |cntr_pvi:auto_generated|           ; 20 (20)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:day_count|cntr_pvi:auto_generated                                                                             ;              ;
-;       |lpm_counter:sec_count|                ; 24 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count                                                                                                     ;              ;
-;          |cntr_h6j:auto_generated|           ; 24 (19)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count|cntr_h6j:auto_generated                                                                             ;              ;
-;             |cmpr_sdc:cmpr2|                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count|cntr_h6j:auto_generated|cmpr_sdc:cmpr2                                                              ;              ;
-;       |lpm_mult:Mult0|                       ; 52 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0                                                                                                            ;              ;
-;          |mult_9ct:auto_generated|           ; 52 (52)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0|mult_9ct:auto_generated                                                                                    ;              ;
-;    |g01_YMD_Counter:E_YMD|                   ; 55 (55)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD                                                                                                                              ;              ;
-;    |g01_to_local:E_Timezone_Converter|       ; 326 (93)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter                                                                                                                  ;              ;
-;       |lpm_divide:Mod0|                      ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod0                                                                                                  ;              ;
-;          |lpm_divide_u7m:auto_generated|     ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                                    ;              ;
-;             |sign_div_unsign_5nh:divider|    ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                        ;              ;
-;                |alt_u_div_c5f:divider|       ; 134 (134)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider                  ;              ;
-;       |lpm_divide:Mod1|                      ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod1                                                                                                  ;              ;
-;          |lpm_divide_u7m:auto_generated|     ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                                    ;              ;
-;             |sign_div_unsign_5nh:divider|    ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                        ;              ;
-;                |alt_u_div_c5f:divider|       ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider                  ;              ;
-;    |g01_to_local:M_Timezone_Converter|       ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:M_Timezone_Converter                                                                                                                  ;              ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                   ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                       ; Library Name ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g01_Mars_Clock_System                         ; 2256 (326)        ; 296 (13)     ; 0           ; 8            ; 0       ; 4         ; 61   ; 0            ; |g01_Mars_Clock_System                                                                                                                                                    ; work         ;
+;    |g01_7_segment_decoder:lcd0_decoder|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd0_decoder                                                                                                                 ;              ;
+;    |g01_7_segment_decoder:lcd1_decoder|        ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd1_decoder                                                                                                                 ;              ;
+;    |g01_7_segment_decoder:lcd2_decoder|        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd2_decoder                                                                                                                 ;              ;
+;    |g01_7_segment_decoder:lcd3_decoder|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_7_segment_decoder:lcd3_decoder                                                                                                                 ;              ;
+;    |g01_Basic_Timer:clock_convert|             ; 55 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Basic_Timer:clock_convert                                                                                                                      ;              ;
+;       |lpm_counter:counter|                    ; 40 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Basic_Timer:clock_convert|lpm_counter:counter                                                                                                  ;              ;
+;          |cntr_8fl:auto_generated|             ; 40 (40)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Basic_Timer:clock_convert|lpm_counter:counter|cntr_8fl:auto_generated                                                                          ;              ;
+;    |g01_Earth_Mars_Timer:timer|                ; 113 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer                                                                                                                         ;              ;
+;       |g01_Basic_Timer:earth|                  ; 57 (16)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth                                                                                                   ;              ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter                                                                               ;              ;
+;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                                                       ;              ;
+;       |g01_Basic_Timer:mars|                   ; 56 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars                                                                                                    ;              ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter                                                                                ;              ;
+;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|lpm_counter:counter|cntr_8fl:auto_generated                                                        ;              ;
+;    |g01_HMS_Counter:E_HMS|                     ; 56 (6)            ; 21 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS                                                                                                                              ;              ;
+;       |lpm_counter:counter_hours|              ; 16 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours                                                                                                    ;              ;
+;          |cntr_fvj:auto_generated|             ; 16 (15)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated                                                                            ;              ;
+;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                                             ;              ;
+;       |lpm_counter:counter_minutes|            ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes                                                                                                  ;              ;
+;          |cntr_gvj:auto_generated|             ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                                                          ;              ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
+;       |lpm_counter:counter_seconds|            ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds                                                                                                  ;              ;
+;          |cntr_gvj:auto_generated|             ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                                                          ;              ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
+;    |g01_HMS_Counter:M_HMS|                     ; 51 (5)            ; 20 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS                                                                                                                              ;              ;
+;       |lpm_counter:counter_hours|              ; 14 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours                                                                                                    ;              ;
+;          |cntr_fvj:auto_generated|             ; 14 (13)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated                                                                            ;              ;
+;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                                             ;              ;
+;       |lpm_counter:counter_minutes|            ; 15 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_minutes                                                                                                  ;              ;
+;          |cntr_gvj:auto_generated|             ; 15 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                                                          ;              ;
+;       |lpm_counter:counter_seconds|            ; 17 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds                                                                                                  ;              ;
+;          |cntr_gvj:auto_generated|             ; 17 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                                                          ;              ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                                                           ;              ;
+;    |g01_UTC_to_MTC:M_Convert|                  ; 829 (367)         ; 99 (18)      ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert                                                                                                                           ;              ;
+;       |g01_HMS_Counter:HMS_count|              ; 37 (6)            ; 21 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count                                                                                                 ;              ;
+;          |lpm_counter:counter_hours|           ; 9 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours                                                                       ;              ;
+;             |cntr_fvj:auto_generated|          ; 9 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated                                               ;              ;
+;                |cmpr_9cc:cmpr2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2                                ;              ;
+;          |lpm_counter:counter_minutes|         ; 11 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes                                                                     ;              ;
+;             |cntr_gvj:auto_generated|          ; 11 (9)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated                                             ;              ;
+;                |cmpr_acc:cmpr2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_minutes|cntr_gvj:auto_generated|cmpr_acc:cmpr2                              ;              ;
+;          |lpm_counter:counter_seconds|         ; 11 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds                                                                     ;              ;
+;             |cntr_gvj:auto_generated|          ; 11 (9)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated                                             ;              ;
+;                |cmpr_acc:cmpr2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|lpm_counter:counter_seconds|cntr_gvj:auto_generated|cmpr_acc:cmpr2                              ;              ;
+;       |g01_YMD_Counter:YMD_Count|              ; 329 (84)          ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count                                                                                                 ;              ;
+;          |lpm_divide:Mod0|                     ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0                                                                                 ;              ;
+;             |lpm_divide_u7m:auto_generated|    ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
+;                |sign_div_unsign_5nh:divider|   ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;                   |alt_u_div_c5f:divider|      ; 146 (146)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
+;          |lpm_divide:Mod1|                     ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1                                                                                 ;              ;
+;             |lpm_divide_u7m:auto_generated|    ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
+;                |sign_div_unsign_5nh:divider|   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;                   |alt_u_div_c5f:divider|      ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
+;       |lpm_counter:day_count|                  ; 20 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:day_count                                                                                                     ;              ;
+;          |cntr_pvi:auto_generated|             ; 20 (20)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:day_count|cntr_pvi:auto_generated                                                                             ;              ;
+;       |lpm_counter:sec_count|                  ; 24 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count                                                                                                     ;              ;
+;          |cntr_h6j:auto_generated|             ; 24 (19)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count|cntr_h6j:auto_generated                                                                             ;              ;
+;             |cmpr_sdc:cmpr2|                   ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_counter:sec_count|cntr_h6j:auto_generated|cmpr_sdc:cmpr2                                                              ;              ;
+;       |lpm_mult:Mult0|                         ; 52 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0                                                                                                            ;              ;
+;          |mult_9ct:auto_generated|             ; 52 (52)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0|mult_9ct:auto_generated                                                                                    ;              ;
+;    |g01_YMD_Counter:E_YMD|                     ; 76 (76)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD                                                                                                                              ;              ;
+;    |g01_to_UTC:E_Input_Timezone_Converter|     ; 345 (100)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter                                                                                                              ;              ;
+;       |lpm_divide:Mod0|                        ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0                                                                                              ;              ;
+;          |lpm_divide_u7m:auto_generated|       ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                                ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                    ;              ;
+;                |alt_u_div_c5f:divider|         ; 146 (146)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider              ;              ;
+;       |lpm_divide:Mod1|                        ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1                                                                                              ;              ;
+;          |lpm_divide_u7m:auto_generated|       ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                                ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                    ;              ;
+;                |alt_u_div_c5f:divider|         ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider              ;              ;
+;    |g01_to_local:E_Display_Timezone_Converter| ; 339 (109)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter                                                                                                          ;              ;
+;       |lpm_divide:Mod0|                        ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0                                                                                          ; work         ;
+;          |lpm_divide_u7m:auto_generated|       ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                            ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 131 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                ;              ;
+;                |alt_u_div_c5f:divider|         ; 131 (131)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider          ;              ;
+;       |lpm_divide:Mod1|                        ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1                                                                                          ; work         ;
+;          |lpm_divide_u7m:auto_generated|       ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                            ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                ;              ;
+;                |alt_u_div_c5f:divider|         ; 99 (99)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider          ;              ;
+;    |g01_to_local:M_Display_Timezone_Converter| ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g01_Mars_Clock_System|g01_to_local:M_Display_Timezone_Converter                                                                                                          ;              ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -360,72 +379,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; E_timezone[4]                                       ; E_timezone[0]       ; yes                    ;
-; E_timezone[2]                                       ; E_timezone[0]       ; yes                    ;
-; E_timezone[3]                                       ; E_timezone[0]       ; yes                    ;
-; E_timezone[1]                                       ; E_timezone[0]       ; yes                    ;
-; E_timezone[0]                                       ; E_timezone[0]       ; yes                    ;
-; M_timezone[0]                                       ; M_timezone[0]       ; yes                    ;
-; E_Day_set[0]                                        ; E_Day_set[0]        ; yes                    ;
-; E_Month_set[0]                                      ; E_Month_set[0]      ; yes                    ;
-; E_Year_set[0]                                       ; E_Year_set[0]       ; yes                    ;
-; E_Year_set[6]                                       ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[7]                                       ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[10]                                      ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[11]                                      ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[9]                                       ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[8]                                       ; E_Year_set[6]       ; yes                    ;
-; E_Year_set[5]                                       ; E_Year_set[0]       ; yes                    ;
-; M_timezone[4]                                       ; M_timezone[0]       ; yes                    ;
-; M_timezone[2]                                       ; M_timezone[0]       ; yes                    ;
-; M_timezone[3]                                       ; M_timezone[0]       ; yes                    ;
-; M_timezone[1]                                       ; M_timezone[0]       ; yes                    ;
-; E_Year_set[4]                                       ; E_Year_set[0]       ; yes                    ;
-; E_Day_set[4]                                        ; E_Day_set[0]        ; yes                    ;
-; E_Year_set[3]                                       ; E_Year_set[0]       ; yes                    ;
-; E_Month_set[3]                                      ; E_Month_set[0]      ; yes                    ;
-; E_Day_set[3]                                        ; E_Day_set[0]        ; yes                    ;
-; E_Day_set[2]                                        ; E_Day_set[0]        ; yes                    ;
-; E_Month_set[2]                                      ; E_Month_set[0]      ; yes                    ;
-; E_Year_set[2]                                       ; E_Year_set[0]       ; yes                    ;
-; E_Day_set[1]                                        ; E_Day_set[0]        ; yes                    ;
-; E_Month_set[1]                                      ; E_Month_set[0]      ; yes                    ;
-; E_Year_set[1]                                       ; E_Year_set[0]       ; yes                    ;
-; E_Hour_set[4]                                       ; E_Hour_set[0]       ; yes                    ;
-; E_Hour_set[3]                                       ; E_Hour_set[0]       ; yes                    ;
-; E_Hour_set[2]                                       ; E_Hour_set[0]       ; yes                    ;
-; E_Hour_set[1]                                       ; E_Hour_set[0]       ; yes                    ;
-; E_Hour_set[0]                                       ; E_Hour_set[0]       ; yes                    ;
-; E_Minute_set[0]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[0]                                     ; E_Second_set[0]     ; yes                    ;
-; E_Minute_set[5]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[5]                                     ; E_Second_set[0]     ; yes                    ;
-; E_Minute_set[4]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[4]                                     ; E_Second_set[0]     ; yes                    ;
-; E_Minute_set[3]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[3]                                     ; E_Second_set[0]     ; yes                    ;
-; E_Minute_set[2]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[2]                                     ; E_Second_set[0]     ; yes                    ;
-; E_Minute_set[1]                                     ; E_Minute_set[0]     ; yes                    ;
-; E_Second_set[1]                                     ; E_Second_set[0]     ; yes                    ;
-; Number of user-specified and inferred latches = 48  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; E_load                                              ; buttons[0]            ; yes                    ;
+; E_load_ymd                                          ; buttons[0]            ; yes                    ;
+; E_Year_set_local[0]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_timezone[0]                                       ; E_timezone[0]         ; yes                    ;
+; E_timezone[3]                                       ; E_timezone[0]         ; yes                    ;
+; E_timezone[2]                                       ; E_timezone[0]         ; yes                    ;
+; E_timezone[1]                                       ; E_timezone[0]         ; yes                    ;
+; E_timezone[4]                                       ; E_timezone[0]         ; yes                    ;
+; M_timezone[0]                                       ; M_timezone[0]         ; yes                    ;
+; M_timezone[3]                                       ; M_timezone[0]         ; yes                    ;
+; M_timezone[2]                                       ; M_timezone[0]         ; yes                    ;
+; M_timezone[1]                                       ; M_timezone[0]         ; yes                    ;
+; M_timezone[4]                                       ; M_timezone[0]         ; yes                    ;
+; E_Year_set_local[1]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_Year_set_local[2]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_Year_set_local[6]                                 ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[7]                                 ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[8]                                 ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[11]                                ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[10]                                ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[9]                                 ; E_Year_set_local[10]  ; yes                    ;
+; E_Year_set_local[5]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_Year_set_local[4]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_Year_set_local[3]                                 ; E_Year_set_local[0]   ; yes                    ;
+; E_Hour_set_local[0]                                 ; E_Hour_set_local[0]   ; yes                    ;
+; E_Hour_set_local[3]                                 ; E_Hour_set_local[0]   ; yes                    ;
+; E_Hour_set_local[2]                                 ; E_Hour_set_local[0]   ; yes                    ;
+; E_Hour_set_local[1]                                 ; E_Hour_set_local[0]   ; yes                    ;
+; E_Hour_set_local[4]                                 ; E_Hour_set_local[0]   ; yes                    ;
+; E_Second_set_local[0]                               ; E_Second_set_local[0] ; yes                    ;
+; E_Minute_set_local[0]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Day_set_local[0]                                  ; E_Day_set_local[0]    ; yes                    ;
+; E_Day_set_local[1]                                  ; E_Day_set_local[0]    ; yes                    ;
+; E_Day_set_local[2]                                  ; E_Day_set_local[0]    ; yes                    ;
+; E_Day_set_local[3]                                  ; E_Day_set_local[0]    ; yes                    ;
+; E_Day_set_local[4]                                  ; E_Day_set_local[0]    ; yes                    ;
+; E_Month_set_local[0]                                ; E_Month_set_local[0]  ; yes                    ;
+; E_Month_set_local[3]                                ; E_Month_set_local[0]  ; yes                    ;
+; E_Month_set_local[2]                                ; E_Month_set_local[0]  ; yes                    ;
+; E_Month_set_local[1]                                ; E_Month_set_local[0]  ; yes                    ;
+; E_Second_set_local[1]                               ; E_Second_set_local[0] ; yes                    ;
+; E_Minute_set_local[1]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Second_set_local[2]                               ; E_Second_set_local[0] ; yes                    ;
+; E_Minute_set_local[2]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Minute_set_local[5]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Second_set_local[5]                               ; E_Second_set_local[0] ; yes                    ;
+; E_Minute_set_local[4]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Second_set_local[4]                               ; E_Second_set_local[0] ; yes                    ;
+; E_Minute_set_local[3]                               ; E_Minute_set_local[0] ; yes                    ;
+; E_Second_set_local[3]                               ; E_Second_set_local[0] ; yes                    ;
+; Number of user-specified and inferred latches = 50  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; ledsGreen[3]~reg0                     ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ledsGreen[3]~reg0                      ; Stuck at VCC due to stuck port data_in ;
+; \syncProcess:step[4..31]               ; Merged with \syncProcess:step[3]       ;
+; \syncProcess:step[3]                   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 30 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -433,12 +456,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 251   ;
-; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 148   ;
-; Number of registers using Asynchronous Clear ; 92    ;
+; Total registers                              ; 296   ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 190   ;
+; Number of registers using Asynchronous Clear ; 37    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 212   ;
+; Number of registers using Clock Enable       ; 213   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -448,13 +471,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------+---------+
 ; Inverted Register                                                ; Fan out ;
 +------------------------------------------------------------------+---------+
-; g01_YMD_Counter:E_YMD|int_months[0]                              ; 19      ;
-; g01_YMD_Counter:E_YMD|int_days[0]                                ; 21      ;
-; g01_YMD_Counter:E_YMD|int_years[0]                               ; 7       ;
+; g01_YMD_Counter:E_YMD|int_days[0]                                ; 20      ;
+; g01_YMD_Counter:E_YMD|int_months[0]                              ; 17      ;
+; g01_YMD_Counter:E_YMD|int_years[0]                               ; 9       ;
+; \syncProcess:sync_int                                            ; 3       ;
 ; g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_years[0]  ; 4       ;
 ; g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_months[0] ; 6       ;
 ; g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_days[0]   ; 6       ;
-; Total number of inverted registers = 6                           ;         ;
+; Total number of inverted registers = 7                           ;         ;
 +------------------------------------------------------------------+---------+
 
 
@@ -463,16 +487,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_years[5]                               ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_years[5]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_months[1]                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_days[2]                                ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_years[7]  ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_months[1] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_days[4]   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |g01_Mars_Clock_System|state[1]                                                         ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[6]                                           ;
-; 12:1               ; 3 bits    ; 24 LEs        ; 15 LEs               ; 9 LEs                  ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[11]                                          ;
-; 46:1               ; 3 bits    ; 90 LEs        ; 54 LEs               ; 36 LEs                 ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[2]                                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|int_days[2]   ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 11 LEs               ; 44 LEs                 ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_years[4]                               ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |g01_Mars_Clock_System|\syncProcess:step[0]                                             ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_months[2]                              ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; Yes        ; |g01_Mars_Clock_System|g01_YMD_Counter:E_YMD|int_days[4]                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|Hour_out[2]                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|Hour_out[3]                ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[7]                                           ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[11]                                          ;
+; 41:1               ; 3 bits    ; 81 LEs        ; 54 LEs               ; 27 LEs                 ; No         ; |g01_Mars_Clock_System|\modeProcess:bcd_in[2]                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
 
@@ -529,6 +555,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                           ;
 ; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                           ;
 +---------------------------+-------+------+-----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Source assignments for g01_Basic_Timer:clock_convert|LPM_COUNTER:counter ;
++---------------------------+-------+------+-------------------------------+
+; Assignment                ; Value ; From ; To                            ;
++---------------------------+-------+------+-------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                             ;
++---------------------------+-------+------+-------------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -774,6 +811,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g01_Basic_Timer:clock_convert ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; count_val      ; 1     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g01_Basic_Timer:clock_convert|LPM_COUNTER:counter ;
++------------------------+-------------------+---------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                              ;
++------------------------+-------------------+---------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                    ;
+; LPM_WIDTH              ; 40                ; Signed Integer                                    ;
+; LPM_DIRECTION          ; down              ; Untyped                                           ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                    ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                           ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                           ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                           ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                           ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                           ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                           ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                           ;
+; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                           ;
++------------------------+-------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds ;
 +------------------------+-------------------+---------------------------------------------------+
@@ -990,49 +1064,95 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g01_to_local:E_Timezone_Converter|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                     ;
-+------------------------+----------------+----------------------------------------------------------+
-; LPM_WIDTHN             ; 12             ; Untyped                                                  ;
-; LPM_WIDTHD             ; 12             ; Untyped                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                           ;
-+------------------------+----------------+----------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                             ;
++------------------------+----------------+------------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                          ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                   ;
++------------------------+----------------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g01_to_local:E_Timezone_Converter|lpm_divide:Mod1 ;
-+------------------------+----------------+----------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                     ;
-+------------------------+----------------+----------------------------------------------------------+
-; LPM_WIDTHN             ; 12             ; Untyped                                                  ;
-; LPM_WIDTHD             ; 12             ; Untyped                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                           ;
-+------------------------+----------------+----------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                             ;
++------------------------+----------------+------------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                          ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                          ;
+; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                   ;
++------------------------+----------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                      ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                      ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_u7m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1167,7 +1287,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g01_to_local:M_Timezone_Converter"                                                            ;
+; Port Connectivity Checks: "g01_to_local:M_Display_Timezone_Converter"                                                    ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1185,15 +1305,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; month_out      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; day_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "g01_to_local:E_Timezone_Converter" ;
-+------+-------+----------+-------------------------------------+
-; Port ; Type  ; Severity ; Details                             ;
-+------+-------+----------+-------------------------------------+
-; dst  ; Input ; Info     ; Stuck at GND                        ;
-+------+-------+----------+-------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -1217,16 +1328,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count" ;
-+-------------+-------+----------+-----------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                       ;
-+-------------+-------+----------+-----------------------------------------------+
-; reset       ; Input ; Info     ; Stuck at GND                                  ;
-; h_set[3..2] ; Input ; Info     ; Stuck at VCC                                  ;
-; h_set[1..0] ; Input ; Info     ; Stuck at GND                                  ;
-; h_set[4]    ; Input ; Info     ; Stuck at GND                                  ;
-; m_set       ; Input ; Info     ; Stuck at GND                                  ;
-; s_set       ; Input ; Info     ; Stuck at GND                                  ;
-+-------------+-------+----------+-----------------------------------------------+
++-------+-------+----------+-----------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                             ;
++-------+-------+----------+-----------------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                        ;
+; h_set ; Input ; Info     ; Stuck at GND                                        ;
+; m_set ; Input ; Info     ; Stuck at GND                                        ;
+; s_set ; Input ; Info     ; Stuck at GND                                        ;
++-------+-------+----------+-----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -1234,9 +1343,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset        ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; end_of_day   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "g01_Basic_Timer:clock_convert" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                  ;
++--------+-------+----------+-------------------------------+
 
 
 +---------------------------------------------------+
@@ -1244,8 +1363,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+-----------------+
 ; Port         ; Type  ; Severity ; Details         ;
 +--------------+-------+----------+-----------------+
+; reset        ; Input ; Info     ; Stuck at GND    ;
 ; count_enable ; Input ; Info     ; Stuck at VCC    ;
 +--------------+-------+----------+-----------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "g01_YMD_Counter:E_YMD" ;
++-------+-------+----------+------------------------+
+; Port  ; Type  ; Severity ; Details                ;
++-------+-------+----------+------------------------+
+; reset ; Input ; Info     ; Stuck at GND           ;
++-------+-------+----------+------------------------+
 
 
 +-------------------------------+
@@ -1254,7 +1383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Apr 10 02:49:23 2014
+    Info: Processing started: Thu Apr 10 15:07:38 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c Lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g01_utc_to_mtc.vhd
@@ -1285,82 +1414,94 @@ Info: Found 2 design units, including 1 entities, in source file g01_ymd_counter
     Info: Found design unit 1: g01_YMD_Counter-behaviour
     Info: Found entity 1: g01_YMD_Counter
 Info: Elaborating entity "g01_Mars_Clock_System" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at g01_Mars_Clock.vhd(159): used explicit default value for signal "E_DST" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(304): signal "E_Year_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(306): signal "E_Year_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(308): signal "E_Month_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(310): signal "E_Day_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(242): inferring latch(es) for signal or variable "bcd_in", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_timezone", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "M_timezone", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Hour_set", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Minute_set", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Second_set", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Year_set", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Month_set", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(320): inferring latch(es) for signal or variable "E_Day_set", which holds its previous value in one or more paths through the process
-Warning (10873): Using initial value X (don't care) for net "ledsRed[8..0]" at g01_Mars_Clock.vhd(21)
-Warning (10873): Using initial value X (don't care) for net "ledsGreen[7..4]" at g01_Mars_Clock.vhd(22)
-Info (10041): Inferred latch for "E_Day_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Day_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Day_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Day_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Day_set[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Month_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Month_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Month_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Month_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[5]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[6]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[7]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[8]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[9]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[10]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Year_set[11]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Second_set[5]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Minute_set[5]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Hour_set[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Hour_set[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Hour_set[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Hour_set[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_Hour_set[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "M_timezone[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "M_timezone[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "M_timezone[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "M_timezone[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "M_timezone[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_timezone[0]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_timezone[1]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_timezone[2]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_timezone[3]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "E_timezone[4]" at g01_Mars_Clock.vhd(320)
-Info (10041): Inferred latch for "modeProcess:bcd_in[0]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[1]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[2]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[3]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[4]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[5]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[6]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[7]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[8]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[9]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[10]" at g01_Mars_Clock.vhd(245)
-Info (10041): Inferred latch for "modeProcess:bcd_in[11]" at g01_Mars_Clock.vhd(245)
+Warning (10036): Verilog HDL or VHDL warning at g01_Mars_Clock.vhd(240): object "M_Hour_set" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g01_Mars_Clock.vhd(241): object "M_Minute_set" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g01_Mars_Clock.vhd(242): object "M_Second_set" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(325): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(327): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(335): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(337): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(339): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(347): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(347): signal "E_Year_set_local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(349): signal "E_Year_set_local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(349): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(351): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g01_Mars_Clock.vhd(353): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(285): inferring latch(es) for signal or variable "bcd_in", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_timezone", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "M_timezone", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Hour_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Minute_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Second_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Year_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Month_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_Day_set_local", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_load", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at g01_Mars_Clock.vhd(365): inferring latch(es) for signal or variable "E_load_ymd", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "ledsGreen[6..4]" at g01_Mars_Clock.vhd(22)
+Info (10041): Inferred latch for "E_load_ymd" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_load" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Day_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Day_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Day_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Day_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Day_set_local[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Month_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Month_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Month_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Month_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[5]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[6]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[7]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[8]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[9]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[10]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Year_set_local[11]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Second_set_local[5]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Minute_set_local[5]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Hour_set_local[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Hour_set_local[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Hour_set_local[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Hour_set_local[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_Hour_set_local[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "M_timezone[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "M_timezone[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "M_timezone[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "M_timezone[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "M_timezone[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_timezone[0]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_timezone[1]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_timezone[2]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_timezone[3]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "E_timezone[4]" at g01_Mars_Clock.vhd(365)
+Info (10041): Inferred latch for "modeProcess:bcd_in[0]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[1]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[2]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[3]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[4]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[5]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[6]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[7]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[8]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[9]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[10]" at g01_Mars_Clock.vhd(288)
+Info (10041): Inferred latch for "modeProcess:bcd_in[11]" at g01_Mars_Clock.vhd(288)
 Info: Elaborating entity "g01_Earth_Mars_Timer" for hierarchy "g01_Earth_Mars_Timer:timer"
 Info: Elaborating entity "g01_Basic_Timer" for hierarchy "g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth"
 Info: Elaborating entity "LPM_COUNTER" for hierarchy "g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter"
@@ -1435,8 +1576,20 @@ Info: Elaborating entity "cntr_fvj" for hierarchy "g01_HMS_Counter:E_HMS|LPM_COU
 Info: Found 1 design units, including 1 entities, in source file db/cmpr_9cc.tdf
     Info: Found entity 1: cmpr_9cc
 Info: Elaborating entity "cmpr_9cc" for hierarchy "g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_hours|cntr_fvj:auto_generated|cmpr_9cc:cmpr2"
+Info: Elaborating entity "g01_Basic_Timer" for hierarchy "g01_Basic_Timer:clock_convert"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g01_Basic_Timer:clock_convert|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g01_Basic_Timer:clock_convert|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g01_Basic_Timer:clock_convert|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
 Info: Elaborating entity "g01_UTC_to_MTC" for hierarchy "g01_UTC_to_MTC:M_Convert"
-Warning (10492): VHDL Process Statement warning at g01_UTC_to_MTC.vhd(127): signal "done" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10542): VHDL Variable Declaration warning at g01_UTC_to_MTC.vhd(131): used initial value expression for variable "pt97324_shifted_32" because variable was never assigned a value
 Warning (10542): VHDL Variable Declaration warning at g01_UTC_to_MTC.vhd(132): used initial value expression for variable "pt00072_shifted_42" because variable was never assigned a value
 Info: Elaborating entity "LPM_COUNTER" for hierarchy "g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count"
@@ -1472,7 +1625,8 @@ Info: Instantiated megafunction "g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_pvi.tdf
     Info: Found entity 1: cntr_pvi
 Info: Elaborating entity "cntr_pvi" for hierarchy "g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count|cntr_pvi:auto_generated"
-Info: Elaborating entity "g01_to_local" for hierarchy "g01_to_local:E_Timezone_Converter"
+Info: Elaborating entity "g01_to_local" for hierarchy "g01_to_local:E_Display_Timezone_Converter"
+Info: Elaborating entity "g01_to_UTC" for hierarchy "g01_to_UTC:E_Input_Timezone_Converter"
 Info: Elaborating entity "g01_7_segment_decoder" for hierarchy "g01_7_segment_decoder:lcd0_decoder"
 Warning: LATCH primitive "\modeProcess:bcd_in[1]" is permanently enabled
 Warning: LATCH primitive "\modeProcess:bcd_in[2]" is permanently enabled
@@ -1486,14 +1640,16 @@ Warning: LATCH primitive "\modeProcess:bcd_in[9]" is permanently enabled
 Warning: LATCH primitive "\modeProcess:bcd_in[10]" is permanently enabled
 Warning: LATCH primitive "\modeProcess:bcd_in[11]" is permanently enabled
 Warning: LATCH primitive "\modeProcess:bcd_in[0]" is permanently enabled
-Info: Inferred 5 megafunctions from design logic
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_local:E_Timezone_Converter|Mod0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_local:E_Timezone_Converter|Mod1"
+Info: Inferred 7 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_local:E_Display_Timezone_Converter|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_local:E_Display_Timezone_Converter|Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_UTC:E_Input_Timezone_Converter|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_to_UTC:E_Input_Timezone_Converter|Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|Mod1"
     Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g01_UTC_to_MTC:M_Convert|Mult0"
-Info: Elaborated megafunction instantiation "g01_to_local:E_Timezone_Converter|lpm_divide:Mod0"
-Info: Instantiated megafunction "g01_to_local:E_Timezone_Converter|lpm_divide:Mod0" with the following parameter:
+Info: Elaborated megafunction instantiation "g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0"
+Info: Instantiated megafunction "g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "12"
     Info: Parameter "LPM_WIDTHD" = "12"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1508,8 +1664,8 @@ Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.
     Info: Found entity 1: add_sub_lkc
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
     Info: Found entity 1: add_sub_mkc
-Info: Elaborated megafunction instantiation "g01_to_local:E_Timezone_Converter|lpm_divide:Mod1"
-Info: Instantiated megafunction "g01_to_local:E_Timezone_Converter|lpm_divide:Mod1" with the following parameter:
+Info: Elaborated megafunction instantiation "g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1"
+Info: Instantiated megafunction "g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "12"
     Info: Parameter "LPM_WIDTHD" = "12"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1529,35 +1685,20 @@ Info: Found 1 design units, including 1 entities, in source file db/mult_9ct.tdf
     Info: Found entity 1: mult_9ct
 Info: Ignored 156 buffer(s)
     Info: Ignored 156 SOFT buffer(s)
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ledsRed[0]" is stuck at GND
-    Warning (13410): Pin "ledsRed[1]" is stuck at GND
-    Warning (13410): Pin "ledsRed[2]" is stuck at GND
-    Warning (13410): Pin "ledsRed[3]" is stuck at GND
-    Warning (13410): Pin "ledsRed[4]" is stuck at GND
-    Warning (13410): Pin "ledsRed[5]" is stuck at GND
-    Warning (13410): Pin "ledsRed[6]" is stuck at GND
-    Warning (13410): Pin "ledsRed[7]" is stuck at GND
-    Warning (13410): Pin "ledsRed[8]" is stuck at GND
     Warning (13410): Pin "ledsGreen[3]" is stuck at VCC
     Warning (13410): Pin "ledsGreen[4]" is stuck at GND
     Warning (13410): Pin "ledsGreen[5]" is stuck at GND
     Warning (13410): Pin "ledsGreen[6]" is stuck at GND
-    Warning (13410): Pin "ledsGreen[7]" is stuck at GND
-Warning: Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "set"
-    Warning (15610): No output dependent on input pin "buttons[1]"
-Info: Implemented 1868 device resources after synthesis - the final resource count might be different
+Info: Implemented 2335 device resources after synthesis - the final resource count might be different
     Info: Implemented 15 input pins
     Info: Implemented 46 output pins
-    Info: Implemented 1799 logic cells
+    Info: Implemented 2266 logic cells
     Info: Implemented 8 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 336 megabytes
-    Info: Processing ended: Thu Apr 10 02:49:31 2014
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 335 megabytes
+    Info: Processing ended: Thu Apr 10 15:07:49 2014
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 

@@ -2,16 +2,18 @@
 <LOG_ROOT>
 	<PROJECT NAME="Lab5">
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_seconds" CBX_FILE_NAME="cntr_gvj.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_seconds" CBX_FILE_NAME="cntr_gvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_seconds" CBX_FILE_NAME="cntr_gvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|LPM_COUNTER:sec_count" CBX_FILE_NAME="cntr_h6j.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_local:E_Timezone_Converter|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_UTC:E_Input_Timezone_Converter|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_Basic_Timer:clock_convert|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_Earth_Mars_Timer:timer|g01_Basic_Timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_hours" CBX_FILE_NAME="cntr_fvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_HMS_Counter:HMS_count|LPM_COUNTER:counter_minutes" CBX_FILE_NAME="cntr_gvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|lpm_mult:Mult0" CBX_FILE_NAME="mult_9ct.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_hours" CBX_FILE_NAME="cntr_fvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_HMS_Counter:E_HMS|LPM_COUNTER:counter_minutes" CBX_FILE_NAME="cntr_gvj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_HMS_Counter:M_HMS|LPM_COUNTER:counter_hours" CBX_FILE_NAME="cntr_fvj.tdf"/>
@@ -19,5 +21,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|LPM_COUNTER:day_count" CBX_FILE_NAME="cntr_pvi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_UTC_to_MTC:M_Convert|g01_YMD_Counter:YMD_Count|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g01_Mars_Clock_System|g01_to_local:E_Display_Timezone_Converter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

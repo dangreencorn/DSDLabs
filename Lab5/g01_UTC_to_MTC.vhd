@@ -111,7 +111,7 @@ architecture behaviour of g01_UTC_to_MTC is
 	signal JD_seconds : std_logic_vector (16 downto 0);
 	signal JD_days : std_logic_vector (19 downto 0);	
 begin
-	
+	finished <= done;
 	-- determines when we are done counting
 	done_count : process (years_int,months_int,days_int,hours_int,minutes_int,seconds_int, clock)
 		
@@ -124,7 +124,7 @@ begin
 				-- set 00:00:00 to H:M:S output
 			end if;
 		end if;
-		finished <= done;
+		
 	end process;
 	
 	calculate : process (done)
@@ -183,7 +183,7 @@ begin
 			sec_clock => sec_clock,
 			count_enable => (enable AND NOT done),
 			load_enable => reset,
-			H_Set => "01100",
+			H_Set => "00000",
 			M_Set => "000000",
 			S_Set => "000000",
 			Hours => hours_int,

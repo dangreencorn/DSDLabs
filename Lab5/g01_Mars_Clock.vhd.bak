@@ -14,9 +14,9 @@ use ieee.numeric_std.all;
 
 entity g01_Mars_Clock_System is
 	port ( clock : in std_logic;
-		set : in std_logic;
 		mode : in std_logic_vector(2 downto 0);
 		data : in std_logic_vector(5 downto 0);
+		DST : in std_logic;
 		buttons : in std_logic_vector(3 downto 0);
 		ledsRed : out std_logic_vector(9 downto 0);
 		ledsGreen : out std_logic_vector(7 downto 0);
@@ -120,6 +120,36 @@ architecture behaviour of g01_Mars_Clock_System is
 			Second_out : out std_logic_vector(5 downto 0)
 		);
 	end component;
+	
+	component g01_to_UTC is
+		PORT (
+			Year_in : in std_logic_vector(11 downto 0);
+			Month_in : in std_logic_vector(3 downto 0);
+			Day_in : in std_logic_vector(4 downto 0);
+			Hour_in : in std_logic_vector(4 downto 0);
+			Minute_in : in std_logic_vector(5 downto 0);
+			Second_in : in std_logic_vector(5 downto 0);
+			
+			DST : in std_logic;
+			Time_Zone : in std_logic_vector(4 downto 0);
+			
+			Year_out : out std_logic_vector(11 downto 0);
+			Month_out : out std_logic_vector(3 downto 0);
+			Day_out : out std_logic_vector(4 downto 0);
+			Hour_out : out std_logic_vector(4 downto 0);
+			Minute_out : out std_logic_vector(5 downto 0);
+			Second_out : out std_logic_vector(5 downto 0)
+		);
+	end component;
+	
+	component g01_Basic_Timer
+		generic ( count_val : natural := 0);
+		port ( clk : in std_logic;
+			enable : in std_logic;
+			reset : in std_logic;
+			pulse : out std_logic
+		);
+	end component;
 
 	function to_bcd ( bin : std_logic_vector((11) downto 0) ) return std_logic_vector is
 
@@ -180,7 +210,15 @@ architecture behaviour of g01_Mars_Clock_System is
 	signal E_Second_set : std_logic_vector(5 downto 0) := "000000";
 	signal E_Day_set : std_logic_vector(4 downto 0) := "00110";
 	signal E_Month_set : std_logic_vector(3 downto 0) := "0001";
-	signal E_Year_set : std_logic_vector(11 downto 0) := "011111010000";	
+	signal E_Year_set : std_logic_vector(11 downto 0) := "011111010000";
+	
+	-- Earth values to load (local)
+	signal E_Hour_set_local : std_logic_vector(4 downto 0) := "01100";
+	signal E_Minute_set_local : std_logic_vector(5 downto 0) := "000000";
+	signal E_Second_set_local : std_logic_vector(5 downto 0) := "000000";
+	signal E_Day_set_local : std_logic_vector(4 downto 0) := "00110";
+	signal E_Month_set_local : std_logic_vector(3 downto 0) := "0001";
+	signal E_Year_set_local : std_logic_vector(11 downto 0) := "011111010000";	
 
 	-- Mars second pulse
 	signal M_pulse_sec : std_logic;
@@ -203,24 +241,42 @@ architecture behaviour of g01_Mars_Clock_System is
 	signal M_Minute_set : std_logic_vector(5 downto 0);
 	signal M_Second_set : std_logic_vector(5 downto 0);
 
-
+	signal M_Hour_converted : std_logic_vector(4 downto 0);
+	signal M_Minute_converted : std_logic_vector(5 downto 0);
+	signal M_Second_converted : std_logic_vector(5 downto 0);
 
 	-- signals for converting UTC to MTC
-	signal convert_done : std_logic;
-	signal convert_en : std_logic;
-	signal convert_clr : std_logic;
+	signal convert_done : std_logic := '0';
+	signal convert_en : std_logic := '0';
+	signal convert_clr : std_logic := '0';
+	signal convert_clock : std_logic;
 
 	-- BCD output and ripple blanks for LCD Display
 	signal bcd_out : std_logic_vector(15 downto 0);
 	signal lcd1_rb : std_logic;
 	signal lcd2_rb : std_logic;
-begin
 	
+	signal latch : std_logic;
+begin
+	latch <= NOT buttons(2);
 	reset <= NOT buttons(0);
 	ledsRed(9) <= reset;
 	-- The state managing process
-	stateProcess : process (buttons(3), state)
+	stateProcess : process (buttons(3), reset)
 	begin
+		if (reset = '1') then
+			ledsGreen(3 downto 0) <= reset & reset & reset & reset;
+		elsif (reset = '0') then
+			if (state = "00") then
+				ledsGreen(3 downto 0) <= "1000";
+			elsif (state = "01") then
+				ledsGreen(3 downto 0) <= "1100";
+			elsif (state = "10") then
+				ledsGreen(3 downto 0) <= "1110";
+			else
+				ledsGreen(3 downto 0) <= "1111";
+			end if;
+		end if;
 		if (buttons(3) = '0' AND buttons(3)'event) then
 			if (state = "00") then
 				state <= "01";
@@ -279,9 +335,9 @@ begin
 			-- Set Timezones
 			
 			if (state = "00") then
-				bcd_in := "0000000" & E_timezone;
+				bcd_in := "0000000" & data(4 downto 0); -- Earth Timezone
 			elsif (state = "01") then
-				bcd_in := "0000000" & M_timezone;
+				bcd_in := "0000000" & data(4 downto 0); -- Mars Timezone
 			else
 				-- show '3333' when invalid state for timezones
 				bcd_in := "110100000101";
@@ -289,11 +345,11 @@ begin
 		elsif (mode = "100") then
 			-- Set Time
 			if (state = "00") then
-				bcd_in := "0000000" & E_Hour_tz;
+				bcd_in := "0000000" & data(4 downto 0); --Hour
 			elsif (state = "01") then
-				bcd_in := "000000" & E_Minute_tz;
+				bcd_in := "000000" & data(5 downto 0); --Minute
 			elsif (state = "10") then
-				bcd_in := "000000" & E_Second_tz;
+				bcd_in := "000000" & data(5 downto 0); --Second
 			else
 				-- show '3333' when invalid state for set time
 				bcd_in := "110100000101";
@@ -301,13 +357,13 @@ begin
 		elsif (mode = "101") then
 			-- Set Date
 			if (state = "00") then
-				bcd_in := E_Year_set;
+				bcd_in := data(5 downto 0) & E_Year_Set_Local(5 downto 0);
 			elsif (state = "01") then
-				bcd_in := E_Year_set;
+				bcd_in := E_Year_Set_Local(11 downto 6) & data(5 downto 0);
 			elsif (state = "10") then
-				bcd_in := "00000000" & E_Month_set;
+				bcd_in := "00000000" & data(3 downto 0);
 			elsif (state = "11") then
-				bcd_in := "0000000" & E_Day_set;
+				bcd_in := "0000000" & data(4 downto 0);
 			end if;
 		else
 			-- show '3333' when invalid Mode (dip switch setting)
@@ -319,87 +375,133 @@ begin
 	
 	-- Can set Dates, timezones, and times on earth.
 	-- epulse and mpulse stop when in a mode to set values
-	dataProcess : process (clock, mode, state, data)
+	dataProcess : process (mode, state, data, reset, latch)
 	begin
-		
-		if (mode = "000") then
-			-- Mars Time
-			-- view only
-		elsif (mode = "001") then
-			-- Earth Time
-			-- view only
-		elsif (mode = "010") then
-			-- Earth Date
-			-- view only
-		elsif (mode = "011") then
-			-- Set TZ
-			if (state = "00") then
-				E_timezone <= data(4 downto 0);
-			elsif (state = "01") then
-				M_timezone <= data (4 downto 0);
-			end if;
-		end if;
-		-- special cases where load signals go high
-		if (mode = "100") then
-			-- stop the counters, and load the values into the HMS counter
-			-- we must set hours, minutes and seconds
-			E_load <= '1';
-			-- Set Time
-			if (state = "00") then
-				E_Hour_set <= data(4 downto 0);
-			elsif (state = "01") then
-				E_Minute_set <= data(5 downto 0);
-			elsif (state = "10") then
-				E_Second_set <= data(5 downto 0);
-			end if;
+		if (reset = '1') then
+			E_timezone <= "01100";
+			M_timezone <= "01100";
+			
+			E_Hour_set_local <= "01110";
+			E_Minute_set_local <= "000000";
+			E_Second_set_local <= "000000";
+			E_Year_set_local <= "011111010000";
+			E_Month_set_local <= "0001";
+			E_Day_set_local <= "00110";
+			
+			M_Hour_set <= "01011";
+			M_Minute_set <= "000000";
+			M_Second_set <= "000000";
+			
 		else
-			-- continue counting after the data has been loaded
-			E_load <= '0';
-		end if;
-		if (mode = "101") then
-			E_load_ymd <= '1';
-			-- Set Date
-			if (state = "00") then
-				E_Year_set(11 downto 6) <= data (5 downto 0);
-			elsif (state = "01") then
-				E_Year_set(5 downto 0) <= data (5 downto 0);
-			elsif (state = "10") then
-				E_Month_set <= data (3 downto 0);
-			elsif (state = "11") then
-				E_Day_set <= data (4 downto 0);
+			if (mode = "000") then
+				-- Mars Time
+				-- view only
+			elsif (mode = "001") then
+				-- Earth Time
+				-- view only
+			elsif (mode = "010") then
+				-- Earth Date
+				-- view only
+			elsif (mode = "011") then
+				-- Set TZ
+				if (state = "00" AND latch='1') then
+					E_timezone <= data(4 downto 0);
+				elsif (state = "01" AND latch='1') then
+					M_timezone <= data (4 downto 0);
+				end if;
 			end if;
-		else
-			E_load_ymd <= '0';
+			-- special cases where load signals go high
+			if (mode = "100") then
+				-- stop the counters, and load the values into the HMS counter
+				-- we must set hours, minutes and seconds
+				E_load <= '1';
+				-- Set Time
+				if (state = "00" AND latch='1') then
+					E_Hour_set_local <= data(4 downto 0);
+				elsif (state = "01" AND latch='1') then
+					E_Minute_set_local <= data(5 downto 0);
+				elsif (state = "10" AND latch='1') then
+					E_Second_set_local <= data(5 downto 0);
+				end if;
+			else
+				-- continue counting after the data has been loaded
+				E_load <= '0';
+			end if;
+			if (mode = "101") then
+				E_load_ymd <= '1';
+				-- Set Date
+				if (state = "00" AND latch='1') then
+					E_Year_set_local(11 downto 6) <= data (5 downto 0);
+				elsif (state = "01" AND latch='1') then
+					E_Year_set_local(5 downto 0) <= data (5 downto 0);
+				elsif (state = "10" AND latch='1') then
+					E_Month_set_local <= data (3 downto 0);
+				elsif (state = "11" AND latch='1') then
+					E_Day_set_local <= data (4 downto 0);
+				end if;
+			else
+				E_load_ymd <= '0';
+			end if;
 		end if;
 	end process;
 
 	-- WORKING HERE
 	-- Trying to trigger Sync circuit and control logic
-	syncProcess : process (buttons(2), convert_done, clock)
+	-- M_HMS is no longer working properly
+	
+	syncProcess : process (clock)
+	variable sync_int : std_logic := '1';
+	variable convert_done_int : std_logic := '0';
+	variable step : integer := 0;
 	begin
-		if (clock'event AND clock = '1') then
-			if (buttons(2) = '0') then
+		if (clock = '1' and clock'event) then
+			if (sync_int = '1' and buttons(1) = '0') then --falling edge of button (down press)
 				convert_clr <= '1';
-			elsif (buttons(2) = '1' AND convert_clr = '1') then
+				step := 1;
+			elsif (step = 1) then
 				convert_clr <= '0';
 				convert_en <= '1';
-			end if;
-		
-			if (convert_done = '1') then
+				step := 2;
+			elsif (convert_done_int = '0' and convert_done = '1' and step = 2) then --rising edge
 				M_load <= '1';
-			end if;
-		
-			if (M_load = '1') then
+				step := 3;
+			elsif (M_load = '1' and step = 3) then
+				step := 4;
+			elsif (M_load = '1' and step = 4) then
 				M_load <= '0';
 				convert_en <= '0';
+				convert_clr <= '1';
+				step := 5;
+			elsif (step = 5) then
+				convert_clr <= '0';
+				step := 6;
 			end if;
+			if (reset = '1') then
+				step := 6;
+			end if;
+			sync_int := buttons(1);
+			convert_done_int := convert_done;
 		end if;
 	end process;
+ledsRed(0) <= E_load OR reset; 
+ledsRed(1) <= E_load_ymd OR reset;
+ledsRed(2) <= convert_en OR reset;
+ledsRed(3) <= DST OR reset;
+ledsRed(4) <= reset;
+ledsRed(5) <= reset;
+ledsRed(6) <= reset;
+ledsRed(7) <= reset;
+ledsRed(8) <= reset;
+ledsRed(9) <= reset;
+ledsGreen(4) <= reset;
+ledsGreen(5) <= reset;
+ledsGreen(6) <= reset;
+ledsGreen(7) <= (NOT (E_load OR E_load_ymd OR M_load OR convert_en)) OR reset;
 	-- The Earth_Mars second Pulse Timer
 	timer : g01_Earth_Mars_timer
 		PORT MAP ( 
 			clk => clock, 
-			reset => reset, 
+			reset => reset or convert_done, 
 			enable => NOT (E_load OR E_load_ymd OR M_load OR convert_en), 
 			epulse => E_pulse_sec,
 			mpulse => M_pulse_sec
@@ -408,9 +510,9 @@ begin
 	-- Earth Counters
 	E_YMD : g01_YMD_Counter
 		PORT MAP ( clock => clock,
-			reset => reset,
+			reset => '0',
 			day_count_en => E_pulse_day, 
-			load_en => E_load_ymd, 
+			load_en => E_load_ymd OR reset, 
 			Y_Set => E_Year_set,
 			M_Set => E_Month_set,
 			D_Set => E_Day_set,
@@ -421,10 +523,10 @@ begin
 	E_HMS : g01_HMS_Counter
 		PORT MAP (
 			clock => clock,
-			reset => reset,
+			reset => '0',
 			sec_clock => E_pulse_sec,
 			count_enable => '1',
-			load_enable => E_load,
+			load_enable => E_load OR reset,
 			H_Set => E_Hour_set,
 			M_Set => E_Minute_set,
 			S_Set => E_Second_set,
@@ -434,17 +536,21 @@ begin
 			end_of_day => E_pulse_day
 		);
 
+	clock_convert : g01_Basic_Timer
+		GENERIC MAP ( count_val => 1)
+		PORT MAP ( clk => clock, enable => '1', reset => reset, pulse => convert_clock);
+		
 	-- Mars Counter and Converter
 	M_HMS : g01_HMS_Counter
 		PORT MAP (
 			clock => clock,
-			reset => reset,
+			reset => '0',
 			sec_clock => M_pulse_sec,
 			count_enable => '1',
-			load_enable => M_load,
-			H_Set => M_Hour_set,
-			M_Set => M_Minute_set,
-			S_Set => M_Second_set,
+			load_enable => M_load or reset,
+			H_Set => M_Hour_converted,
+			M_Set => M_Minute_converted,
+			S_Set => M_Second_converted,
 			Hours => M_Hour,
 			Minutes => M_Minute,
 			Seconds => M_Second
@@ -452,7 +558,7 @@ begin
 	M_Convert : g01_UTC_to_MTC
 		PORT MAP (
 			clock => clock,
-			sec_clock => clock,
+			sec_clock => convert_clock,
 			reset => reset OR convert_clr,
 			enable => convert_en,
 			year => E_Year,
@@ -464,13 +570,13 @@ begin
 
 			finished => convert_done,
 			
-			MHour => M_Hour_set,
-			MMinute => M_Minute_set,
-			MSecond => M_Second_set
+			MHour => M_Hour_converted,
+			MMinute => M_Minute_converted,
+			MSecond => M_Second_converted
 		);
 
 	-- Timezone Converters
-	E_Timezone_Converter : g01_to_local
+	E_Display_Timezone_Converter : g01_to_local
 		PORT MAP (
 			Year_in => E_year,
 			Month_in => E_month,
@@ -479,7 +585,7 @@ begin
 			Minute_in => E_minute,
 			Second_in => E_second,
 			
-			DST => E_DST,
+			DST => DST,
 			Time_Zone => E_timezone,
 			
 			Year_out => E_year_tz,
@@ -489,7 +595,7 @@ begin
 			Minute_out => E_minute_tz,
 			Second_out => E_second_tz
 		);
-	M_Timezone_Converter : g01_to_local
+	M_Display_Timezone_Converter : g01_to_local
 		PORT MAP (
 			Year_in => "000000000100",
 			Month_in => "0100",
@@ -504,6 +610,25 @@ begin
 			Hour_out => M_hour_tz,
 			Minute_out => M_minute_tz,
 			Second_out => M_second_tz
+		);
+	E_Input_Timezone_Converter : g01_to_UTC
+		PORT MAP (
+			Year_in => E_Year_set_local,
+			Month_in => E_Month_set_local,
+			Day_in => E_Day_set_local,
+			Hour_in => E_Hour_set_local,
+			Minute_in => E_Minute_set_local,
+			Second_in => E_Second_set_local,
+			
+			DST => DST,
+			Time_Zone => E_timezone,
+			
+			Year_out => E_year_set,
+			Month_out => E_month_set,
+			Day_out => E_day_set,
+			Hour_out => E_hour_set,
+			Minute_out => E_minute_set,
+			Second_out => E_second_set
 		);
 
 	-- LCD Decoders, for displaying values --
